@@ -1,0 +1,91 @@
+{
+  "2411ee15-2e8a-4d47-a881-8c160c57418e": {
+    "url": "db://assets/res",
+    "value": {}
+  },
+  "430c3ff9-7a47-4aae-a265-d9b353b3c9a9": {
+    "url": "db://assets/scene",
+    "value": {}
+  },
+  "28f39c53-0dab-4d1a-9b88-7bb7e580c636": {
+    "url": "db://assets/script",
+    "value": {}
+  },
+  "808dc934-1506-4b1c-877c-05dc11ec5921": {
+    "url": "db://assets/script/com",
+    "value": {}
+  },
+  "2d9c7a70-453e-481a-83f2-a2c7bcb8c3ab": {
+    "url": "db://assets/script/overwrite",
+    "value": {}
+  },
+  "fbdab4ec-dfe1-4606-aadb-1762e88f6f0a": {
+    "url": "db://assets/script/utils",
+    "value": {}
+  },
+  "6ed06b80-76ca-49b0-aebe-dfa781633962": {
+    "url": "db://assets/script/com/MainEntry.ts",
+    "value": {}
+  },
+  "4511e96d-75ab-4393-94da-f238c25ae033": {
+    "url": "db://assets/script/overwrite/engineOverride.ts",
+    "value": {}
+  },
+  "45eae75f-23a2-488e-b757-a58bbbfc8231": {
+    "url": "db://assets/script/overwrite/or.d.ts",
+    "value": {}
+  },
+  "94b568eb-0637-4e07-a0ba-2b98e30c53ba": {
+    "url": "db://assets/script/utils/ClassSon.ts",
+    "value": {}
+  },
+  "29641874-b567-487e-b43a-57dd5008dcdd": {
+    "url": "db://assets/script/utils/ClassSuper.ts",
+    "value": {}
+  },
+  "adc6510f-24fb-423d-ba74-4dc067f47150": {
+    "url": "db://assets/script/utils/GlabolImport.ts",
+    "value": {}
+  },
+  "3feeb5bb-66f3-4c75-9662-fca9de185c19": {
+    "url": "db://assets/scene.scene",
+    "value": {
+      "depends": [
+        "3feeb5bb-66f3-4c75-9662-fca9de185c19",
+        "a31de0a7-4252-4274-99c6-4d9d8048dab4@f9941",
+        "3feeb5bb-66f3-4c75-9662-fca9de185c19"
+      ]
+    }
+  },
+  "a31de0a7-4252-4274-99c6-4d9d8048dab4": {
+    "url": "db://assets/res/bg.jpg",
+    "value": {
+      "depends": []
+    }
+  },
+  "a31de0a7-4252-4274-99c6-4d9d8048dab4@6c48a": {
+    "url": "db://assets/res/bg.jpg@6c48a",
+    "value": {
+      "depends": [
+        "a31de0a7-4252-4274-99c6-4d9d8048dab4"
+      ]
+    }
+  },
+  "a31de0a7-4252-4274-99c6-4d9d8048dab4@f9941": {
+    "url": "db://assets/res/bg.jpg@f9941",
+    "value": {
+      "depends": [
+        "a31de0a7-4252-4274-99c6-4d9d8048dab4@6c48a"
+      ]
+    }
+  },
+  "42d332d3-b53f-4745-9374-3e718f998071": {
+    "url": "db://assets/scene/scene-001.scene",
+    "value": {
+      "depends": [
+        "c77ecaa8-c936-46c4-a5b0-98692673ed87",
+        "a31de0a7-4252-4274-99c6-4d9d8048dab4@f9941"
+      ]
+    }
+  }
+}
