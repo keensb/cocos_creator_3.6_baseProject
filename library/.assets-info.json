@@ -46,42 +46,42 @@
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script": {
-    "time": 1666577636665.5645,
+    "time": 1666920850519.028,
     "uuid": "28f39c53-0dab-4d1a-9b88-7bb7e580c636",
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\com": {
-    "time": 1666577636657.0142,
+    "time": 1666919075132.2507,
     "uuid": "808dc934-1506-4b1c-877c-05dc11ec5921",
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\overwrite": {
-    "time": 1666577636664.0608,
+    "time": 1666919075503.2737,
     "uuid": "2d9c7a70-453e-481a-83f2-a2c7bcb8c3ab",
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\utils": {
-    "time": 1666577636673.106,
+    "time": 1666919075681.746,
     "uuid": "fbdab4ec-dfe1-4606-aadb-1762e88f6f0a",
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\overwrite\\or.d.ts": {
-    "time": 1666081675372.3235,
+    "time": 1670829016928.1208,
     "uuid": "45eae75f-23a2-488e-b757-a58bbbfc8231",
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\com\\MainEntry.ts": {
-    "time": 1666577751515.6892,
+    "time": 1670828415675.9648,
     "uuid": "6ed06b80-76ca-49b0-aebe-dfa781633962",
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\overwrite\\engineOverride.ts": {
-    "time": 1666577732682.7693,
+    "time": 1670828599293.2627,
     "uuid": "4511e96d-75ab-4393-94da-f238c25ae033",
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\utils\\ClassSon.ts": {
-    "time": 1666081957410.6526,
+    "time": 1670828583466.2512,
     "uuid": "94b568eb-0637-4e07-a0ba-2b98e30c53ba",
     "missing": false
   },
@@ -91,7 +91,7 @@
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\utils\\GlabolImport.ts": {
-    "time": 1665995114895.313,
+    "time": 1666919075682.7217,
     "uuid": "adc6510f-24fb-423d-ba74-4dc067f47150",
     "missing": false
   },
@@ -117,6 +117,14 @@
   "F:\\creator\\project_3\\NewProject_36\\assets\\scene\\scene-001.scene": {
     "time": 1666577770044.8264,
     "uuid": "42d332d3-b53f-4745-9374-3e718f998071",
+    "missing": false
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\script\\ClassDictionary.ts.meta": {
+    "time": 1666920490431.24
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\script\\ClassDictionary.ts": {
+    "time": 1666921793377.1587,
+    "uuid": "6d00a2ad-dab7-4238-9fec-c1f25b66dbfd",
     "missing": false
   }
 }

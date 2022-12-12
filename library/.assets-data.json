@@ -87,5 +87,9 @@
         "a31de0a7-4252-4274-99c6-4d9d8048dab4@f9941"
       ]
     }
+  },
+  "6d00a2ad-dab7-4238-9fec-c1f25b66dbfd": {
+    "url": "db://assets/script/ClassDictionary.ts",
+    "value": {}
   }
 }

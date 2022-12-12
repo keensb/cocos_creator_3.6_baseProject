@@ -1,3 +1,4 @@
+import { director } from "cc";
 import { ClassSuper } from "./ClassSuper";
 
 export class ClassSon extends ClassSuper {

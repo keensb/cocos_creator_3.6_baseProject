@@ -49,9 +49,40 @@
         "y": 0,
         "z": 0
       }
+    },
+    "42d332d3-b53f-4745-9374-3e718f998071": {
+      "position": {
+        "x": 475.8373983739837,
+        "y": 320,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
     }
   },
   "camera-uuids": [
-    "c77ecaa8-c936-46c4-a5b0-98692673ed87"
-  ]
+    "42d332d3-b53f-4745-9374-3e718f998071"
+  ],
+  "float-window": {
+    "position": {
+      "cc": {
+        "Camera": {
+          "dock": false,
+          "top": null,
+          "bottom": 10,
+          "left": null,
+          "right": 10
+        }
+      }
+    }
+  }
 }

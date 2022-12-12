@@ -1,5 +1,4 @@
-import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode } from 'cc';
-import { engineOverrider } from '../overwrite/engineOverride';
+import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode, NodeEventType, Scene } from 'cc';
 import { ClassSon } from '../utils/ClassSon';
 import { superSetter } from '../utils/GlabolImport';
 
@@ -21,6 +20,7 @@ export class MainEntry extends Component {
     label: Label = null;
 
     onLoad() {
+        console.log("okokokok", this.node["__proto__"]);
         //engineOverrider.startWrite();//在 creator 底层的JS原型链中 新增或覆盖自定义的业务代码
     }
 
@@ -31,7 +31,7 @@ export class MainEntry extends Component {
         log(son.a)
         son.a = 3;
         log(son.a);
-        
+
         //find("Canvas/bg").getComponent(UIOpacity).opacity = 100;
         var bg = find("Canvas/bg");
         bg.getOrAddComponent(UIOpacity).opacity = 100;
@@ -39,23 +39,34 @@ export class MainEntry extends Component {
         bg.setPosition(100, bg.position.y);
 
         console.log("scale", bg.scale)
-        
+
         tween(bg).to(5, { scaleX: 2 }).start();
         tween(bg).to(5, { hh: 400 }).start();
 
+         
 
-        let textObj1 = this.test<Object>(10, 20);//这里没传入第三个参数, 也就是类型 所以 Object 不起作用 返回的将是默认的 Node
-        let textObj2 = this.test<Object>(10, 20, Object);//这里没传入第三个参数, 也就是类型 所以 Object 不起作用
+        let textObj2 = this.test<Object>(10, 20, Node, "hello");
 
-        console.log("textObj1 =", textObj1)
-        console.log("textObj2 =", textObj2)
 
+        console.log("textObj2 =", textObj2, textObj2["name"])
+
+        var xxx = new Node();
+        xxx.on(NodeEventType.PARENT_CHANGED, (evt) => {
+            
+        })
+
+
+
+        this.node.addChild(xxx)
+        console.log("STAGE_CHANGED1111", xxx.stage);
+
+        this.node.removeChild(xxx)
+        console.log("STAGE_CHANGED2222", xxx.stage);
 
     }
 
-    private test<T>(x: number, y: number, inst?: new () => T): T {
-
-        let obj = !!inst ? new inst : new Node();
+    private test<T>(x: number, y: number, inst: new (...parmas) => T, ...args): T {
+        let obj = new inst(...args);
         obj["x"] = x;
         obj["y"] = y;
         return <T>obj;
@@ -65,7 +76,3 @@ export class MainEntry extends Component {
 
     }
 }
-
-
-
-
