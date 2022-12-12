@@ -409,7 +409,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 2652288.6106950045,
+      "mTimestamp": 6551354.007100999,
       "chunkId": "07fb1dcca2f4fad0c5a0bf7f0aa6ba570dd5ef4e",
       "imports": [
         {
@@ -441,7 +441,7 @@
           }
         },
         {
-          "value": "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/engineOverride.ts",
+          "value": "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/EngineOverride.ts",
           "resolved": "__unresolved_2",
           "loc": {
             "start": {
@@ -516,7 +516,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/engineOverride.ts"
+            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/EngineOverride.ts"
           },
           "messages": []
         },
@@ -545,10 +545,10 @@
     },
     "file:///F:/creator/project_3/NewProject_36/assets/script/ClassDictionary.ts": {
       "mTimestamp": {
-        "mtime": 1670832434496.2253,
+        "mtime": 1670836728629.6016,
         "uuid": "6d00a2ad-dab7-4238-9fec-c1f25b66dbfd"
       },
-      "chunkId": "ae22bd118ff092163e566c4e69e3dafae7014b03",
+      "chunkId": "822021207f7616006701f5738d935da80986dea2",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -600,16 +600,16 @@
           }
         },
         {
-          "value": "./../script/overwrite/engineOverride",
+          "value": "./overwrite/EngineOverride",
           "resolved": "__unresolved_4",
           "loc": {
             "start": {
               "line": 4,
-              "column": 32
+              "column": 31
             },
             "end": {
               "line": 4,
-              "column": 70
+              "column": 59
             }
           }
         }
@@ -654,7 +654,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/engineOverride.ts"
+            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/EngineOverride.ts"
           },
           "messages": []
         }
@@ -755,10 +755,10 @@
     },
     "file:///F:/creator/project_3/NewProject_36/assets/script/com/MainEntry.ts": {
       "mTimestamp": {
-        "mtime": 1670833859466.4402,
+        "mtime": 1670839012500.9814,
         "uuid": "6ed06b80-76ca-49b0-aebe-dfa781633962"
       },
-      "chunkId": "a2f394ed7b33e5a76a3bd239a17057c906cda188",
+      "chunkId": "aa41e9a4338eafff7092250dd1b44c96eeba3f0b",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -812,7 +812,7 @@
           }
         },
         {
-          "value": "../overwrite/engineOverride",
+          "value": "../overwrite/EngineOverride",
           "resolved": "__unresolved_3",
           "loc": {
             "start": {
@@ -822,6 +822,19 @@
             "end": {
               "line": 5,
               "column": 36
+            }
+          }
+        },
+        {
+          "value": "cc/env",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 22
+            },
+            "end": {
+              "line": 6,
+              "column": 30
             }
           }
         }
@@ -873,7 +886,14 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/engineOverride.ts"
+            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/EngineOverride.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cc/env"
           },
           "messages": []
         }
@@ -903,10 +923,62 @@
     },
     "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/engineOverride.ts": {
       "mTimestamp": {
-        "mtime": 1670833817325.0002,
+        "mtime": 1670835852152.9534,
         "uuid": "4511e96d-75ab-4393-94da-f238c25ae033"
       },
-      "chunkId": "2b8f8e6ce2f783b0367c1126749cb55ea3ecd519",
+      "chunkId": "aa992ea3830deeb39376199cdabe5f02a7c0b3d2",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 91
+            },
+            "end": {
+              "line": 2,
+              "column": 95
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/EngineOverride.ts": {
+      "mTimestamp": {
+        "mtime": 1670839018532.9539,
+        "uuid": "44c8dc46-5ccf-4a3b-ad16-135e58191b1f"
+      },
+      "chunkId": "5c9629920b6c6d4e572f935603be1a333d6bd833",
       "imports": [
         {
           "value": "cc"

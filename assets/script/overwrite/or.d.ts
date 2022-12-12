@@ -17,7 +17,7 @@ declare module "cc" {//<----------注意:这里坑爹的地方  模块名不是 
 
 
         /**
-         * 检测Node和其下各级子节点有没有这个Component ,有的话存进数组并返回
+         * 检测本节点(最高级别为Scene)和其下各级子节点有没有这个Component, 有的话存进数组并最终返回
          */
         findSubComponent<T extends Component>(componentType: new (...parmas) => T, ...agrs): T[];
 

@@ -328,7 +328,7 @@ myProp = 0;
 2022-12-12T08:08:04.838Z - info: [Scene] [PHYSICS]: using builtin.
 2022-12-12T08:08:04.939Z - log: [Scene] Cocos Creator v3.6.0
 2022-12-12T08:08:04.939Z - info: [Scene] Forward render pipeline initialized.
-2022-12-12T08:14:16.726Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/engineOverride"  Error: 
+2022-12-12T08:14:16.726Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
     at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
     at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
     at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
@@ -337,7 +337,7 @@ myProp = 0;
     at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
     at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
     at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/engineOverride"  Error: 
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
     at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
     at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
     at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
@@ -354,7 +354,7 @@ myProp = 0;
     at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
     at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
     at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-2022-12-12T08:52:02.090Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/engineOverride"  Error: 
+2022-12-12T08:52:02.090Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
     at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
     at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
     at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
@@ -363,7 +363,7 @@ myProp = 0;
     at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
     at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
     at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/engineOverride"  Error: 
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
     at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
     at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
     at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
@@ -380,3 +380,251 @@ myProp = 0;
     at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
     at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
     at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+2022-12-12T08:58:07.026Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
+    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
+    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
+    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
+    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+2022-12-12T08:59:30.615Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
+    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
+    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
+    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
+    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+2022-12-12T09:00:23.806Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
+    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
+    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
+    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
+    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+2022-12-12T09:01:01.695Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
+    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
+    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
+    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
+    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+2022-12-12T09:02:49.274Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
+    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
+    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
+    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
+    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+2022-12-12T09:03:37.280Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
+    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
+    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
+    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
+    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+2022-12-12T09:04:15.961Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
+    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
+    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
+    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
+    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+2022-12-12T09:40:20.134Z - error: [Scene] Failed to refresh the current sceneError: [Scene] Failed to refresh the current scene
+    at GeneralSceneProxy.softReload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scene\proxy\general-scene-proxy.ccc:1:4468)
+    at GeneralSceneFacade.softReloadScene (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\facade\general-scene-facade.ccc:1:5839)
+    at SceneFacadeManager.softReloadScene (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\facade\scene-facade-manager.ccc:1:7777)
+2022-12-12T09:40:20.136Z - error: [Scene] Cannot read property 'nodeOnStage' of undefinedTypeError: Cannot read property 'nodeOnStage' of undefined
+    at Node.setParent (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/40/4073349564b48b8fa7380ae98a01f876a63e727a.js:90:24)
+    at Node.setParent (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:149120:17)
+    at Node.set parent [as parent] (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:144593:16)
+    at Director.runSceneImmediate (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:5602:27)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scene\utils.ccc:1:1302
+    at eval (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:90258:17)
+    at eval (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:97749:9)
+    at eval (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:156745:9)
+2022-12-12T09:40:23.331Z - error: [Preview]Cannot read properties of undefined (reading 'nodeOnStage')errorInfo.stack ? '/n TypeError: Cannot read properties of undefined (reading 'nodeOnStage')
+    at Node.setParent (http://localhost:7456/scripting/x/chunks/16/16f0d7b8601aa4edd40e30dbdfad58ca4320e451.js:98:24)
+    at Node.setParent (http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:152210:41)
+    at Node.set (http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:149071:18)
+    at Director.runSceneImmediate (http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:5396:27)
+    at http://localhost:7456/preview-app/main.js:1:3431
+    at http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:92144:17
+    at http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:99829:9
+    at http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:160023:9' : ''
+2022-12-12T09:46:17.134Z - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:CocosDashboard_1.2.2ile:F:creatorproject_3NewProject_36assetsscriptoverwriteEngineOverride.ts: Unexpected reserved word 'let'. (76:16)
+
+  74 |                 ccDic.nodeOnStage = {};
+  75 |
+> 76 |                 let 
+     |                 ^
+  77 |             }
+  78 |
+  79 |
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/eb/eb41d6c6b41bd5807e09f62996b2e5473784e08e.js:8:13)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at Array.forEach (<anonymous>)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at Array.forEach (<anonymous>)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:CocosDashboard_1.2.2ile:F:creatorproject_3NewProject_36assetsscriptoverwriteEngineOverride.ts: Unexpected reserved word 'let'. (76:16)
+
+  74 |                 ccDic.nodeOnStage = {};
+  75 |
+> 76 |                 let 
+  79 |
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/eb/eb41d6c6b41bd5807e09f62996b2e5473784e08e.js:8:13)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at Array.forEach (<anonymous>)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at Array.forEach (<anonymous>)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
+    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.error (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1414)
+    at ScriptManager._handleImportException (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:5825)
+    at Executor.importExceptionHandler [as _importExceptionHandler] (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3509)
+    at Executor._onModuleLoaded (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:312:22)
+    at SystemJS.onload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:73:18)
+    at triggerOnload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:270:10)
+    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:538:7)
+    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)

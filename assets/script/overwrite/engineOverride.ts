@@ -1,8 +1,9 @@
-//建议通过在主入口类添加 import "../overwrite/engineOverride" 的方式直接加载并执行
+//建议通过在主入口类添加 import "../overwrite/EngineOverride" 的方式直接加载并执行
 import { BaseNode, Component, director, Node, NodeEventType, UIOpacity, UITransform } from 'cc';
+import { DEBUG } from 'cc/env';
 
 
-class engineOverrider {
+export class EngineOverride {
 
     public static startWrite() {
         //新增API, 建议把API写进 or.d.ts 下的 interface BaseNode 中,便于在使用时带自动提示功能 
@@ -30,7 +31,6 @@ class engineOverrider {
             configurable: true
         });
 
-
         BaseNode.prototype.findSubComponent = function <T extends Component>(componentType: new (...parmas) => T, ...args): T[] {
             
             let arr = [];
@@ -40,7 +40,7 @@ class engineOverrider {
             }
 
             function loop(node) {
-                if (node && node.children && node.children > 0) {
+                if (node && node.children && node.children.length > 0) {
                     for (let i = 0; i < node.children.length; i++) {
                         let nodeObj = (node.children[i].getComponent.call(node.children[i], componentType, ...args));
                         if (nodeObj) {
@@ -54,13 +54,12 @@ class engineOverrider {
             loop(this);
             return arr;
         }
-
-
+        
         const _setParent = BaseNode.prototype.setParent;
         BaseNode.prototype.setParent = function setParent(value, keepWorldTransform) {
             //不能用 if(this.scene)来判断是否在场景上 this.scene 不会随着节点的 加载/移除 发生改变
-
             let oldStage = this.stage;
+            let newStage;
 
             const loopHandler = function (node: BaseNode, evtType: string) {
                 if (node && node.children && node.children.length > 0) {
@@ -75,7 +74,7 @@ class engineOverrider {
 
             _setParent.call(this, value, keepWorldTransform);
 
-            let newStage = this.stage;
+            newStage = this.stage;
 
             if (oldStage != newStage) {//场景发生了变化 有可能换了新场景 也有可能被加入场景成为可视节点  也有可能从场景上被移除出去
                 if (this.emit) this.emit(NodeEventType.STAGE_CHANGED);// node.stage 可以检测有无舞台
@@ -196,5 +195,5 @@ class engineOverrider {
     }
 }
 
-engineOverrider.startWrite();
+EngineOverride.startWrite();
 

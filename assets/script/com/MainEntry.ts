@@ -2,7 +2,8 @@ import { _decorator, Component, find, director, Node, log, UIOpacity, Label, twe
 import { ClassSon } from '../utils/ClassSon';
 import { superSetter } from '../utils/GlabolImport';
 
-import "../overwrite/engineOverride";//不带 from 关键字的import,  作用是直接导进来并立即执行 相当于js的 require()
+import "../overwrite/EngineOverride";//不带 from 关键字的import,  作用是直接导进来并立即执行 相当于js的 require()
+import { DEBUG } from 'cc/env';
 
 const { ccclass, property } = _decorator;
 
@@ -43,8 +44,8 @@ export class MainEntry extends Component {
         tween(bg).to(5, { scaleX: 2 }).start();
         tween(bg).to(5, { hh: 400 }).start();
 
-         
-        
+        NodeEventType.SCENE_CHANGED_FOR_PERSISTS
+
         let textObj2 = this.test<Object>(10, 20, Node, "hello");
 
 
@@ -57,7 +58,11 @@ export class MainEntry extends Component {
         console.log("STAGE_CHANGED1111", xxx.stage);
 
         this.node.removeChild(xxx)
-        console.log("STAGE_CHANGED2222", xxx.stage);
+        console.log("STAGE_CHANGED2222", xxx.stage, DEBUG);
+
+        console.log(director.getScene().findSubComponent(MainEntry), find("Canvas").findSubComponent(MainEntry));
+
+        
 
     }
 

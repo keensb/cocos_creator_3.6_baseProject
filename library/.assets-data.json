@@ -86,5 +86,9 @@
   "6d00a2ad-dab7-4238-9fec-c1f25b66dbfd": {
     "url": "db://assets/script/ClassDictionary.ts",
     "value": {}
+  },
+  "44c8dc46-5ccf-4a3b-ad16-135e58191b1f": {
+    "url": "db://assets/script/overwrite/EngineOverride.ts",
+    "value": {}
   }
 }
