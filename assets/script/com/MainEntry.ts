@@ -44,18 +44,14 @@ export class MainEntry extends Component {
         tween(bg).to(5, { hh: 400 }).start();
 
          
-
+        
         let textObj2 = this.test<Object>(10, 20, Node, "hello");
 
 
         console.log("textObj2 =", textObj2, textObj2["name"])
 
         var xxx = new Node();
-        xxx.on(NodeEventType.PARENT_CHANGED, (evt) => {
-            
-        })
-
-
+        
 
         this.node.addChild(xxx)
         console.log("STAGE_CHANGED1111", xxx.stage);

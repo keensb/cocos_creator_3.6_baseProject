@@ -34,8 +34,8 @@
   "camera-infos": {
     "c77ecaa8-c936-46c4-a5b0-98692673ed87": {
       "position": {
-        "x": 480,
-        "y": 117,
+        "x": 479.99999999999994,
+        "y": 320,
         "z": 5000
       },
       "rotation": {
@@ -70,7 +70,7 @@
     }
   },
   "camera-uuids": [
-    "42d332d3-b53f-4745-9374-3e718f998071"
+    "c77ecaa8-c936-46c4-a5b0-98692673ed87"
   ],
   "float-window": {
     "position": {

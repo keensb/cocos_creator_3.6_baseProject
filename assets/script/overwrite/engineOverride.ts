@@ -1,8 +1,8 @@
-
+//建议通过在主入口类添加 import "../overwrite/engineOverride" 的方式直接加载并执行
 import { BaseNode, Component, director, Node, NodeEventType, UIOpacity, UITransform } from 'cc';
 
 
-export class engineOverrider {
+class engineOverrider {
 
     public static startWrite() {
         //新增API, 建议把API写进 or.d.ts 下的 interface BaseNode 中,便于在使用时带自动提示功能 
@@ -31,12 +31,37 @@ export class engineOverrider {
         });
 
 
+        BaseNode.prototype.findSubComponent = function <T extends Component>(componentType: new (...parmas) => T, ...args): T[] {
+            
+            let arr = [];
+            let obj = this.getComponent.call(this, componentType, ...args);
+            if (obj) {
+                arr.push(obj);
+            }
+
+            function loop(node) {
+                if (node && node.children && node.children > 0) {
+                    for (let i = 0; i < node.children.length; i++) {
+                        let nodeObj = (node.children[i].getComponent.call(node.children[i], componentType, ...args));
+                        if (nodeObj) {
+                            arr.push(nodeObj);
+                        }
+                        loop(node.children[i]);
+                    }
+                }
+            }
+
+            loop(this);
+            return arr;
+        }
+
+
         const _setParent = BaseNode.prototype.setParent;
         BaseNode.prototype.setParent = function setParent(value, keepWorldTransform) {
             //不能用 if(this.scene)来判断是否在场景上 this.scene 不会随着节点的 加载/移除 发生改变
 
             let oldStage = this.stage;
-            
+
             const loopHandler = function (node: BaseNode, evtType: string) {
                 if (node && node.children && node.children.length > 0) {
                     for (let i = 0; i < node.children.length; i++) {

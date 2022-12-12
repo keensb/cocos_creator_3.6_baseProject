@@ -15,6 +15,12 @@ declare module "cc" {//<----------注意:这里坑爹的地方  模块名不是 
          */
         stage: Scene;
 
+
+        /**
+         * 检测Node和其下各级子节点有没有这个Component ,有的话存进数组并返回
+         */
+        findSubComponent<T extends Component>(componentType: new (...parmas) => T, ...agrs): T[];
+
     }
 
     export interface Node {//这里声明是 interface Node  , 避免和 class Node 重复
