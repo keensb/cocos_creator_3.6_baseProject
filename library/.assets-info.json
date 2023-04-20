@@ -1,6 +1,6 @@
 {
   "F:\\creator\\project_3\\NewProject_36\\assets\\res.meta": {
-    "time": 1681970590825.4082
+    "time": 1681971964831.947
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\scene.meta": {
     "time": 1670832434494.1965
@@ -68,7 +68,7 @@
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\com\\MainEntry.ts": {
-    "time": 1681965304253.7358,
+    "time": 1681971991241.6833,
     "uuid": "6ed06b80-76ca-49b0-aebe-dfa781633962",
     "missing": false
   },
@@ -94,7 +94,7 @@
     "time": 1670832434493.194
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\scene.scene": {
-    "time": 1681962170158.0686,
+    "time": 1681971474600.4585,
     "uuid": "3feeb5bb-66f3-4c75-9662-fca9de185c19",
     "missing": false
   },
@@ -147,7 +147,7 @@
     "time": 1681961192609.3162
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\utils\\asyncAsset.ts": {
-    "time": 1681960734842.162,
+    "time": 1681971928211.8608,
     "uuid": "27ad81e9-db69-4d36-9093-7df04639ce95",
     "missing": false
   },
@@ -163,7 +163,7 @@
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\config\\useAssets.ts": {
-    "time": 1681965543714.5762,
+    "time": 1681970899252.445,
     "uuid": "73dd0325-6f92-4f50-a467-ad2dfd053f46",
     "missing": false
   }

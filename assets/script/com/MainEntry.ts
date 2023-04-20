@@ -4,6 +4,8 @@ import { superSetter } from '../utils/GlabolImport';
 
 import "../overwrite/EngineOverride";//不带 from 关键字的import,  作用是直接导进来并立即执行 相当于js的 require()
 import { DEBUG } from 'cc/env';
+import { useAssets } from '../config/useAssets';
+import { asyncAsset } from '../utils/asyncAsset';
 
 const { ccclass, property } = _decorator;
 
@@ -44,13 +46,18 @@ export class MainEntry extends Component {
 
         tween(bg).to(5, { scaleX: 2 }).start();
         tween(bg).to(5, { hh: 400 }).start();
-        
-        
-        /* assetManager.loadAny({url:'assets/res/dog.jpg', type: SpriteAtlas}, (err, res) => {
+
+
+
+
+
+        /* 
+            assetManager.loadAny({url:'assets/res/dog.jpg', type: SpriteAtlas}, (err, res) => {
             let sprite = this.getComponent(Sprite);
             //sprite.spriteFrame = res.getSpriteFrame(bg);
             console.log("aaaaa", err,res);
-        }) */
+            }) 
+        */
         
         
         /* assetManager.loadAny({uuid:'xxx', type: SpriteAtlas}, (err, res) => {
@@ -66,6 +73,8 @@ export class MainEntry extends Component {
         console.log("textObj2 =", textObj2, textObj2["name"])
 
         var xxx = new Node();
+
+        
         
 
         this.node.addChild(xxx)
@@ -75,9 +84,13 @@ export class MainEntry extends Component {
         console.log("STAGE_CHANGED2222", xxx.stage, DEBUG);
 
         console.log(director.getScene().findSubComponent(MainEntry), find("Canvas").findSubComponent(MainEntry));
-
         
+        this.assetHandler();
+    }
 
+    private async assetHandler(): Promise<void> {
+        let bundle = await asyncAsset.loadOneBundle("res", true);
+        console.log(bundle);
     }
 
     private test<T>(x: number, y: number, inst: new (...parmas) => T, ...args): T {

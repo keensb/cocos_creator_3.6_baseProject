@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 16838.10875415802,
+      "mTimestamp": 7427.737892150879,
       "chunkId": "ca4374a3008ca85000d465787e739a302e4e4ac6",
       "imports": [
         {
@@ -535,7 +535,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 12201133.163621902,
+      "mTimestamp": 970298.114235878,
       "chunkId": "0a9720cd6802460e9ee754bdc90c884642eb8e69",
       "imports": [
         {
@@ -850,7 +850,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1681958393789,
+      "mTimestamp": 1681971027040,
       "chunkId": "84741ad843cea9a440c5d8c2d379669b6551400d",
       "imports": [],
       "type": "esm",
@@ -944,10 +944,10 @@
     },
     "file:///F:/creator/project_3/NewProject_36/assets/script/com/MainEntry.ts": {
       "mTimestamp": {
-        "mtime": 1681965304253.7358,
+        "mtime": 1681971991241.6833,
         "uuid": "6ed06b80-76ca-49b0-aebe-dfa781633962"
       },
-      "chunkId": "9636e2e9698dc7620ec8841583f70d5355b59cec",
+      "chunkId": "c33b858076d08f9dace3df21a96c81be9d2a7aa6",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -1026,6 +1026,20 @@
               "column": 30
             }
           }
+        },
+        {
+          "value": "../utils/asyncAsset",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 27
+            },
+            "end": {
+              "line": 8,
+              "column": 48
+            }
+          }
         }
       ],
       "type": "esm",
@@ -1083,6 +1097,13 @@
           "resolved": {
             "type": "external",
             "specifierOrURL": "cc/env"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/asyncAsset.ts"
           },
           "messages": []
         }
@@ -1216,11 +1237,15 @@
     },
     "file:///F:/creator/project_3/NewProject_36/assets/script/utils/asyncAsset.ts": {
       "mTimestamp": {
-        "mtime": 1681960734842.162,
+        "mtime": 1681971928211.8608,
         "uuid": "27ad81e9-db69-4d36-9093-7df04639ce95"
       },
-      "chunkId": "12f41d071052f9fb3f3da987611384d743dc59d3",
+      "chunkId": "11e5ce13a4e0919fffcafe77f354242f5cc94ad2",
       "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
         {
           "value": "cc"
         },
@@ -1239,6 +1264,20 @@
               "column": 67
             }
           }
+        },
+        {
+          "value": "../config/useAssets",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 26
+            },
+            "end": {
+              "line": 2,
+              "column": 47
+            }
+          }
         }
       ],
       "type": "esm",
@@ -1246,7 +1285,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "cce:/internal/x/cc"
+            "url": "cce:/internal/code-quality/cr.mjs"
           },
           "messages": []
         },
@@ -1261,6 +1300,20 @@
           "resolved": {
             "type": "module",
             "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/config/useAssets.ts"
           },
           "messages": []
         }
@@ -1268,10 +1321,10 @@
     },
     "file:///F:/creator/project_3/NewProject_36/assets/script/config/useAssets.ts": {
       "mTimestamp": {
-        "mtime": 1681965543714.5762,
+        "mtime": 1681970899252.445,
         "uuid": "73dd0325-6f92-4f50-a467-ad2dfd053f46"
       },
-      "chunkId": "57ca7ca0a87a8f3c67422f20cce8511d1f1dfe74",
+      "chunkId": "20e982bfc776027785aa4fbf9d2f9896fa670c39",
       "imports": [
         {
           "value": "cc"
