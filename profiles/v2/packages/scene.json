@@ -67,10 +67,28 @@
         "y": 0,
         "z": 0
       }
+    },
+    "3feeb5bb-66f3-4c75-9662-fca9de185c19": {
+      "position": {
+        "x": 479.99999999999994,
+        "y": 320,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
     }
   },
   "camera-uuids": [
-    "c77ecaa8-c936-46c4-a5b0-98692673ed87"
+    "3feeb5bb-66f3-4c75-9662-fca9de185c19"
   ],
   "float-window": {
     "position": {

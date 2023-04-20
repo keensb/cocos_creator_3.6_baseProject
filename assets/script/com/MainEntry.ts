@@ -1,4 +1,4 @@
-import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode, NodeEventType, Scene } from 'cc';
+import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode, NodeEventType, Scene, resources, AssetManager, assetManager, SpriteAtlas, Sprite, SpriteFrame, dragonBones } from 'cc';
 import { ClassSon } from '../utils/ClassSon';
 import { superSetter } from '../utils/GlabolImport';
 
@@ -26,6 +26,7 @@ export class MainEntry extends Component {
     }
 
     start() {
+        
         let son = new ClassSon();
         log(son.a)
         superSetter(ClassSon, son, "a", 5);
@@ -43,6 +44,19 @@ export class MainEntry extends Component {
 
         tween(bg).to(5, { scaleX: 2 }).start();
         tween(bg).to(5, { hh: 400 }).start();
+        
+        
+        /* assetManager.loadAny({url:'assets/res/dog.jpg', type: SpriteAtlas}, (err, res) => {
+            let sprite = this.getComponent(Sprite);
+            //sprite.spriteFrame = res.getSpriteFrame(bg);
+            console.log("aaaaa", err,res);
+        }) */
+        
+        
+        /* assetManager.loadAny({uuid:'xxx', type: SpriteAtlas}, (err, res) => {
+            let sprite = this.getComponent(Sprite);
+            sprite.spriteFrame = res.getSpriteFrame(bg);
+          }) */
 
         NodeEventType.SCENE_CHANGED_FOR_PERSISTS
 

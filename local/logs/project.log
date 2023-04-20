@@ -1,107 +1,139 @@
-2022-12-12T08:07:46.124Z - log: [Package] menu@1.0.0 enable
-2022-12-12T08:07:46.126Z - log: [Package] profile@1.0.0 enable
-2022-12-12T08:07:46.134Z - log: [Package] project@1.0.2 enable
-2022-12-12T08:07:46.138Z - log: [Package] messages@1.0.0 enable
-2022-12-12T08:07:46.140Z - log: [Package] program@1.0.0 enable
-2022-12-12T08:07:46.146Z - log: [Package] tester@1.0.0 enable
-2022-12-12T08:07:46.151Z - log: [Package] preferences@1.0.0 enable
-2022-12-12T08:07:49.293Z - log: Profile changed: engine (modules.includeModules: 2d,animation,audio,base,dragon-bones,gfx-webgl,gfx-webgl2,intersection-2d,marionette,particle-2d,physics-2d-box2d,profiler,skeletal-animation,spine,tiled-map,tween,ui,video,webview)
-2022-12-12T08:07:49.305Z - log: [Package] engine@1.0.6 enable
-2022-12-12T08:07:50.782Z - log: [Package] programming@1.0.0 enable
-2022-12-12T08:07:50.822Z - warn: 
-2022-12-12T08:07:50.856Z - warn: 
-2022-12-12T08:07:51.027Z - log: [Package] device@1.0.1 enable
-2022-12-12T08:07:51.051Z - log: [Package] ui-kit@1.0.1 enable
-2022-12-12T08:07:51.075Z - log: [Package] engine-extends@1.0.0 enable
-2022-12-12T08:07:51.134Z - log: [Package] asset-db@1.0.0 enable
-2022-12-12T08:07:51.135Z - warn: 
-2022-12-12T08:07:51.169Z - log: [Package] scene@1.0.0 enable
-2022-12-12T08:07:51.302Z - log: [Package] server@1.0.0 enable
-2022-12-12T08:07:51.328Z - log: [Package] utils@1.0.0 enable
-2022-12-12T08:07:52.036Z - warn: Browserslist: caniuse-lite is outdated. Please run:
+2023-04-20T02:39:50.050Z - log: [Package] menu@1.0.0 enable
+2023-04-20T02:39:50.052Z - log: [Package] profile@1.0.0 enable
+2023-04-20T02:39:50.058Z - log: [Package] project@1.0.2 enable
+2023-04-20T02:39:50.062Z - log: [Package] messages@1.0.0 enable
+2023-04-20T02:39:50.065Z - log: [Package] program@1.0.0 enable
+2023-04-20T02:39:50.070Z - log: [Package] tester@1.0.0 enable
+2023-04-20T02:39:50.074Z - log: [Package] preferences@1.0.0 enable
+2023-04-20T02:39:52.563Z - log: error Error: EEXIST: file already exists, symlink 'D:\ProgramData\cocos\editors\3.6.0\resources\resources\3d\engine\native' -> 'D:\ProgramData\cocos\editors\3.6.0\resources\resources\3d\engine-native'
+    at symlinkSync (fs.js:1169:3)
+    at createSymlink (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\browser\index.ccc:1:6169)
+    at Package.load (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\browser\index.ccc:1:3421)
+    at Package.execLifeFunc (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\package\dist\browser\package.ccc:1:1181)
+    at Package.enable (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\package\dist\browser\package.ccc:1:3339)
+    at PackageManager.enable (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\package\dist\browser\index.js:1:1743)
+    at Object.<anonymous> (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\creator\dist\package\browser\index.ccc:1:7461)
+    at Generator.next (<anonymous>)
+    at i (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\creator\dist\package\browser\index.ccc:1:131)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  errno: -4075,
+  syscall: 'symlink',
+  code: 'EEXIST',
+  path: 'D:\\ProgramData\\cocos\\editors\\3.6.0\\resources\\resources\\3d\\engine\\native',
+  dest: 'D:\\ProgramData\\cocos\\editors\\3.6.0\\resources\\resources\\3d\\engine-native'
+}
+2023-04-20T02:39:53.189Z - log: Profile changed: engine (modules.includeModules: 2d,animation,audio,base,dragon-bones,gfx-webgl,gfx-webgl2,intersection-2d,marionette,particle-2d,physics-2d-box2d,profiler,skeletal-animation,spine,tiled-map,tween,ui,video,webview)
+2023-04-20T02:39:53.208Z - log: [Package] engine@1.0.6 enable
+2023-04-20T02:39:54.776Z - log: [Package] programming@1.0.0 enable
+2023-04-20T02:39:54.818Z - warn: 
+2023-04-20T02:39:54.854Z - warn: 
+2023-04-20T02:39:55.024Z - log: [Package] device@1.0.1 enable
+2023-04-20T02:39:55.049Z - log: [Package] ui-kit@1.0.1 enable
+2023-04-20T02:39:55.071Z - log: [Package] engine-extends@1.0.0 enable
+2023-04-20T02:39:55.129Z - log: [Package] asset-db@1.0.0 enable
+2023-04-20T02:39:55.130Z - warn: 
+2023-04-20T02:39:55.163Z - log: [Package] scene@1.0.0 enable
+2023-04-20T02:39:55.289Z - log: [Package] server@1.0.0 enable
+2023-04-20T02:39:55.317Z - log: [Package] utils@1.0.0 enable
+2023-04-20T02:39:56.028Z - warn: Browserslist: caniuse-lite is outdated. Please run:
 npx browserslist@latest --update-db
 
 Why you should do it regularly:
 https://github.com/browserslist/browserslist#browsers-data-updating
-2022-12-12T08:07:55.663Z - warn: 
-2022-12-12T08:07:55.663Z - warn: 
-2022-12-12T08:07:55.663Z - warn: 
-2022-12-12T08:07:55.683Z - warn: 
-2022-12-12T08:07:55.683Z - warn: 
-2022-12-12T08:07:55.683Z - warn: 
-2022-12-12T08:07:57.062Z - warn: 
-2022-12-12T08:07:57.119Z - log: [Package] preview@1.0.1 enable
-2022-12-12T08:07:57.150Z - log: [Package] animator@1.0.0 enable
-2022-12-12T08:07:57.188Z - log: pluginManager init: 0.13ms
-2022-12-12T08:07:58.140Z - warn: 
-2022-12-12T08:07:58.140Z - warn: 
-2022-12-12T08:07:58.140Z - warn: 
-2022-12-12T08:07:58.726Z - log: [Package] builder@1.3.3 enable
-2022-12-12T08:07:58.756Z - log: [Package] shortcuts@1.0.1 enable
-2022-12-12T08:07:58.785Z - log: [Package] animation-graph@1.0.0 enable
-2022-12-12T08:07:58.811Z - log: [Package] about@1.0.0 enable
-2022-12-12T08:07:58.840Z - log: [Package] assets@1.0.0 enable
-2022-12-12T08:07:58.866Z - log: [Package] console@1.0.0 enable
-2022-12-12T08:07:59.016Z - log: [Package] extension@3.0.16 enable
-2022-12-12T08:07:59.045Z - log: [Package] hierarchy@1.0.0 enable
-2022-12-12T08:07:59.072Z - log: [Package] inspector@1.0.0 enable
-2022-12-12T08:07:59.099Z - log: [Package] lightmap@1.0.4 enable
-2022-12-12T08:07:59.535Z - log: [Package] localization-editor@1.0.0 enable
-2022-12-12T08:07:59.541Z - log: [Build-plugin] register pkg localization-editor: 4.248ms
-2022-12-12T08:07:59.566Z - log: [Package] node-library@1.0.1 enable
-2022-12-12T08:07:59.588Z - log: [Package] package-asset@1.0.0 enable
-2022-12-12T08:07:59.615Z - log: [Package] process@1.0.0 enable
-2022-12-12T08:07:59.642Z - log: [Package] reference-image@1.0.0 enable
-2022-12-12T08:07:59.664Z - log: [Package] alipay-mini-game@1.0.1 enable
-2022-12-12T08:07:59.665Z - log: [Build-plugin] register pkg alipay-mini-game: 0.876ms
-2022-12-12T08:07:59.687Z - log: [Package] android@1.0.1 enable
-2022-12-12T08:07:59.693Z - log: [Build-plugin] register pkg android: 5.499ms
-2022-12-12T08:07:59.715Z - log: [Package] baidu-mini-game@1.0.1 enable
-2022-12-12T08:07:59.718Z - log: [Build-plugin] register pkg baidu-mini-game: 3.11ms
-2022-12-12T08:07:59.777Z - log: [Package] bytedance-mini-game@1.0.2 enable
-2022-12-12T08:07:59.779Z - log: [Build-plugin] register pkg bytedance-mini-game: 2.255ms
-2022-12-12T08:07:59.801Z - log: [Package] certificate@1.0.0 enable
-2022-12-12T08:07:59.823Z - log: [Package] channel-upload-tools@1.0.0 enable
-2022-12-12T08:07:59.845Z - log: [Package] cocos-play@1.0.1 enable
-2022-12-12T08:07:59.850Z - log: [Build-plugin] register pkg cocos-play: 4.331ms
-2022-12-12T08:07:59.871Z - log: [Package] huawei-agc@1.0.0 enable
-2022-12-12T08:07:59.874Z - log: [Build-plugin] register pkg huawei-agc: 3.116ms
-2022-12-12T08:07:59.897Z - log: [Package] huawei-quick-game@1.0.1 enable
-2022-12-12T08:07:59.900Z - log: [Build-plugin] register pkg huawei-quick-game: 3.305ms
-2022-12-12T08:07:59.924Z - log: [Package] ios@1.0.0 enable
-2022-12-12T08:07:59.928Z - log: [Build-plugin] register pkg ios: 3.198ms
-2022-12-12T08:07:59.949Z - log: [Package] linux@1.0.0 enable
-2022-12-12T08:07:59.950Z - log: [Build-plugin] register pkg linux: 0.836ms
-2022-12-12T08:07:59.972Z - log: [Package] mac@1.0.0 enable
-2022-12-12T08:07:59.977Z - log: [Build-plugin] register pkg mac: 3.88ms
-2022-12-12T08:08:00.062Z - log: [Package] native@1.0.2 enable
-2022-12-12T08:08:00.065Z - log: [Build-plugin] register pkg native: 2.772ms
-2022-12-12T08:08:00.088Z - log: [Package] ohos@1.0.0 enable
-2022-12-12T08:08:00.091Z - log: [Build-plugin] register pkg ohos: 3.032ms
-2022-12-12T08:08:00.114Z - log: [Package] open-harmonyos@1.0.0 enable
-2022-12-12T08:08:00.115Z - log: [Build-plugin] register pkg open-harmonyos: 0.862ms
-2022-12-12T08:08:00.135Z - log: [Package] oppo-mini-game@1.0.1 enable
-2022-12-12T08:08:00.139Z - log: [Build-plugin] register pkg oppo-mini-game: 3.367ms
-2022-12-12T08:08:00.161Z - log: [Package] runtime-dev-tools@1.0.0 enable
-2022-12-12T08:08:00.182Z - log: [Package] vivo-mini-game@1.0.1 enable
-2022-12-12T08:08:00.186Z - log: [Build-plugin] register pkg vivo-mini-game: 3.35ms
-2022-12-12T08:08:00.227Z - log: [Package] web-desktop@1.0.1 enable
-2022-12-12T08:08:00.231Z - log: [Build-plugin] register pkg web-desktop: 3.296ms
-2022-12-12T08:08:00.259Z - log: [Package] web-mobile@1.0.1 enable
-2022-12-12T08:08:00.263Z - log: [Build-plugin] register pkg web-mobile: 2.96ms
-2022-12-12T08:08:00.291Z - log: [Package] wechatgame@1.0.2 enable
-2022-12-12T08:08:00.295Z - log: [Build-plugin] register pkg wechatgame: 3.567ms
-2022-12-12T08:08:00.317Z - log: [Package] windows@1.0.1 enable
-2022-12-12T08:08:00.320Z - log: [Build-plugin] register pkg windows: 2.981ms
-2022-12-12T08:08:00.342Z - log: [Package] xiaomi-quick-game@1.0.1 enable
-2022-12-12T08:08:00.345Z - log: [Build-plugin] register pkg xiaomi-quick-game: 3.404ms
-2022-12-12T08:08:00.563Z - log: [Package] cocos-service@3.0.4 enable
-2022-12-12T08:08:00.567Z - log: [Build-plugin] register pkg cocos-service: 1.631ms
-2022-12-12T08:08:00.595Z - log: [Package] importer@1.0.0 enable
-2022-12-12T08:08:00.811Z - log: [Im-plugin] Check im-plugin version.
-2022-12-12T08:08:00.816Z - log: [Package] im-plugin@3.0.9 enable
-2022-12-12T08:08:02.855Z - log: [Im-plugin] No online info of im-plugin.
-2022-12-12T08:08:04.632Z - log: [Scene] Please specifiy a default value for "cc.EditorExtendable.__editorExtras__" property at its declaration:
+2023-04-20T02:40:07.928Z - warn: 
+2023-04-20T02:40:07.928Z - warn: 
+2023-04-20T02:40:07.928Z - warn: 
+2023-04-20T02:40:07.943Z - warn: 
+2023-04-20T02:40:07.943Z - warn: 
+2023-04-20T02:40:07.943Z - warn: 
+2023-04-20T02:40:10.540Z - warn: 
+2023-04-20T02:40:10.612Z - log: [Package] preview@1.0.1 enable
+2023-04-20T02:40:10.642Z - log: [Package] animator@1.0.0 enable
+2023-04-20T02:40:10.682Z - log: pluginManager init: 0.217ms
+2023-04-20T02:40:10.655Z - warn: [Programming] Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme[Programming] Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme  
+at Logger.record (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)  
+at console.warn (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)  
+at Object.oldDataWarning (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@cocos\creator-programming-mod-lo\node_modules\browserslist\node.js:386:15)  
+at browserslist (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@cocos\creator-programming-mod-lo\node_modules\browserslist\index.js:394:7)  
+at resolveTargets (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@cocos\creator-programming-mod-lo\node_modules\@babel\helper-compilation-targets\lib\index.js:165:20)  
+at getTargets (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@cocos\creator-programming-mod-lo\node_modules\@babel\helper-compilation-targets\lib\index.js:210:27)  
+at getLocalTargets (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@cocos\creator-programming-mod-lo\node_modules\@babel\preset-env\lib\index.js:227:48)  
+at D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@cocos\creator-programming-mod-lo\node_modules\@babel\preset-env\lib\index.js:288:15
+2023-04-20T02:40:12.835Z - log: [Package] builder@1.3.3 enable
+2023-04-20T02:40:12.868Z - log: [Package] shortcuts@1.0.1 enable
+2023-04-20T02:40:12.895Z - log: [Package] animation-graph@1.0.0 enable
+2023-04-20T02:40:12.922Z - log: [Package] about@1.0.0 enable
+2023-04-20T02:40:12.952Z - log: [Package] assets@1.0.0 enable
+2023-04-20T02:40:12.982Z - log: [Package] console@1.0.0 enable
+2023-04-20T02:40:13.150Z - log: [Package] extension@3.0.16 enable
+2023-04-20T02:40:13.176Z - log: [Package] hierarchy@1.0.0 enable
+2023-04-20T02:40:13.204Z - log: [Package] inspector@1.0.0 enable
+2023-04-20T02:40:13.231Z - log: [Package] lightmap@1.0.4 enable
+2023-04-20T02:40:13.858Z - log: [Package] localization-editor@1.0.0 enable
+2023-04-20T02:40:13.872Z - log: [Build-plugin] register pkg localization-editor: 11.404ms
+2023-04-20T02:40:13.899Z - log: [Package] node-library@1.0.1 enable
+2023-04-20T02:40:13.921Z - log: [Package] package-asset@1.0.0 enable
+2023-04-20T02:40:13.947Z - log: [Package] process@1.0.0 enable
+2023-04-20T02:40:13.989Z - log: [Package] reference-image@1.0.0 enable
+2023-04-20T02:40:14.010Z - log: [Package] alipay-mini-game@1.0.1 enable
+2023-04-20T02:40:14.011Z - log: [Build-plugin] register pkg alipay-mini-game: 0.89ms
+2023-04-20T02:40:14.034Z - log: [Package] android@1.0.1 enable
+2023-04-20T02:40:14.044Z - log: [Build-plugin] register pkg android: 10.237ms
+2023-04-20T02:40:14.066Z - log: [Package] baidu-mini-game@1.0.1 enable
+2023-04-20T02:40:14.069Z - log: [Build-plugin] register pkg baidu-mini-game: 3.167ms
+2023-04-20T02:40:14.131Z - log: [Package] bytedance-mini-game@1.0.2 enable
+2023-04-20T02:40:14.134Z - log: [Build-plugin] register pkg bytedance-mini-game: 2.222ms
+2023-04-20T02:40:14.155Z - log: [Package] certificate@1.0.0 enable
+2023-04-20T02:40:14.176Z - log: [Package] channel-upload-tools@1.0.0 enable
+2023-04-20T02:40:14.198Z - log: [Package] cocos-play@1.0.1 enable
+2023-04-20T02:40:14.202Z - log: [Build-plugin] register pkg cocos-play: 4.029ms
+2023-04-20T02:40:14.224Z - log: [Package] huawei-agc@1.0.0 enable
+2023-04-20T02:40:14.227Z - log: [Build-plugin] register pkg huawei-agc: 3.032ms
+2023-04-20T02:40:14.249Z - log: [Package] huawei-quick-game@1.0.1 enable
+2023-04-20T02:40:14.252Z - log: [Build-plugin] register pkg huawei-quick-game: 3.333ms
+2023-04-20T02:40:14.277Z - log: [Package] ios@1.0.0 enable
+2023-04-20T02:40:14.280Z - log: [Build-plugin] register pkg ios: 2.971ms
+2023-04-20T02:40:14.302Z - log: [Package] linux@1.0.0 enable
+2023-04-20T02:40:14.303Z - log: [Build-plugin] register pkg linux: 1.069ms
+2023-04-20T02:40:14.326Z - log: [Package] mac@1.0.0 enable
+2023-04-20T02:40:14.331Z - log: [Build-plugin] register pkg mac: 5.197ms
+2023-04-20T02:40:14.463Z - log: [Package] native@1.0.2 enable
+2023-04-20T02:40:14.471Z - log: [Build-plugin] register pkg native: 6.877ms
+2023-04-20T02:40:14.500Z - log: [Package] ohos@1.0.0 enable
+2023-04-20T02:40:14.504Z - log: [Build-plugin] register pkg ohos: 3.155ms
+2023-04-20T02:40:14.526Z - log: [Package] open-harmonyos@1.0.0 enable
+2023-04-20T02:40:14.527Z - log: [Build-plugin] register pkg open-harmonyos: 1.083ms
+2023-04-20T02:40:14.549Z - log: [Package] oppo-mini-game@1.0.1 enable
+2023-04-20T02:40:14.553Z - log: [Build-plugin] register pkg oppo-mini-game: 3.49ms
+2023-04-20T02:40:14.575Z - log: [Package] runtime-dev-tools@1.0.0 enable
+2023-04-20T02:40:14.597Z - log: [Package] vivo-mini-game@1.0.1 enable
+2023-04-20T02:40:14.600Z - log: [Build-plugin] register pkg vivo-mini-game: 3.37ms
+2023-04-20T02:40:14.642Z - log: [Package] web-desktop@1.0.1 enable
+2023-04-20T02:40:14.646Z - log: [Build-plugin] register pkg web-desktop: 3.497ms
+2023-04-20T02:40:14.675Z - log: [Package] web-mobile@1.0.1 enable
+2023-04-20T02:40:14.679Z - log: [Build-plugin] register pkg web-mobile: 3.235ms
+2023-04-20T02:40:14.708Z - log: [Package] wechatgame@1.0.2 enable
+2023-04-20T02:40:14.711Z - log: [Build-plugin] register pkg wechatgame: 3.45ms
+2023-04-20T02:40:14.733Z - log: [Package] windows@1.0.1 enable
+2023-04-20T02:40:14.736Z - log: [Build-plugin] register pkg windows: 3.198ms
+2023-04-20T02:40:14.761Z - log: [Package] xiaomi-quick-game@1.0.1 enable
+2023-04-20T02:40:14.765Z - log: [Build-plugin] register pkg xiaomi-quick-game: 3.806ms
+2023-04-20T02:40:15.018Z - log: [Package] cocos-service@3.0.4 enable
+2023-04-20T02:40:15.025Z - log: [Build-plugin] register pkg cocos-service: 2.356ms
+2023-04-20T02:40:15.045Z - warn: 
+2023-04-20T02:40:15.045Z - warn: 
+2023-04-20T02:40:15.045Z - warn: 
+2023-04-20T02:40:15.052Z - log: [Package] importer@1.0.0 enable
+2023-04-20T02:40:15.294Z - log: [Im-plugin] Check im-plugin version.
+2023-04-20T02:40:15.299Z - log: [Package] im-plugin@3.0.9 enable
+2023-04-20T02:40:15.380Z - warn: [Window] Message does not exist: scene.programming:pack-build-end
+2023-04-20T02:40:15.395Z - warn: [Window] Message does not exist: scene.programming:pack-build-end
+2023-04-20T02:40:16.202Z - log: [Im-plugin] No online info of im-plugin.
+2023-04-20T02:40:20.732Z - log: [Scene] Please specifiy a default value for "cc.EditorExtendable.__editorExtras__" property at its declaration:
 
  
 // Before:
@@ -110,7 +142,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.652Z - log: [Scene] Please specifiy a default value for "CCPropertyOverrideInfo.value" property at its declaration:
+2023-04-20T02:40:20.753Z - log: [Scene] Please specifiy a default value for "CCPropertyOverrideInfo.value" property at its declaration:
 
  
 // Before:
@@ -119,7 +151,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.653Z - log: [Scene] Please specifiy a default value for "cc.PrefabInfo.asset" property at its declaration:
+2023-04-20T02:40:20.753Z - log: [Scene] Please specifiy a default value for "cc.PrefabInfo.asset" property at its declaration:
 
  
 // Before:
@@ -128,7 +160,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.653Z - log: [Scene] Please specifiy a default value for "cc.PrefabInfo.nestedPrefabInstanceRoots" property at its declaration:
+2023-04-20T02:40:20.753Z - log: [Scene] Please specifiy a default value for "cc.PrefabInfo.nestedPrefabInstanceRoots" property at its declaration:
 
  
 // Before:
@@ -137,9 +169,9 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.656Z - log: [Scene] The 'default' attribute of 'ColorDesc.beginAccesses' must be an array
-2022-12-12T08:08:04.656Z - log: [Scene] The 'default' attribute of 'ColorDesc.endAccesses' must be an array
-2022-12-12T08:08:04.670Z - log: [Scene] Please specifiy a default value for "cc.animation.TrackBinding.proxy" property at its declaration:
+2023-04-20T02:40:20.757Z - log: [Scene] The 'default' attribute of 'ColorDesc.beginAccesses' must be an array
+2023-04-20T02:40:20.757Z - log: [Scene] The 'default' attribute of 'ColorDesc.endAccesses' must be an array
+2023-04-20T02:40:20.769Z - log: [Scene] Please specifiy a default value for "cc.animation.TrackBinding.proxy" property at its declaration:
 
  
 // Before:
@@ -148,7 +180,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.670Z - log: [Scene] Please specifiy a default value for "cc.animation.Channel._curve" property at its declaration:
+2023-04-20T02:40:20.770Z - log: [Scene] Please specifiy a default value for "cc.animation.Channel._curve" property at its declaration:
 
  
 // Before:
@@ -157,7 +189,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.670Z - log: [Scene] Please specifiy a default value for "cc.animation.SingleChannelTrack._channel" property at its declaration:
+2023-04-20T02:40:20.770Z - log: [Scene] Please specifiy a default value for "cc.animation.SingleChannelTrack._channel" property at its declaration:
 
  
 // Before:
@@ -166,7 +198,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.671Z - log: [Scene] Please specifiy a default value for "cc.animation.VectorTrack._channels" property at its declaration:
+2023-04-20T02:40:20.771Z - log: [Scene] Please specifiy a default value for "cc.animation.VectorTrack._channels" property at its declaration:
 
  
 // Before:
@@ -175,7 +207,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.671Z - log: [Scene] Please specifiy a default value for "cc.animation.ColorTrack._channels" property at its declaration:
+2023-04-20T02:40:20.771Z - log: [Scene] Please specifiy a default value for "cc.animation.ColorTrack._channels" property at its declaration:
 
  
 // Before:
@@ -184,7 +216,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.671Z - log: [Scene] Please specifiy a default value for "cc.animation.SizeTrack._channels" property at its declaration:
+2023-04-20T02:40:20.771Z - log: [Scene] Please specifiy a default value for "cc.animation.SizeTrack._channels" property at its declaration:
 
  
 // Before:
@@ -193,7 +225,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.672Z - log: [Scene] Please specifiy a default value for "cc.animation.Transition.from" property at its declaration:
+2023-04-20T02:40:20.772Z - log: [Scene] Please specifiy a default value for "cc.animation.Transition.from" property at its declaration:
 
  
 // Before:
@@ -202,7 +234,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.672Z - log: [Scene] Please specifiy a default value for "cc.animation.Transition.to" property at its declaration:
+2023-04-20T02:40:20.772Z - log: [Scene] Please specifiy a default value for "cc.animation.Transition.to" property at its declaration:
 
  
 // Before:
@@ -211,7 +243,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.672Z - log: [Scene] Please specifiy a default value for "cc.animation.StateMachine._entryState" property at its declaration:
+2023-04-20T02:40:20.772Z - log: [Scene] Please specifiy a default value for "cc.animation.StateMachine._entryState" property at its declaration:
 
  
 // Before:
@@ -220,7 +252,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.672Z - log: [Scene] Please specifiy a default value for "cc.animation.StateMachine._exitState" property at its declaration:
+2023-04-20T02:40:20.772Z - log: [Scene] Please specifiy a default value for "cc.animation.StateMachine._exitState" property at its declaration:
 
  
 // Before:
@@ -229,7 +261,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.672Z - log: [Scene] Please specifiy a default value for "cc.animation.StateMachine._anyState" property at its declaration:
+2023-04-20T02:40:20.773Z - log: [Scene] Please specifiy a default value for "cc.animation.StateMachine._anyState" property at its declaration:
 
  
 // Before:
@@ -238,7 +270,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.673Z - log: [Scene] Please specifiy a default value for "cc.animation.Layer._stateMachine" property at its declaration:
+2023-04-20T02:40:20.773Z - log: [Scene] Please specifiy a default value for "cc.animation.Layer._stateMachine" property at its declaration:
 
  
 // Before:
@@ -247,7 +279,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.674Z - log: [Scene] Please specifiy a default value for "cc.animation.ExoticVectorLikeTrackValues._values" property at its declaration:
+2023-04-20T02:40:20.774Z - log: [Scene] Please specifiy a default value for "cc.animation.ExoticVectorLikeTrackValues._values" property at its declaration:
 
  
 // Before:
@@ -256,7 +288,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.674Z - log: [Scene] Please specifiy a default value for "cc.animation.ExoticVectorLikeTrackValues._isQuantized" property at its declaration:
+2023-04-20T02:40:20.774Z - log: [Scene] Please specifiy a default value for "cc.animation.ExoticVectorLikeTrackValues._isQuantized" property at its declaration:
 
  
 // Before:
@@ -265,7 +297,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.674Z - log: [Scene] Please specifiy a default value for "cc.animation.ExoticTrack.times" property at its declaration:
+2023-04-20T02:40:20.774Z - log: [Scene] Please specifiy a default value for "cc.animation.ExoticTrack.times" property at its declaration:
 
  
 // Before:
@@ -274,7 +306,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.674Z - log: [Scene] Please specifiy a default value for "cc.animation.ExoticTrack.values" property at its declaration:
+2023-04-20T02:40:20.774Z - log: [Scene] Please specifiy a default value for "cc.animation.ExoticTrack.values" property at its declaration:
 
  
 // Before:
@@ -283,7 +315,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.674Z - log: [Scene] Please specifiy a default value for "cc.animation.QuantizedFloatArray.originalPrecision" property at its declaration:
+2023-04-20T02:40:20.774Z - log: [Scene] Please specifiy a default value for "cc.animation.QuantizedFloatArray.originalPrecision" property at its declaration:
 
  
 // Before:
@@ -292,7 +324,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.674Z - log: [Scene] Please specifiy a default value for "cc.animation.QuantizedFloatArray.min" property at its declaration:
+2023-04-20T02:40:20.774Z - log: [Scene] Please specifiy a default value for "cc.animation.QuantizedFloatArray.min" property at its declaration:
 
  
 // Before:
@@ -301,7 +333,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.674Z - log: [Scene] Please specifiy a default value for "cc.animation.QuantizedFloatArray.extent" property at its declaration:
+2023-04-20T02:40:20.774Z - log: [Scene] Please specifiy a default value for "cc.animation.QuantizedFloatArray.extent" property at its declaration:
 
  
 // Before:
@@ -310,7 +342,7 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.674Z - log: [Scene] Please specifiy a default value for "cc.animation.QuantizedFloatArray.values" property at its declaration:
+2023-04-20T02:40:20.774Z - log: [Scene] Please specifiy a default value for "cc.animation.QuantizedFloatArray.values" property at its declaration:
 
  
 // Before:
@@ -319,312 +351,174 @@ myProp;
 // After:
 @property(...)
 myProp = 0;
-2022-12-12T08:08:04.708Z - log: [Scene] 'cc.ParticleSystem2D.color' hides inherited property 'cc.UIRenderer.color'. To make the current property override that implementation, add the `override: true` attribute please.
-2022-12-12T08:08:04.748Z - log: [Scene] No needs to indicate the 'cc.Boolean' attribute for "cc.Terrain._receiveShadow", which its default value is type of Boolean.
-2022-12-12T08:08:04.748Z - log: [Scene] No needs to indicate the 'cc.Boolean' attribute for "cc.Terrain._useNormalmap", which its default value is type of Boolean.
-2022-12-12T08:08:04.748Z - log: [Scene] No needs to indicate the 'cc.Boolean' attribute for "cc.Terrain._usePBR", which its default value is type of Boolean.
-2022-12-12T08:08:04.748Z - log: [Scene] No needs to indicate the 'cc.Boolean' attribute for "cc.Terrain._lodEnable", which its default value is type of Boolean.
-2022-12-12T08:08:04.828Z - info: [Scene] [Physics][Bullet]: Using asmjs Bullet libs.
-2022-12-12T08:08:04.838Z - info: [Scene] [PHYSICS]: using builtin.
-2022-12-12T08:08:04.939Z - log: [Scene] Cocos Creator v3.6.0
-2022-12-12T08:08:04.939Z - info: [Scene] Forward render pipeline initialized.
-2022-12-12T08:14:16.726Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
-    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
-    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
-    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
-    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
-    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-2022-12-12T08:52:02.090Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
-    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
-    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
-    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
-    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
-    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-2022-12-12T08:58:07.026Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
-    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
-    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
-    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
-    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
-    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-2022-12-12T08:59:30.615Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
-    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
-    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
-    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
-    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
-    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-2022-12-12T09:00:23.806Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
-    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
-    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
-    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
-    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
-    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-2022-12-12T09:01:01.695Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
-    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
-    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
-    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
-    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
-    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-2022-12-12T09:02:49.274Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
-    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
-    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
-    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
-    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
-    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-2022-12-12T09:03:37.280Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
-    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
-    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
-    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
-    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
-    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-2022-12-12T09:04:15.961Z - warn: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:78:16)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] Found possible circular reference in "pack:///chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js", happened when use "engineOverrider" imported from "./../script/overwrite/EngineOverride"  Error: 
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
-    at Executor._importPrerequisiteModules (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
-    at Executor.reload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
-    at GlobalEnv.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
-    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
-    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
-    at console.warn (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
-    at Module.report (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/84/84741ad843cea9a440c5d8c2d379669b6551400d.js:16:13)
-    at _reportPossibleCrUseOfengineOverrider (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:19:17)
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/41/410aa66828d351bec5fb37b2baf356253bf3e05d.js:77:91)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
-2022-12-12T09:40:20.134Z - error: [Scene] Failed to refresh the current sceneError: [Scene] Failed to refresh the current scene
-    at GeneralSceneProxy.softReload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scene\proxy\general-scene-proxy.ccc:1:4468)
-    at GeneralSceneFacade.softReloadScene (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\facade\general-scene-facade.ccc:1:5839)
-    at SceneFacadeManager.softReloadScene (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\facade\scene-facade-manager.ccc:1:7777)
-2022-12-12T09:40:20.136Z - error: [Scene] Cannot read property 'nodeOnStage' of undefinedTypeError: Cannot read property 'nodeOnStage' of undefined
-    at Node.setParent (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/40/4073349564b48b8fa7380ae98a01f876a63e727a.js:90:24)
-    at Node.setParent (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:149120:17)
-    at Node.set parent [as parent] (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:144593:16)
-    at Director.runSceneImmediate (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:5602:27)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scene\utils.ccc:1:1302
-    at eval (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:90258:17)
-    at eval (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:97749:9)
-    at eval (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:156745:9)
-2022-12-12T09:40:23.331Z - error: [Preview]Cannot read properties of undefined (reading 'nodeOnStage')errorInfo.stack ? '/n TypeError: Cannot read properties of undefined (reading 'nodeOnStage')
-    at Node.setParent (http://localhost:7456/scripting/x/chunks/16/16f0d7b8601aa4edd40e30dbdfad58ca4320e451.js:98:24)
-    at Node.setParent (http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:152210:41)
-    at Node.set (http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:149071:18)
-    at Director.runSceneImmediate (http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:5396:27)
-    at http://localhost:7456/preview-app/main.js:1:3431
-    at http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:92144:17
-    at http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:99829:9
-    at http://localhost:7456/scripting/engine/bin/.cache/dev/preview/bundled/index.js:160023:9' : ''
-2022-12-12T09:46:17.134Z - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:CocosDashboard_1.2.2ile:F:creatorproject_3NewProject_36assetsscriptoverwriteEngineOverride.ts: Unexpected reserved word 'let'. (76:16)
+2023-04-20T02:40:20.808Z - log: [Scene] 'cc.ParticleSystem2D.color' hides inherited property 'cc.UIRenderer.color'. To make the current property override that implementation, add the `override: true` attribute please.
+2023-04-20T02:40:20.849Z - log: [Scene] No needs to indicate the 'cc.Boolean' attribute for "cc.Terrain._receiveShadow", which its default value is type of Boolean.
+2023-04-20T02:40:20.849Z - log: [Scene] No needs to indicate the 'cc.Boolean' attribute for "cc.Terrain._useNormalmap", which its default value is type of Boolean.
+2023-04-20T02:40:20.849Z - log: [Scene] No needs to indicate the 'cc.Boolean' attribute for "cc.Terrain._usePBR", which its default value is type of Boolean.
+2023-04-20T02:40:20.849Z - log: [Scene] No needs to indicate the 'cc.Boolean' attribute for "cc.Terrain._lodEnable", which its default value is type of Boolean.
+2023-04-20T02:40:20.925Z - info: [Scene] [Physics][Bullet]: Using asmjs Bullet libs.
+2023-04-20T02:40:20.935Z - info: [Scene] [PHYSICS]: using builtin.
+2023-04-20T02:40:21.064Z - log: [Scene] Cocos Creator v3.6.0
+2023-04-20T02:40:21.064Z - info: [Scene] Forward render pipeline initialized.
+2023-04-20T02:45:53.799Z - log: [Window] Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+2023-04-20T02:45:53.799Z - log: [Window] Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
+2023-04-20T02:50:31.187Z - info: [Window] URL  已被复制：    db://assets/res/hzw.jpeg
+2023-04-20T02:58:04.308Z - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:CocosDashboard_1.2.2ile:F:creatorproject_3NewProject_36assetsscriptcomMainEntry.ts: Identifier 'loader' has already been declared. (1:190)
 
-  74 |                 ccDic.nodeOnStage = {};
-  75 |
-> 76 |                 let 
-     |                 ^
-  77 |             }
-  78 |
-  79 |
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/eb/eb41d6c6b41bd5807e09f62996b2e5473784e08e.js:8:13)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+> 1 | import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode, NodeEventType, Scene, resources, AssetManager, assetManager, SpriteAtlas, Sprite, loader, loader } from 'cc';
+    |                                                                                                                                                                                               ^
+  2 | import { ClassSon } from '../utils/ClassSon';
+  3 | import { superSetter } from '../utils/GlabolImport';
+  4 |
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/d6/d6dbfc81c6c73b2e662d78465ffda7875bf02810.js:8:13)
+    at doExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
     at Array.forEach (<anonymous>)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
-    at Array.forEach (<anonymous>)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:CocosDashboard_1.2.2ile:F:creatorproject_3NewProject_36assetsscriptoverwriteEngineOverride.ts: Unexpected reserved word 'let'. (76:16)
+    at postOrderExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:CocosDashboard_1.2.2ile:F:creatorproject_3NewProject_36assetsscriptcomMainEntry.ts: Identifier 'loader' has already been declared. (1:190)
 
-  74 |                 ccDic.nodeOnStage = {};
-  75 |
-> 76 |                 let 
-  79 |
-    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/eb/eb41d6c6b41bd5807e09f62996b2e5473784e08e.js:8:13)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+> 1 | import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode, NodeEventType, Scene, resources, AssetManager, assetManager, SpriteAtlas, Sprite, loader, loader } from 'cc';
+  4 |
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/d6/d6dbfc81c6c73b2e662d78465ffda7875bf02810.js:8:13)
+    at doExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
     at Array.forEach (<anonymous>)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at postOrderExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Logger._logHandler (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
+    at Logger.record (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.error (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1414)
+    at ScriptManager._handleImportException (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:5825)
+    at Executor.importExceptionHandler [as _importExceptionHandler] (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3509)
+    at Executor._onModuleLoaded (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:312:22)
+    at SystemJS.onload (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:73:18)
+    at triggerOnload (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:270:10)
+    at doExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:538:7)
+    at postOrderExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+2023-04-20T02:58:04.312Z - warn: [Scene] Missing class: 6ed06uAdspJsK6+36eBYzliError: [Scene] Missing class: 6ed06uAdspJsK6+36eBYzli
+    at Object.classFinder (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:1:2131)
+    at _Deserializer.classFinder [as _classFinder] (D:\ProgramData\cocos\editors\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:93084:34)
+    at _Deserializer._deserializeTypeTaggedObject (D:\ProgramData\cocos\editors\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:110754:30)
+    at _Deserializer._deserializeObject (D:\ProgramData\cocos\editors\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:110695:29)
+    at _Deserializer._deserializeAndAssignField (D:\ProgramData\cocos\editors\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:110903:38)
+    at _Deserializer._deserializeArray (D:\ProgramData\cocos\editors\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:110729:40)
+    at _Deserializer._deserializeObject (D:\ProgramData\cocos\editors\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:110701:29)
+2023-04-20T02:58:04.350Z - error: [Scene] Script "6ed06uAdspJsK6+36eBYzli" attached to "MainEntry" is missing or invalid. Detailed information:
+Node path: "Canvas/Node1/Node2/MainEntry"
+Script UUID: "6ed06b80-76ca-49b0-aebe-dfa781633962"
+Class ID: "6ed06uAdspJsK6+36eBYzli"
+Error: [Scene] Script "6ed06uAdspJsK6+36eBYzli" attached to "MainEntry" is missing or invalid. Detailed information:
+Node path: "Canvas/Node1/Node2/MainEntry"
+Script UUID: "6ed06b80-76ca-49b0-aebe-dfa781633962"
+Class ID: "6ed06uAdspJsK6+36eBYzli"
+
+    at report (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:1:1156)
+    at reportByWalker (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:1:1252)
+    at D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:1:1893
+    at ObjectWalkerBehavior.walk (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\object-walker.ccc:1:2365)
+    at ObjectWalkerBehavior.forEach (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\object-walker.ccc:1:825)
+    at ObjectWalkerBehavior.parseObject (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\object-walker.ccc:1:306)
+    at doWalkProperties (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\object-walker.ccc:1:2158)
+2023-04-20T02:58:46.334Z - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:CocosDashboard_1.2.2ile:F:creatorproject_3NewProject_36assetsscriptcomMainEntry.ts: Identifier 'loader' has already been declared. (1:190)
+
+> 1 | import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode, NodeEventType, Scene, resources, AssetManager, assetManager, SpriteAtlas, Sprite, loader, loader } from 'cc';
+    |                                                                                                                                                                                               ^
+  2 | import { ClassSon } from '../utils/ClassSon';
+  3 | import { superSetter } from '../utils/GlabolImport';
+  4 |
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/d6/d6dbfc81c6c73b2e662d78465ffda7875bf02810.js:8:13)
+    at doExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
     at Array.forEach (<anonymous>)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
-    at D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at Logger._logHandler (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
-    at Logger.record (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
-    at console.error (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1414)
-    at ScriptManager._handleImportException (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:5825)
-    at Executor.importExceptionHandler [as _importExceptionHandler] (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3509)
-    at Executor._onModuleLoaded (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:312:22)
-    at SystemJS.onload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:73:18)
-    at triggerOnload (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:270:10)
-    at doExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:538:7)
-    at postOrderExec (D:\CocosDashboard_1.2.2\resources\.editors\Creator\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at postOrderExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: SyntaxError: D:CocosDashboard_1.2.2ile:F:creatorproject_3NewProject_36assetsscriptcomMainEntry.ts: Identifier 'loader' has already been declared. (1:190)
+
+> 1 | import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode, NodeEventType, Scene, resources, AssetManager, assetManager, SpriteAtlas, Sprite, loader, loader } from 'cc';
+  4 |
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/d6/d6dbfc81c6c73b2e662d78465ffda7875bf02810.js:8:13)
+    at doExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at Array.forEach (<anonymous>)
+    at postOrderExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/f2/f24891e8e38a2f9a13966f6e3cf69b2dabd1888a.js:8:7)
+    at Executor._importPrerequisiteModules (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Logger._logHandler (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
+    at Logger.record (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.error (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1414)
+    at ScriptManager._handleImportException (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:5825)
+    at Executor.importExceptionHandler [as _importExceptionHandler] (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3509)
+    at Executor._onModuleLoaded (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:312:22)
+    at SystemJS.onload (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:73:18)
+    at triggerOnload (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:270:10)
+    at doExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:538:7)
+    at postOrderExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+2023-04-20T02:58:46.339Z - warn: [Scene] Missing class: 6ed06uAdspJsK6+36eBYzliError: [Scene] Missing class: 6ed06uAdspJsK6+36eBYzli
+    at Object.classFinder (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:1:2131)
+    at _Deserializer.classFinder [as _classFinder] (D:\ProgramData\cocos\editors\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:93084:34)
+    at _Deserializer._deserializeTypeTaggedObject (D:\ProgramData\cocos\editors\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:110754:30)
+    at _Deserializer._deserializeObject (D:\ProgramData\cocos\editors\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:110695:29)
+    at _Deserializer._deserializeAndAssignField (D:\ProgramData\cocos\editors\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:110903:38)
+    at _Deserializer._deserializeArray (D:\ProgramData\cocos\editors\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:110729:40)
+    at _Deserializer._deserializeObject (D:\ProgramData\cocos\editors\3.6.0\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:110701:29)
+2023-04-20T02:58:46.340Z - error: [Scene] Script "6ed06uAdspJsK6+36eBYzli" attached to "MainEntry" is missing or invalid. Detailed information:
+Node path: "Canvas/Node1/Node2/MainEntry"
+Script UUID: "6ed06b80-76ca-49b0-aebe-dfa781633962"
+Class ID: "6ed06uAdspJsK6+36eBYzli"
+Error: [Scene] Script "6ed06uAdspJsK6+36eBYzli" attached to "MainEntry" is missing or invalid. Detailed information:
+Node path: "Canvas/Node1/Node2/MainEntry"
+Script UUID: "6ed06b80-76ca-49b0-aebe-dfa781633962"
+Class ID: "6ed06uAdspJsK6+36eBYzli"
+
+    at report (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:1:1156)
+    at reportByWalker (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:1:1252)
+    at D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\missing-class-reporter.ccc:1:1893
+    at ObjectWalkerBehavior.walk (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\object-walker.ccc:1:2365)
+    at ObjectWalkerBehavior.forEach (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\object-walker.ccc:1:825)
+    at ObjectWalkerBehavior.parseObject (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\object-walker.ccc:1:306)
+    at doWalkProperties (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\engine\dist\editor-extends\missing-reporter\object-walker.ccc:1:2158)
+2023-04-20T03:03:16.989Z - info: [Window] UUID  已被复制：    dcabd975-61d3-4db7-b731-174086c525f3  ,  压缩的 UUID：    dcq9l1YdNNt7cxF0CGxSXz
+2023-04-20T03:03:16.989Z - log: [Window] 重定向: dcabd975-61d3-4db7-b731-174086c525f3@f9941 , 压缩的 UUID： dcq9l1YdNNt7cxF0CGxSXz
+2023-04-20T03:05:28.328Z - info: [Window] URL  已被复制：    db://assets/res/dog.jpg
+2023-04-20T03:10:07.576Z - info: [Window] URL  已被复制：    db://assets/res/dog.jpg
+2023-04-20T04:17:10.133Z - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} ReferenceError: SpriteFrame is not defined
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/b2/b2cb8a6d43dff514a03bda5442d8c88a7d26405b.js:21:19)
+    at doExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/0a/0a9720cd6802460e9ee754bdc90c884642eb8e69.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/0a/0a9720cd6802460e9ee754bdc90c884642eb8e69.js:8:7)
+    at Executor._importPrerequisiteModules (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} ReferenceError: SpriteFrame is not defined
+    at D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/0a/0a9720cd6802460e9ee754bdc90c884642eb8e69.js:13:13
+    at Object.execute (file:///F:/creator/project_3/NewProject_36/temp/programming/packer-driver/targets/editor/chunks/0a/0a9720cd6802460e9ee754bdc90c884642eb8e69.js:8:7)
+    at Executor._importPrerequisiteModules (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:263:13)
+    at Executor.reload (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:151:9)
+    at GlobalEnv.record (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1989)
+    at Logger._logHandler (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
+    at Logger.record (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.error (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1414)
+    at ScriptManager._handleImportException (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:5825)
+    at Executor.importExceptionHandler [as _importExceptionHandler] (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3509)
+    at Executor._onModuleLoaded (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:312:22)
+    at SystemJS.onload (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:73:18)
+    at triggerOnload (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:270:10)
+    at doExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:538:7)
+    at postOrderExec (D:\ProgramData\cocos\editors\3.6.0\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)

@@ -90,5 +90,65 @@
   "44c8dc46-5ccf-4a3b-ad16-135e58191b1f": {
     "url": "db://assets/script/overwrite/EngineOverride.ts",
     "value": {}
+  },
+  "b637398c-d65e-4aac-8d36-799850526b4a": {
+    "url": "db://assets/res/hzw.jpeg",
+    "value": {
+      "depends": []
+    }
+  },
+  "b637398c-d65e-4aac-8d36-799850526b4a@6c48a": {
+    "url": "db://assets/res/hzw.jpeg@6c48a",
+    "value": {
+      "depends": [
+        "b637398c-d65e-4aac-8d36-799850526b4a"
+      ]
+    }
+  },
+  "b637398c-d65e-4aac-8d36-799850526b4a@f9941": {
+    "url": "db://assets/res/hzw.jpeg@f9941",
+    "value": {
+      "depends": [
+        "b637398c-d65e-4aac-8d36-799850526b4a@6c48a"
+      ]
+    }
+  },
+  "dcabd975-61d3-4db7-b731-174086c525f3": {
+    "url": "db://assets/res/dog.jpg",
+    "value": {
+      "depends": []
+    }
+  },
+  "dcabd975-61d3-4db7-b731-174086c525f3@6c48a": {
+    "url": "db://assets/res/dog.jpg@6c48a",
+    "value": {
+      "depends": [
+        "dcabd975-61d3-4db7-b731-174086c525f3"
+      ]
+    }
+  },
+  "dcabd975-61d3-4db7-b731-174086c525f3@f9941": {
+    "url": "db://assets/res/dog.jpg@f9941",
+    "value": {
+      "depends": [
+        "dcabd975-61d3-4db7-b731-174086c525f3@6c48a"
+      ]
+    }
+  },
+  "521f49a7-c280-404f-b487-e743ee8b569a": {
+    "url": "db://assets/resources",
+    "value": {}
+  },
+  "27ad81e9-db69-4d36-9093-7df04639ce95": {
+    "url": "db://assets/script/utils/asyncAsset.ts",
+    "value": {}
+  },
+  "d5567a4d-4073-4d4d-850d-79b759d42fbd": {
+    "url": "db://assets/script/config",
+    "value": {}
+  },
+  "73dd0325-6f92-4f50-a467-ad2dfd053f46": {
+    "url": "db://assets/script/config/useAssets.ts",
+    "value": {}
   }
 }

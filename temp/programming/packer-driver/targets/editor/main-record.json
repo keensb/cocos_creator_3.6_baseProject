@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 7338.23988699913,
+      "mTimestamp": 16838.10875415802,
       "chunkId": "ca4374a3008ca85000d465787e739a302e4e4ac6",
       "imports": [
         {
@@ -535,8 +535,8 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 6551231.289213002,
-      "chunkId": "f24891e8e38a2f9a13966f6e3cf69b2dabd1888a",
+      "mTimestamp": 12201133.163621902,
+      "chunkId": "0a9720cd6802460e9ee754bdc90c884642eb8e69",
       "imports": [
         {
           "value": "file:///F:/creator/project_3/NewProject_36/assets/script/ClassDictionary.ts",
@@ -567,7 +567,7 @@
           }
         },
         {
-          "value": "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/EngineOverride.ts",
+          "value": "file:///F:/creator/project_3/NewProject_36/assets/script/config/useAssets.ts",
           "resolved": "__unresolved_2",
           "loc": {
             "start": {
@@ -576,31 +576,31 @@
             },
             "end": {
               "line": 5,
-              "column": 305
+              "column": 297
+            }
+          }
+        },
+        {
+          "value": "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/EngineOverride.ts",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 313
+            },
+            "end": {
+              "line": 5,
+              "column": 399
             }
           }
         },
         {
           "value": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/ClassSon.ts",
-          "resolved": "__unresolved_3",
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 321
-            },
-            "end": {
-              "line": 5,
-              "column": 397
-            }
-          }
-        },
-        {
-          "value": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/ClassSuper.ts",
           "resolved": "__unresolved_4",
           "loc": {
             "start": {
               "line": 5,
-              "column": 413
+              "column": 415
             },
             "end": {
               "line": 5,
@@ -609,7 +609,7 @@
           }
         },
         {
-          "value": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/GlabolImport.ts",
+          "value": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/ClassSuper.ts",
           "resolved": "__unresolved_5",
           "loc": {
             "start": {
@@ -618,7 +618,35 @@
             },
             "end": {
               "line": 5,
-              "column": 587
+              "column": 585
+            }
+          }
+        },
+        {
+          "value": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/GlabolImport.ts",
+          "resolved": "__unresolved_6",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 601
+            },
+            "end": {
+              "line": 5,
+              "column": 681
+            }
+          }
+        },
+        {
+          "value": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/asyncAsset.ts",
+          "resolved": "__unresolved_7",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 697
+            },
+            "end": {
+              "line": 5,
+              "column": 775
             }
           }
         }
@@ -636,6 +664,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///F:/creator/project_3/NewProject_36/assets/script/com/MainEntry.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/config/useAssets.ts"
           },
           "messages": []
         },
@@ -666,15 +701,22 @@
             "url": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/GlabolImport.ts"
           },
           "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/asyncAsset.ts"
+          },
+          "messages": []
         }
       ]
     },
     "file:///F:/creator/project_3/NewProject_36/assets/script/ClassDictionary.ts": {
       "mTimestamp": {
-        "mtime": 1670836728629.6016,
+        "mtime": 1681961615811.7717,
         "uuid": "6d00a2ad-dab7-4238-9fec-c1f25b66dbfd"
       },
-      "chunkId": "ee50d8f0501f8f7603826b5866d41da6fbd74c92",
+      "chunkId": "7d3f7381bdc4a447d5070b2662f7f1aba78cc42b",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -712,30 +754,44 @@
           }
         },
         {
-          "value": "./../script/com/MainEntry",
+          "value": "./../script/overwrite/EngineOverride",
           "resolved": "__unresolved_3",
           "loc": {
             "start": {
               "line": 3,
-              "column": 26
+              "column": 31
             },
             "end": {
               "line": 3,
+              "column": 69
+            }
+          }
+        },
+        {
+          "value": "./../script/com/MainEntry",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 26
+            },
+            "end": {
+              "line": 4,
               "column": 53
             }
           }
         },
         {
-          "value": "./overwrite/EngineOverride",
-          "resolved": "__unresolved_4",
+          "value": "./../script/utils/asyncAsset",
+          "resolved": "__unresolved_5",
           "loc": {
             "start": {
-              "line": 4,
-              "column": 31
+              "line": 5,
+              "column": 27
             },
             "end": {
-              "line": 4,
-              "column": 59
+              "line": 5,
+              "column": 57
             }
           }
         }
@@ -773,6 +829,13 @@
         {
           "resolved": {
             "type": "module",
+            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/EngineOverride.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
             "url": "file:///F:/creator/project_3/NewProject_36/assets/script/com/MainEntry.ts"
           },
           "messages": []
@@ -780,14 +843,14 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/EngineOverride.ts"
+            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/asyncAsset.ts"
           },
           "messages": []
         }
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1670832469796,
+      "mTimestamp": 1681958393789,
       "chunkId": "84741ad843cea9a440c5d8c2d379669b6551400d",
       "imports": [],
       "type": "esm",
@@ -881,10 +944,10 @@
     },
     "file:///F:/creator/project_3/NewProject_36/assets/script/com/MainEntry.ts": {
       "mTimestamp": {
-        "mtime": 1670839012500.9814,
+        "mtime": 1681965304253.7358,
         "uuid": "6ed06b80-76ca-49b0-aebe-dfa781633962"
       },
-      "chunkId": "c0f111a8c82f5e575247d5172da4beb1a88fb202",
+      "chunkId": "9636e2e9698dc7620ec8841583f70d5355b59cec",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -901,11 +964,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 128
+              "column": 214
             },
             "end": {
               "line": 1,
-              "column": 132
+              "column": 218
             }
           }
         },
@@ -1101,7 +1164,7 @@
     },
     "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/EngineOverride.ts": {
       "mTimestamp": {
-        "mtime": 1670839018532.9539,
+        "mtime": 1681955289411.4355,
         "uuid": "44c8dc46-5ccf-4a3b-ad16-135e58191b1f"
       },
       "chunkId": "a46e5a92568da7a7fd922248e423cb6f4743c639",
@@ -1116,12 +1179,116 @@
           "value": "cc",
           "loc": {
             "start": {
-              "line": 2,
+              "line": 6,
               "column": 91
             },
             "end": {
-              "line": 2,
+              "line": 6,
               "column": 95
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///F:/creator/project_3/NewProject_36/assets/script/utils/asyncAsset.ts": {
+      "mTimestamp": {
+        "mtime": 1681960734842.162,
+        "uuid": "27ad81e9-db69-4d36-9093-7df04639ce95"
+      },
+      "chunkId": "12f41d071052f9fb3f3da987611384d743dc59d3",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 63
+            },
+            "end": {
+              "line": 1,
+              "column": 67
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///F:/creator/project_3/NewProject_36/assets/script/config/useAssets.ts": {
+      "mTimestamp": {
+        "mtime": 1681965543714.5762,
+        "uuid": "73dd0325-6f92-4f50-a467-ad2dfd053f46"
+      },
+      "chunkId": "57ca7ca0a87a8f3c67422f20cce8511d1f1dfe74",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 124
+            },
+            "end": {
+              "line": 2,
+              "column": 128
             }
           }
         }

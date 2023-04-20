@@ -1,8 +1,9 @@
 import { ClassSon } from "./../script/utils/ClassSon";
 import { ClassSuper } from "./../script/utils/ClassSuper";
+import { EngineOverride } from "./../script/overwrite/EngineOverride";
 import { MainEntry } from "./../script/com/MainEntry";
-import { EngineOverride } from "./overwrite/EngineOverride";
- 
+import { asyncAsset } from "./../script/utils/asyncAsset";
+
 
 export class ClassDictionary {
     public static classDic: { [key: string]: any } = {};
@@ -29,5 +30,6 @@ export class ClassDictionary {
 
 ClassDictionary.classDic["ClassSon"] = ClassSon;
 ClassDictionary.classDic["ClassSuper"] = ClassSuper;
-ClassDictionary.classDic["MainEntry"] = MainEntry;
 ClassDictionary.classDic["EngineOverride"] = EngineOverride;
+ClassDictionary.classDic["MainEntry"] = MainEntry;
+ClassDictionary.classDic["asyncAsset"] = asyncAsset;

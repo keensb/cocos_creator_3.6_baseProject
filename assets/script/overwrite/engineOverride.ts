@@ -1,4 +1,8 @@
 //建议通过在主入口类添加 import "../overwrite/EngineOverride" 的方式直接加载并执行
+//在控制台输入 cc.Sprite 按回车, 出现代码块; 点击代码块可以找到定义的位置在 index.js
+//cocos creator 3.0+ 引擎代码位置  可以尝试覆盖这几个位置
+//CocosDashboard安装目录\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\preview\bundled\index.js  主要
+//CocosDashboard安装目录\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\cocos\core\scene-graph\node.ts  次要
 import { BaseNode, Component, director, Node, NodeEventType, UIOpacity, UITransform } from 'cc';
 import { DEBUG } from 'cc/env';
 

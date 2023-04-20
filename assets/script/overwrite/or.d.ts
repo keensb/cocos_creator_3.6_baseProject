@@ -15,12 +15,10 @@ declare module "cc" {//<----------注意:这里坑爹的地方  模块名不是 
          */
         stage: Scene;
 
-
         /**
          * 检测本节点(最高级别为Scene)和其下各级子节点有没有这个Component, 有的话存进数组并最终返回
          */
         findSubComponent<T extends Component>(componentType: new (...parmas) => T, ...agrs): T[];
-
     }
 
     export interface Node {//这里声明是 interface Node  , 避免和 class Node 重复
@@ -59,7 +57,6 @@ declare module "cc" {//<----------注意:这里坑爹的地方  模块名不是 
          * 按照creator 2.x习惯直接修改 Node的水平比例
          */
         scaleX: number;
-
 
         /**
          * 按照creator 2.x习惯直接修改 Node的竖直比例

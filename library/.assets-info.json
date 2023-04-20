@@ -1,6 +1,6 @@
 {
   "F:\\creator\\project_3\\NewProject_36\\assets\\res.meta": {
-    "time": 1670832434492.1912
+    "time": 1681970590825.4082
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\scene.meta": {
     "time": 1670832434494.1965
@@ -33,7 +33,7 @@
     "time": 1670832434503.2214
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\res": {
-    "time": 1670832434493.194,
+    "time": 1681959763654.5518,
     "uuid": "2411ee15-2e8a-4d47-a881-8c160c57418e",
     "missing": false
   },
@@ -43,7 +43,7 @@
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script": {
-    "time": 1670832434501.2468,
+    "time": 1681964230003.0571,
     "uuid": "28f39c53-0dab-4d1a-9b88-7bb7e580c636",
     "missing": false
   },
@@ -58,17 +58,17 @@
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\utils": {
-    "time": 1670832434503.2214,
+    "time": 1681961192606.3076,
     "uuid": "fbdab4ec-dfe1-4606-aadb-1762e88f6f0a",
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\overwrite\\or.d.ts": {
-    "time": 1670838543452.5002,
+    "time": 1670896603716.8225,
     "uuid": "45eae75f-23a2-488e-b757-a58bbbfc8231",
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\com\\MainEntry.ts": {
-    "time": 1670839012500.9814,
+    "time": 1681965304253.7358,
     "uuid": "6ed06b80-76ca-49b0-aebe-dfa781633962",
     "missing": false
   },
@@ -94,7 +94,7 @@
     "time": 1670832434493.194
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\scene.scene": {
-    "time": 1670832764121.8953,
+    "time": 1681962170158.0686,
     "uuid": "3feeb5bb-66f3-4c75-9662-fca9de185c19",
     "missing": false
   },
@@ -107,7 +107,7 @@
     "time": 1670832434497.2275
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\ClassDictionary.ts": {
-    "time": 1670836728629.6016,
+    "time": 1681961615811.7717,
     "uuid": "6d00a2ad-dab7-4238-9fec-c1f25b66dbfd",
     "missing": false
   },
@@ -115,8 +115,56 @@
     "time": 1670836712126.1736
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\overwrite\\EngineOverride.ts": {
-    "time": 1670839018532.9539,
+    "time": 1681955289411.4355,
     "uuid": "44c8dc46-5ccf-4a3b-ad16-135e58191b1f",
+    "missing": false
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\res\\hzw.jpeg.meta": {
+    "time": 1681953430556.4907
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\res\\hzw.jpeg": {
+    "time": 1681953369826.4563,
+    "uuid": "b637398c-d65e-4aac-8d36-799850526b4a",
+    "missing": false
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\res\\dog.jpg.meta": {
+    "time": 1681959763710.7014
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\res\\dog.jpg": {
+    "time": 1664184669689.578,
+    "uuid": "dcabd975-61d3-4db7-b731-174086c525f3",
+    "missing": false
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\resources.meta": {
+    "time": 1681960527531.2502
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\resources": {
+    "time": 1681960527526.7393,
+    "uuid": "521f49a7-c280-404f-b487-e743ee8b569a",
+    "missing": false
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\script\\utils\\asyncAsset.ts.meta": {
+    "time": 1681961192609.3162
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\script\\utils\\asyncAsset.ts": {
+    "time": 1681960734842.162,
+    "uuid": "27ad81e9-db69-4d36-9093-7df04639ce95",
+    "missing": false
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\script\\config.meta": {
+    "time": 1681964230007.0928
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\script\\config\\useAssets.ts.meta": {
+    "time": 1681964230010.0762
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\script\\config": {
+    "time": 1681964230004.0608,
+    "uuid": "d5567a4d-4073-4d4d-850d-79b759d42fbd",
+    "missing": false
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\script\\config\\useAssets.ts": {
+    "time": 1681965543714.5762,
+    "uuid": "73dd0325-6f92-4f50-a467-ad2dfd053f46",
     "missing": false
   }
 }
