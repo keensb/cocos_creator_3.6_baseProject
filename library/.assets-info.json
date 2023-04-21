@@ -33,7 +33,7 @@
     "time": 1670832434503.2214
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\res": {
-    "time": 1681959763654.5518,
+    "time": 1682048284678.4705,
     "uuid": "2411ee15-2e8a-4d47-a881-8c160c57418e",
     "missing": false
   },
@@ -53,7 +53,7 @@
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\overwrite": {
-    "time": 1670836712126.1736,
+    "time": 1681985150576.61,
     "uuid": "2d9c7a70-453e-481a-83f2-a2c7bcb8c3ab",
     "missing": false
   },
@@ -63,12 +63,12 @@
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\overwrite\\or.d.ts": {
-    "time": 1670896603716.8225,
+    "time": 1681982453999.99,
     "uuid": "45eae75f-23a2-488e-b757-a58bbbfc8231",
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\com\\MainEntry.ts": {
-    "time": 1681971991241.6833,
+    "time": 1682067593279.5647,
     "uuid": "6ed06b80-76ca-49b0-aebe-dfa781633962",
     "missing": false
   },
@@ -94,7 +94,7 @@
     "time": 1670832434493.194
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\scene.scene": {
-    "time": 1681971474600.4585,
+    "time": 1681980237630.9314,
     "uuid": "3feeb5bb-66f3-4c75-9662-fca9de185c19",
     "missing": false
   },
@@ -115,7 +115,7 @@
     "time": 1670836712126.1736
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\overwrite\\EngineOverride.ts": {
-    "time": 1681955289411.4355,
+    "time": 1682064848085.3489,
     "uuid": "44c8dc46-5ccf-4a3b-ad16-135e58191b1f",
     "missing": false
   },
@@ -136,10 +136,10 @@
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\resources.meta": {
-    "time": 1681960527531.2502
+    "time": 1681980424124.6497
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\resources": {
-    "time": 1681960527526.7393,
+    "time": 1681980587879.3347,
     "uuid": "521f49a7-c280-404f-b487-e743ee8b569a",
     "missing": false
   },
@@ -147,24 +147,32 @@
     "time": 1681961192609.3162
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\utils\\asyncAsset.ts": {
-    "time": 1681971928211.8608,
+    "time": 1682070085979.96,
     "uuid": "27ad81e9-db69-4d36-9093-7df04639ce95",
     "missing": false
   },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\config.meta": {
     "time": 1681964230007.0928
   },
-  "F:\\creator\\project_3\\NewProject_36\\assets\\script\\config\\useAssets.ts.meta": {
-    "time": 1681964230010.0762
-  },
   "F:\\creator\\project_3\\NewProject_36\\assets\\script\\config": {
-    "time": 1681964230004.0608,
+    "time": 1682060660594.2075,
     "uuid": "d5567a4d-4073-4d4d-850d-79b759d42fbd",
     "missing": false
   },
-  "F:\\creator\\project_3\\NewProject_36\\assets\\script\\config\\useAssets.ts": {
-    "time": 1681970899252.445,
-    "uuid": "73dd0325-6f92-4f50-a467-ad2dfd053f46",
+  "F:\\creator\\project_3\\NewProject_36\\assets\\res\\sound_1.mp3.meta": {
+    "time": 1682048284793.7786
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\res\\sound_1.mp3": {
+    "time": 1648429420134.6855,
+    "uuid": "71ccf2cf-1a76-40b6-950d-b55b543e0b28",
+    "missing": false
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\script\\config\\usingAssets.ts.meta": {
+    "time": 1682060627609.9153
+  },
+  "F:\\creator\\project_3\\NewProject_36\\assets\\script\\config\\usingAssets.ts": {
+    "time": 1682060670714.3142,
+    "uuid": "1be8cfa4-6f46-47ec-bb33-b1abf794eb20",
     "missing": false
   }
 }

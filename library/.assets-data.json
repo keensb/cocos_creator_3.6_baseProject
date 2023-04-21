@@ -150,5 +150,39 @@
   "73dd0325-6f92-4f50-a467-ad2dfd053f46": {
     "url": "db://assets/script/config/useAssets.ts",
     "value": {}
+  },
+  "c420cff4-5e29-4e91-82e0-8fb03d221739": {
+    "url": "db://assets/resources/dog.jpg",
+    "value": {}
+  },
+  "c420cff4-5e29-4e91-82e0-8fb03d221739@6c48a": {
+    "url": "db://assets/resources/dog.jpg@6c48a",
+    "value": {
+      "depends": [
+        "c420cff4-5e29-4e91-82e0-8fb03d221739"
+      ]
+    }
+  },
+  "c420cff4-5e29-4e91-82e0-8fb03d221739@f9941": {
+    "url": "db://assets/resources/dog.jpg@f9941",
+    "value": {
+      "depends": [
+        "c420cff4-5e29-4e91-82e0-8fb03d221739@6c48a"
+      ]
+    }
+  },
+  "fdd3d9e9-f8ae-46f5-9e2a-f0b4adbb318c": {
+    "url": "db://assets/script/overwrite/aa.d.ts",
+    "value": {}
+  },
+  "71ccf2cf-1a76-40b6-950d-b55b543e0b28": {
+    "url": "db://assets/res/sound_1.mp3",
+    "value": {
+      "depends": []
+    }
+  },
+  "1be8cfa4-6f46-47ec-bb33-b1abf794eb20": {
+    "url": "db://assets/script/config/usingAssets.ts",
+    "value": {}
   }
 }

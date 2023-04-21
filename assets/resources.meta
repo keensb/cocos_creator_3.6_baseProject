@@ -9,7 +9,9 @@
     "isBundle": true,
     "bundleName": "resources",
     "priority": 8,
-    "compressionType": {},
+    "compressionType": {
+      "web-desktop": "none"
+    },
     "isRemoteBundle": {}
   }
 }

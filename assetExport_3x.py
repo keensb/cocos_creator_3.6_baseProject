@@ -1,4 +1,4 @@
-# 此.py文件放在 creator 3.x版本的根目录下, 与assets文件夹同级  自动导出配置到 ./script/config/useAssets.ts 文件
+# 此.py文件放在 creator 3.x版本的根目录下, 与assets文件夹同级  自动导出配置到 ./script/config/usingAssets.ts 文件
 
 '''
     不支持骨骼动画资源   请先自行把骨骼动画封装成预制体
@@ -104,11 +104,11 @@ for i in range(0, len(bundleNames)):
 if not os.path.exists("./assets/script/config"):
     os.makedirs("./assets/script/config")
 
-with open("./assets/script/config/useAssets.ts", "w+", encoding="utf-8") as file:
+with open("./assets/script/config/usingAssets.ts", "w+", encoding="utf-8") as file:
     file.write("/** created by assetExport.py */"+"\n")
     file.write(
         'import { AnimationClip, LabelAtlas, Font, SpriteAtlas, SpriteFrame, Prefab, AudioClip, dragonBones, JsonAsset, Asset } from "cc";'+'\n\n')
-    file.write("export const useAssets = {"+"\n")
+    file.write("export const usingAssets = {"+"\n")
     for key in fileArray:
         file.write("\t" + key + ": {\n")
         # file.write("\t\t"+ "id: \"" + key + "\",\n")
@@ -142,6 +142,7 @@ with open("./assets/script/config/useAssets.ts", "w+", encoding="utf-8") as file
                 n = n + 1
             fileNameArray.append(fileName)
 
+            
             if file_extension == "anim":  # 动画剪辑
                 assetType = "AnimationClip"
             elif file_extension == "labelatlas":  # 艺术字
@@ -150,7 +151,7 @@ with open("./assets/script/config/useAssets.ts", "w+", encoding="utf-8") as file
                 assetType = "Font"
             elif file_extension == "plist":  # 图集
                 assetType = "SpriteAtlas"
-            elif file_extension == "png" or file_extension == "jpg":  # 单图
+            elif file_extension == "png" or file_extension == "jpg" or file_extension == "jpeg":  # 单图
                 assetType = "SpriteFrame"
             elif file_extension == "prefab":  # 预制体
                 assetType = "Prefab"
@@ -166,19 +167,19 @@ with open("./assets/script/config/useAssets.ts", "w+", encoding="utf-8") as file
             else:
                 assetType = "Asset"
             info = fileName + ": { url: \"" + value[i].split("." + file_extension)[
-                0] + "\", ext: \"" + file_extension + "\", type: " + assetType + " },"
+                0] + "\", ext: \"." + file_extension + "\", type: " + assetType + " },"
             print(info)
             # value[i].split(file_extension)[0]
             file.write("\t\t" + info + "\n")
         file.write("\t},\n")
     file.write("}\n")
-    file.write("globalThis[\"useAssets\"] = globalThis[\"UA\"] = useAssets;\n")
+    file.write("globalThis[\"usingAssets\"] = globalThis[\"UA\"] = usingAssets;\n")
 
-    file.write("\n\nexport const useBundles = {"+"")
+    file.write("\n\nexport const usingBundles = {"+"")
     for value in bundleNames:
         file.write("\n\t" + value[0] + ": " + "\"" + value[0] + "\",")
     file.write("\n}\n")
-    file.write("globalThis[\"useBundles\"] = globalThis[\"UB\"] = useBundles;")
+    file.write("globalThis[\"usingBundles\"] = globalThis[\"UB\"] = usingBundles;")
 
 
 input("===============导出配置完成===============")

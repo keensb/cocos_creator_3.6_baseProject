@@ -3,7 +3,7 @@
 //cocos creator 3.0+ 引擎代码位置  可以尝试覆盖这几个位置
 //CocosDashboard安装目录\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\preview\bundled\index.js  主要
 //CocosDashboard安装目录\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\cocos\core\scene-graph\node.ts  次要
-import { BaseNode, Component, director, Node, NodeEventType, UIOpacity, UITransform } from 'cc';
+import { AssetManager, BaseNode, Component, director, Node, NodeEventType, path, Sprite, SpriteFrame, Texture2D, UIOpacity, UITransform, __private } from 'cc';
 import { DEBUG } from 'cc/env';
 
 
@@ -20,6 +20,7 @@ export class EngineOverride {
             return this.getComponent(componentType);
         }
 
+        //检测一个Node对象是否正处于场景中的渲染队列(类似于检测 egret.DisplayObject 的 stage)
         Object.defineProperty(BaseNode.prototype, "stage", {
             get: function () {
                 let parent = this.parent;
@@ -36,7 +37,7 @@ export class EngineOverride {
         });
 
         BaseNode.prototype.findSubComponent = function <T extends Component>(componentType: new (...parmas) => T, ...args): T[] {
-            
+
             let arr = [];
             let obj = this.getComponent.call(this, componentType, ...args);
             if (obj) {
@@ -58,7 +59,7 @@ export class EngineOverride {
             loop(this);
             return arr;
         }
-        
+
         const _setParent = BaseNode.prototype.setParent;
         BaseNode.prototype.setParent = function setParent(value, keepWorldTransform) {
             //不能用 if(this.scene)来判断是否在场景上 this.scene 不会随着节点的 加载/移除 发生改变
@@ -195,6 +196,62 @@ export class EngineOverride {
             enumerable: true,
             configurable: true
         });
+
+        //覆盖 让 bundle.get("图片路径", SpriteFrame) 或 bundle.get("图片路径", Texture2D), 填入第二个具体类型参数时  返回一个 SpriteFrame 或 Texture2D,  而不是 ImageAsset
+        AssetManager.Bundle.prototype.getInfoWithPath = function (path: string, type?: __private._cocos_core_asset_manager_shared__AssetType | null): __private._cocos_core_asset_manager_config__IAddressableInfo | null {
+            if (path[path.length - 1] == "/") {
+                path = path.substring(0, path.length - 1);
+            }
+
+            if (type == SpriteFrame) {//自动对应类型 补齐图片资源的后缀路径
+                let arr = path.split("/");
+                if (arr[arr.length - 1] !== "spriteFrame") {
+                    path += "/spriteFrame";
+                }
+            }
+            else if (type == Texture2D) {//自动对应类型 补齐图片资源的后缀路径
+                let arr = path.split("/");
+                if (arr[arr.length - 1] !== "texture") {
+                    path += "/texture";
+                }
+            }
+            return this._config.getInfoWithPath(path, type);
+        }
+
+        /*  Sprite.prototype["_flushAssembler"] = function () {
+             const assembler = Sprite.Assembler.getAssembler(this);
+ 
+             if (this._assembler !== assembler) {
+                 this.destroyRenderData();
+                 this._assembler = assembler;
+             }
+ 
+             if (!this.renderData) {
+                 if (this._assembler && this._assembler.createData) {
+                     this._renderData = this._assembler.createData(this);
+                     this.renderData!.material = this.getRenderMaterial(0);
+                     this.markForUpdateRenderData();
+                     if (this.spriteFrame) {
+                         this._assembler.updateUVs(this);
+                     }
+                     this._updateColor();
+                 }
+             }
+ 
+             // Only Sliced type need update uv when sprite frame insets changed
+             if (this._spriteFrame) {
+                 if (this._spriteFrame.texture) {
+                     
+                 }
+                 if (this._type === 1) {
+                     this._spriteFrame.on(SpriteFrame.EVENT_UV_UPDATED, this._updateUVs, this);
+                 } else {
+                     this._spriteFrame.off(SpriteFrame.EVENT_UV_UPDATED, this._updateUVs, this);
+                 }
+             }
+         }; */
+
+
 
     }
 }

@@ -21,6 +21,11 @@ declare module "cc" {//<----------注意:这里坑爹的地方  模块名不是 
         findSubComponent<T extends Component>(componentType: new (...parmas) => T, ...agrs): T[];
     }
 
+    export class SpriteFrameXX {
+        constructor(xx:any) 
+             
+    }
+
     export interface Node {//这里声明是 interface Node  , 避免和 class Node 重复
 
         /**
@@ -39,27 +44,27 @@ declare module "cc" {//<----------注意:这里坑爹的地方  模块名不是 
         hh: number;
 
         /**
-         * 按照creator 2.x习惯直接修改 Node的x坐标
+         * 按照creator 2.x习惯直接修改 Node在父级节点上的x坐标
          */
         x: number;
 
         /**
-         * 按照creator 2.x习惯直接修改 Node的y坐标
+         * 按照creator 2.x习惯直接修改 Node在父级节点上的y坐标
          */
         y: number;
 
         /**
-         * 按照creator 2.x习惯直接修改 Node的深度值
+         * 按照creator 2.x习惯直接修改 Node在父级节点上的深度值
          */
         z: number;
 
         /**
-         * 按照creator 2.x习惯直接修改 Node的水平比例
+         * 按照creator 2.x习惯直接修改 Node的水平拉伸比例
          */
         scaleX: number;
 
         /**
-         * 按照creator 2.x习惯直接修改 Node的竖直比例
+         * 按照creator 2.x习惯直接修改 Node的竖直拉伸比例
          */
         scaleY: number;
 

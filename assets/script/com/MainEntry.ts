@@ -1,10 +1,10 @@
-import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode, NodeEventType, Scene, resources, AssetManager, assetManager, SpriteAtlas, Sprite, SpriteFrame, dragonBones } from 'cc';
+import "../overwrite/EngineOverride";//不带 from 关键字的import,  作用是直接导进来并立即执行 相当于js的 require()
+import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode, NodeEventType, Scene, resources, AssetManager, assetManager, SpriteAtlas, Sprite, SpriteFrame, dragonBones, Texture2D, Asset, ImageAsset, AudioClip } from 'cc';
 import { ClassSon } from '../utils/ClassSon';
 import { superSetter } from '../utils/GlabolImport';
 
-import "../overwrite/EngineOverride";//不带 from 关键字的import,  作用是直接导进来并立即执行 相当于js的 require()
+
 import { DEBUG } from 'cc/env';
-import { useAssets } from '../config/useAssets';
 import { asyncAsset } from '../utils/asyncAsset';
 
 const { ccclass, property } = _decorator;
@@ -28,7 +28,7 @@ export class MainEntry extends Component {
     }
 
     start() {
-        
+
         let son = new ClassSon();
         log(son.a)
         superSetter(ClassSon, son, "a", 5);
@@ -44,8 +44,8 @@ export class MainEntry extends Component {
 
         console.log("scale", bg.scale)
 
-        tween(bg).to(5, { scaleX: 2 }).start();
-        tween(bg).to(5, { hh: 400 }).start();
+        //tween(bg).to(5, { scaleX: 2 }).start();
+        //tween(bg).to(5, { hh: 400 }).start();
 
 
 
@@ -58,8 +58,8 @@ export class MainEntry extends Component {
             console.log("aaaaa", err,res);
             }) 
         */
-        
-        
+
+
         /* assetManager.loadAny({uuid:'xxx', type: SpriteAtlas}, (err, res) => {
             let sprite = this.getComponent(Sprite);
             sprite.spriteFrame = res.getSpriteFrame(bg);
@@ -74,8 +74,8 @@ export class MainEntry extends Component {
 
         var xxx = new Node();
 
-        
-        
+
+
 
         this.node.addChild(xxx)
         console.log("STAGE_CHANGED1111", xxx.stage);
@@ -84,14 +84,11 @@ export class MainEntry extends Component {
         console.log("STAGE_CHANGED2222", xxx.stage, DEBUG);
 
         console.log(director.getScene().findSubComponent(MainEntry), find("Canvas").findSubComponent(MainEntry));
-        
+
         this.assetHandler();
     }
 
-    private async assetHandler(): Promise<void> {
-        let bundle = await asyncAsset.loadOneBundle("res", true);
-        console.log(bundle);
-    }
+
 
     private test<T>(x: number, y: number, inst: new (...parmas) => T, ...args): T {
         let obj = new inst(...args);
@@ -102,5 +99,30 @@ export class MainEntry extends Component {
 
     update(deltaTime: number) {
 
+    }
+
+
+    private async assetHandler(): Promise<void> {
+        
+        /* let bundle = await asyncAsset.loadOneBundle("res", false);
+
+
+        bundle.load("dog" , Asset, (err, res) => {
+          
+        }) */
+       /*  await asyncAsset.bundleLoadUsingAssets("res", (f, t, p) => { 
+            console.log(f, t);
+        }) */
+        
+        let dog = await asyncAsset.bundleLoadByUrl("res", "dog", SpriteFrame);
+        
+         
+        //let dog2 = assetManager.getBundle("res").load(
+            //AssetManager.Bundle.prototype.get
+        window["dog"] = dog;
+        
+        //assetManager.loadRemote('https://baishancdn.hicnhm.com/beiji_res/assets/avatar3/300000015_8_5.png', (err, texture) => console.log(texture));
+
+        //sprite.spriteFrame
     }
 }
