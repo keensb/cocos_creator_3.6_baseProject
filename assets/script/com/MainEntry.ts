@@ -1,11 +1,12 @@
 import "../overwrite/EngineOverride";//不带 from 关键字的import,  作用是直接导进来并立即执行 相当于js的 require()
-import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode, NodeEventType, Scene, resources, AssetManager, assetManager, SpriteAtlas, Sprite, SpriteFrame, dragonBones, Texture2D, Asset, ImageAsset, AudioClip } from 'cc';
+import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode, NodeEventType, Scene, resources, AssetManager, assetManager, SpriteAtlas, Sprite, SpriteFrame, dragonBones, Texture2D, Asset, ImageAsset, AudioClip, sp, AnimationClip } from 'cc';
 import { ClassSon } from '../utils/ClassSon';
-import { superSetter } from '../utils/GlabolImport';
+import { superSetter } from '../utils/GlobalImport';
 
 
 import { DEBUG } from 'cc/env';
 import { asyncAsset } from '../utils/asyncAsset';
+import { usingAssets } from "../config/usingAssets";
 
 const { ccclass, property } = _decorator;
 
@@ -28,7 +29,7 @@ export class MainEntry extends Component {
     }
 
     start() {
-
+        console.log(1234567);
         let son = new ClassSon();
         log(son.a)
         superSetter(ClassSon, son, "a", 5);
@@ -106,23 +107,18 @@ export class MainEntry extends Component {
         
         /* let bundle = await asyncAsset.loadOneBundle("res", false);
 
-
         bundle.load("dog" , Asset, (err, res) => {
           
         }) */
-       /*  await asyncAsset.bundleLoadUsingAssets("res", (f, t, p) => { 
-            console.log(f, t);
-        }) */
         
-        let dog = await asyncAsset.bundleLoadByUrl("res", "dog", SpriteFrame);
+       /*  let dog = await asyncAsset.bundleLoadByUrl("res", "dog", SpriteFrame);
         
-         
-        //let dog2 = assetManager.getBundle("res").load(
-            //AssetManager.Bundle.prototype.get
         window["dog"] = dog;
-        
+         
+        let ske = await asyncAsset.bundleLoadByUrl("res", usingAssets.res.chuansongganzi$1);
+        console.log("ske =", ske); */
         //assetManager.loadRemote('https://baishancdn.hicnhm.com/beiji_res/assets/avatar3/300000015_8_5.png', (err, texture) => console.log(texture));
-
-        //sprite.spriteFrame
+          
+        let xx = await asyncAsset.loadOneUsingAsset(usingAssets.res.chuansongganzi$1)
     }
 }

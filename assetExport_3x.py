@@ -58,24 +58,23 @@ def findBundleInDir(dirPath):
             findBundleInDir(path)
         # 找到与文件夹对应的 .meta 检查一下它是不是bundle
         elif file_extension == ".meta" and os.path.isdir(path.split(".meta")[0]):
-            file = open(path, "r", encoding="utf-8")
-            read = file.read()
-
-            jsonData = json.loads(read)
-
-            if "isBundle" in jsonData["userData"] and jsonData["userData"]["isBundle"] == True:
-                if read.find("\"bundleName\": \"\"") != -1:  # 这个bundle没有自定义的名称 使用的是默认名
-                    bundleNames.append([os.path.basename(path).split(".")[
-                                        0], path.split(".meta")[0]])
-                else:
-                    bundleNames.append([read.split("\"bundleName\":")[
-                                       1].split("\"")[1], path.split(".meta")[0]])
+            with open(path, "r", encoding="utf-8") as file:
+                read = file.read()
+                jsonData = json.loads(read)
+                if "isBundle" in jsonData["userData"] and jsonData["userData"]["isBundle"] == True:
+                    if read.find("\"bundleName\": \"\"") != -1:  # 这个bundle没有自定义的名称 使用的是默认名
+                        bundleNames.append([os.path.basename(path).split(".")[
+                                            0], path.split(".meta")[0]])
+                    else:
+                        bundleNames.append([read.split("\"bundleName\":")[
+                            1].split("\"")[1], path.split(".meta")[0]])
 
 
 findBundleInDir("./assets")
 
 
 fileArray = {}
+filePathArray = {}
 
 
 def findAssetInDir(bundleName, bundlePath, dirPath):
@@ -90,7 +89,9 @@ def findAssetInDir(bundleName, bundlePath, dirPath):
                 path = path.replace("\\", "/")
                 if fileArray.get(bundleName) == None:
                     fileArray[bundleName] = []
+                    filePathArray[bundleName] = []
                 fileArray[bundleName].append(path.split(bundlePath+"/")[1])
+                filePathArray[bundleName].append(path)
                 if bundleName == "resources":
                     print(path.split(bundlePath+"/")[1])
         elif os.path.isdir(path):  # 这个是文件夹 继续递归向下遍历
@@ -107,15 +108,16 @@ if not os.path.exists("./assets/script/config"):
 with open("./assets/script/config/usingAssets.ts", "w+", encoding="utf-8") as file:
     file.write("/** created by assetExport.py */"+"\n")
     file.write(
-        'import { AnimationClip, LabelAtlas, Font, SpriteAtlas, SpriteFrame, Prefab, AudioClip, dragonBones, JsonAsset, Asset } from "cc";'+'\n\n')
+        'import { AnimationClip, LabelAtlas, Font, SpriteAtlas, SpriteFrame, Prefab, AudioClip, sp, dragonBones, JsonAsset, TextAsset, Asset } from "cc";'+'\n\n')
     file.write("export const usingAssets = {"+"\n")
     for key in fileArray:
         file.write("\t" + key + ": {\n")
         # file.write("\t\t"+ "id: \"" + key + "\",\n")
-        value = fileArray[key]
+        valueArr = fileArray[key]
+        filePathArr = filePathArray[key]
         fileNameArray = []
-        for i in range(0, len(value)):
-            fileName = os.path.basename(value[i])
+        for i in range(0, len(valueArr)):
+            fileName = os.path.basename(valueArr[i])
             # 把 ???@2x.png 这类图片资源名称改为 ???_a2x.png
             tempName = fileName.replace("@", "_a")
             file_extension = fileName.split(".")[-1:][0].lower()
@@ -141,8 +143,8 @@ with open("./assets/script/config/usingAssets.ts", "w+", encoding="utf-8") as fi
                 fileName = tempName + "$" + str(n)
                 n = n + 1
             fileNameArray.append(fileName)
-
-            
+            assetType = "Asset"
+            uuid = ""
             if file_extension == "anim":  # 动画剪辑
                 assetType = "AnimationClip"
             elif file_extension == "labelatlas":  # 艺术字
@@ -151,35 +153,56 @@ with open("./assets/script/config/usingAssets.ts", "w+", encoding="utf-8") as fi
                 assetType = "Font"
             elif file_extension == "plist":  # 图集
                 assetType = "SpriteAtlas"
-            elif file_extension == "png" or file_extension == "jpg" or file_extension == "jpeg":  # 单图
+            elif file_extension == "png" or file_extension == "jpg" or file_extension == "jpeg" or file_extension == "bmp" or file_extension == "webp":  # 单图
                 assetType = "SpriteFrame"
             elif file_extension == "prefab":  # 预制体
                 assetType = "Prefab"
             elif file_extension == "mp3" or file_extension == "wav" or file_extension == "ogg":  # 音频
                 assetType = "AudioClip"
             elif file_extension == "json":  # json配置文件
-                if fileName.find("ske_json") != -1:
-                    assetType = "dragonBones.DragonBonesAsset"
-                elif fileName.find("tex_json") != -1:
-                    assetType = "dragonBones.DragonBonesAtlasAsset"
+                assetType = "JsonAsset"
+                # 优先从比较小的.meta文件去解析 如果新资源传入creator项目并在IDE里刷新了资源包 都会生成这个 .meta文件
+                if os.path.exists(filePathArr[i] + ".meta"):
+                    with open(filePathArr[i] + ".meta", "r", encoding="utf-8") as file1:
+                        read1 = file1.read()
+                        jsonData1 = json.loads(read1)
+                        if "importer" in jsonData1 and jsonData1["importer"] == "spine-data":
+                            assetType = "sp.SkeletonData"
+                            # 目前只发现通过 assetManager.loadAny("uuid")的方式能识别出 sp.SkeletonData
+                            uuid = jsonData1["uuid"]
+                        elif "importer" in jsonData1 and jsonData1["importer"] == "dragonbones":
+                            assetType = "dragonBones.DragonBonesAsset"
+                        elif "importer" in jsonData1 and jsonData1["importer"] == "dragonbones-atlas":
+                            assetType = "dragonBones.DragonBonesAtlasAsset"
+                # .meta文件尚未生成 只能从较大的json文件去解析
                 else:
-                    assetType = "JsonAsset"
-            else:
-                assetType = "Asset"
-            info = fileName + ": { url: \"" + value[i].split("." + file_extension)[
-                0] + "\", ext: \"." + file_extension + "\", type: " + assetType + " },"
+                    with open(filePathArr[i], "r", encoding="utf-8") as file2:
+                        read2 = file2.read()
+                        jsonData2 = json.loads(read2)
+                        if "skeleton" in jsonData2 and "spine" in jsonData2["skeleton"]:
+                            assetType = "sp.SkeletonData"
+                        elif "compatibleVersion" in jsonData2 and "armature" in jsonData2:
+                            assetType = "dragonBones.DragonBonesAsset"
+                        elif "imagePath" in jsonData2 and "SubTexture" in jsonData2:
+                            assetType = "dragonBones.DragonBonesAtlasAsset"
+            elif file_extension == "txt":
+                assetType = "TextAsset"
+            info = fileName + ": { bundle: \"" + key + "\", url: \"" + valueArr[i].split("." + file_extension)[
+                0] + "\", ext: \"." + file_extension + "\", type: " + assetType + (", uuid: \"" + uuid + "\" }," if uuid != "" else " },")
             print(info)
             # value[i].split(file_extension)[0]
             file.write("\t\t" + info + "\n")
         file.write("\t},\n")
     file.write("}\n")
-    file.write("globalThis[\"usingAssets\"] = globalThis[\"UA\"] = usingAssets;\n")
+    file.write(
+        "globalThis[\"usingAssets\"] = globalThis[\"UA\"] = usingAssets;\n")
 
     file.write("\n\nexport const usingBundles = {"+"")
-    for value in bundleNames:
-        file.write("\n\t" + value[0] + ": " + "\"" + value[0] + "\",")
+    for valueArr in bundleNames:
+        file.write("\n\t" + valueArr[0] + ": " + "\"" + valueArr[0] + "\",")
     file.write("\n}\n")
-    file.write("globalThis[\"usingBundles\"] = globalThis[\"UB\"] = usingBundles;")
+    file.write(
+        "globalThis[\"usingBundles\"] = globalThis[\"UB\"] = usingBundles;")
 
 
 input("===============导出配置完成===============")

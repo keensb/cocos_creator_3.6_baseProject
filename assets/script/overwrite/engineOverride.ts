@@ -5,6 +5,7 @@
 //CocosDashboard安装目录\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\cocos\core\scene-graph\node.ts  次要
 import { AssetManager, BaseNode, Component, director, Node, NodeEventType, path, Sprite, SpriteFrame, Texture2D, UIOpacity, UITransform, __private } from 'cc';
 import { DEBUG } from 'cc/env';
+import { superGetter, superSetter } from '../utils/GlobalImport';
 
 
 export class EngineOverride {
@@ -196,6 +197,8 @@ export class EngineOverride {
             enumerable: true,
             configurable: true
         });
+        
+        
 
         //覆盖 让 bundle.get("图片路径", SpriteFrame) 或 bundle.get("图片路径", Texture2D), 填入第二个具体类型参数时  返回一个 SpriteFrame 或 Texture2D,  而不是 ImageAsset
         AssetManager.Bundle.prototype.getInfoWithPath = function (path: string, type?: __private._cocos_core_asset_manager_shared__AssetType | null): __private._cocos_core_asset_manager_config__IAddressableInfo | null {

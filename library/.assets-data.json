@@ -184,5 +184,790 @@
   "1be8cfa4-6f46-47ec-bb33-b1abf794eb20": {
     "url": "db://assets/script/config/usingAssets.ts",
     "value": {}
+  },
+  "571e50d0-4e95-4bcd-9877-90be80b8cfb1": {
+    "url": "db://assets/res/atlas",
+    "value": {}
+  },
+  "e43c6296-9ffe-4ffa-b7b8-c4051b479a63": {
+    "url": "db://assets/res/dragon",
+    "value": {}
+  },
+  "390b6818-80a1-4571-9a91-66986a167c42": {
+    "url": "db://assets/res/spine",
+    "value": {}
+  },
+  "1655f68d-d0f2-4c82-a36b-f40bf263389d": {
+    "url": "db://assets/res/sub1",
+    "value": {}
+  },
+  "886188e5-e0db-49a3-8976-f3c9e2d0b056": {
+    "url": "db://assets/res/sub2",
+    "value": {}
+  },
+  "17af6bd2-909e-48b9-9d42-26b2fce3a9c2": {
+    "url": "db://assets/res/RJ336669_img_main.webp",
+    "value": {
+      "depends": []
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde@a4b91",
+        "ec6af875-be27-41a4-92be-06042e848fde@e641b",
+        "ec6af875-be27-41a4-92be-06042e848fde@90932",
+        "ec6af875-be27-41a4-92be-06042e848fde@dd156",
+        "ec6af875-be27-41a4-92be-06042e848fde@08818",
+        "ec6af875-be27-41a4-92be-06042e848fde@cf6ba",
+        "ec6af875-be27-41a4-92be-06042e848fde@7d56d",
+        "ec6af875-be27-41a4-92be-06042e848fde@97465",
+        "ec6af875-be27-41a4-92be-06042e848fde@aee44",
+        "ec6af875-be27-41a4-92be-06042e848fde@c7167",
+        "ec6af875-be27-41a4-92be-06042e848fde@4d92d",
+        "ec6af875-be27-41a4-92be-06042e848fde@05091",
+        "ec6af875-be27-41a4-92be-06042e848fde@aed97",
+        "ec6af875-be27-41a4-92be-06042e848fde@aacb3",
+        "ec6af875-be27-41a4-92be-06042e848fde@8596e",
+        "ec6af875-be27-41a4-92be-06042e848fde@8dab1",
+        "ec6af875-be27-41a4-92be-06042e848fde@e08aa",
+        "ec6af875-be27-41a4-92be-06042e848fde@38bea",
+        "ec6af875-be27-41a4-92be-06042e848fde@1edc1",
+        "ec6af875-be27-41a4-92be-06042e848fde@08548",
+        "ec6af875-be27-41a4-92be-06042e848fde@133dd",
+        "ec6af875-be27-41a4-92be-06042e848fde@7f901",
+        "ec6af875-be27-41a4-92be-06042e848fde@2a625",
+        "ec6af875-be27-41a4-92be-06042e848fde@b6152",
+        "ec6af875-be27-41a4-92be-06042e848fde@a56e7",
+        "ec6af875-be27-41a4-92be-06042e848fde@2270b",
+        "ec6af875-be27-41a4-92be-06042e848fde@33663",
+        "ec6af875-be27-41a4-92be-06042e848fde@c7d93",
+        "ec6af875-be27-41a4-92be-06042e848fde@f425c",
+        "ec6af875-be27-41a4-92be-06042e848fde@a17ff",
+        "ec6af875-be27-41a4-92be-06042e848fde@7408a",
+        "ec6af875-be27-41a4-92be-06042e848fde@495c4",
+        "ec6af875-be27-41a4-92be-06042e848fde@b4a00",
+        "ec6af875-be27-41a4-92be-06042e848fde@ad93a",
+        "ec6af875-be27-41a4-92be-06042e848fde@74afa",
+        "ec6af875-be27-41a4-92be-06042e848fde@0cc24",
+        "ec6af875-be27-41a4-92be-06042e848fde@1159d",
+        "ec6af875-be27-41a4-92be-06042e848fde@92c2d",
+        "ec6af875-be27-41a4-92be-06042e848fde@31917",
+        "ec6af875-be27-41a4-92be-06042e848fde@26d18",
+        "ec6af875-be27-41a4-92be-06042e848fde@08d9b",
+        "ec6af875-be27-41a4-92be-06042e848fde@54715",
+        "ec6af875-be27-41a4-92be-06042e848fde@492b7",
+        "ec6af875-be27-41a4-92be-06042e848fde@100e6",
+        "ec6af875-be27-41a4-92be-06042e848fde@106da"
+      ]
+    }
+  },
+  "17af6bd2-909e-48b9-9d42-26b2fce3a9c2@6c48a": {
+    "url": "db://assets/res/RJ336669_img_main.webp@6c48a",
+    "value": {
+      "depends": [
+        "17af6bd2-909e-48b9-9d42-26b2fce3a9c2"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@31917": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@31917",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@33663": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@33663",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@54715": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@54715",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "e80e626f-66d8-47ed-afd6-a74a52d53b22": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@90932": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@90932",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "17af6bd2-909e-48b9-9d42-26b2fce3a9c2@f9941": {
+    "url": "db://assets/res/RJ336669_img_main.webp@f9941",
+    "value": {
+      "depends": [
+        "17af6bd2-909e-48b9-9d42-26b2fce3a9c2@6c48a"
+      ]
+    }
+  },
+  "8ccf8008-4e28-4b23-9b23-ab54323d55fd": {
+    "url": "db://assets/res/dragon/bawanglong_ske.json",
+    "value": {
+      "depends": []
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@97465": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@97465",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@a4b91": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@a4b91",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "1262964e-9f1a-4c61-95d1-623bda580a0d": {
+    "url": "db://assets/res/dragon/bawanglong_tex.json",
+    "value": {
+      "depends": [
+        "fc7a0305-4ac0-4112-aba7-6aa2b11cfab8@6c48a"
+      ]
+    }
+  },
+  "fc7a0305-4ac0-4112-aba7-6aa2b11cfab8": {
+    "url": "db://assets/res/dragon/bawanglong_tex.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "90e20505-cf42-4daf-8abf-03740ccd42cf": {
+    "url": "db://assets/res/spine/chuansongganzi.atlas.txt",
+    "value": {
+      "depends": []
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@e641b": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@e641b",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "e6dfbd24-2ee0-4f7e-bf48-886122fa1a30": {
+    "url": "db://assets/res/spine/chuansongganzi.json",
+    "value": {
+      "depends": [
+        "74766249-75fb-4679-8d5c-7fe476936f81@6c48a"
+      ]
+    }
+  },
+  "74766249-75fb-4679-8d5c-7fe476936f81": {
+    "url": "db://assets/res/spine/chuansongganzi.png",
+    "value": {}
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@dd156": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@dd156",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@08818": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@08818",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@cf6ba": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@cf6ba",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "2abbf3c3-f370-4628-bf7e-5309b079dd06": {
+    "url": "db://assets/res/sub1/bg.jpg",
+    "value": {
+      "depends": []
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@7d56d": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@7d56d",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@aee44": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@aee44",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@c7167": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@c7167",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@4d92d": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@4d92d",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@05091": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@05091",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "74766249-75fb-4679-8d5c-7fe476936f81@6c48a": {
+    "url": "db://assets/res/spine/chuansongganzi.png@6c48a",
+    "value": {
+      "depends": [
+        "74766249-75fb-4679-8d5c-7fe476936f81"
+      ]
+    }
+  },
+  "2abbf3c3-f370-4628-bf7e-5309b079dd06@6c48a": {
+    "url": "db://assets/res/sub1/bg.jpg@6c48a",
+    "value": {
+      "depends": [
+        "2abbf3c3-f370-4628-bf7e-5309b079dd06"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@aed97": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@aed97",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@aacb3": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@aacb3",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@8596e": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@8596e",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@8dab1": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@8dab1",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "74766249-75fb-4679-8d5c-7fe476936f81@f9941": {
+    "url": "db://assets/res/spine/chuansongganzi.png@f9941",
+    "value": {
+      "depends": [
+        "74766249-75fb-4679-8d5c-7fe476936f81@6c48a"
+      ]
+    }
+  },
+  "97f98e01-e381-4a6b-a583-286ca590ee35": {
+    "url": "db://assets/res/sub1/dog.jpg",
+    "value": {
+      "depends": []
+    }
+  },
+  "fc7a0305-4ac0-4112-aba7-6aa2b11cfab8@6c48a": {
+    "url": "db://assets/res/dragon/bawanglong_tex.png@6c48a",
+    "value": {
+      "depends": [
+        "fc7a0305-4ac0-4112-aba7-6aa2b11cfab8"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@e08aa": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@e08aa",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.png@6c48a",
+    "value": {
+      "depends": [
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@38bea": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@38bea",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@1edc1": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@1edc1",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "2abbf3c3-f370-4628-bf7e-5309b079dd06@f9941": {
+    "url": "db://assets/res/sub1/bg.jpg@f9941",
+    "value": {
+      "depends": [
+        "2abbf3c3-f370-4628-bf7e-5309b079dd06@6c48a"
+      ]
+    }
+  },
+  "8b2ef6ff-4880-4af2-b7e2-abc28b8f33fc": {
+    "url": "db://assets/res/sub1/hzw.jpeg",
+    "value": {
+      "depends": []
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@08548": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@08548",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "fc7a0305-4ac0-4112-aba7-6aa2b11cfab8@f9941": {
+    "url": "db://assets/res/dragon/bawanglong_tex.png@f9941",
+    "value": {
+      "depends": [
+        "fc7a0305-4ac0-4112-aba7-6aa2b11cfab8@6c48a"
+      ]
+    }
+  },
+  "e80e626f-66d8-47ed-afd6-a74a52d53b22@f9941": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.png@f9941",
+    "value": {
+      "depends": [
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "343708b9-308b-4def-8b66-680b41b23b48": {
+    "url": "db://assets/res/sub2/bg.jpg",
+    "value": {
+      "depends": []
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@133dd": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@133dd",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "6c3a1e21-23a0-4cc1-b205-38690d07d67e": {
+    "url": "db://assets/res/sub2/dog.jpg",
+    "value": {
+      "depends": []
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@7f901": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@7f901",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@2a625": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@2a625",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@b6152": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@b6152",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "97f98e01-e381-4a6b-a583-286ca590ee35@6c48a": {
+    "url": "db://assets/res/sub1/dog.jpg@6c48a",
+    "value": {
+      "depends": [
+        "97f98e01-e381-4a6b-a583-286ca590ee35"
+      ]
+    }
+  },
+  "8b2ef6ff-4880-4af2-b7e2-abc28b8f33fc@6c48a": {
+    "url": "db://assets/res/sub1/hzw.jpeg@6c48a",
+    "value": {
+      "depends": [
+        "8b2ef6ff-4880-4af2-b7e2-abc28b8f33fc"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@a56e7": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@a56e7",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "97f98e01-e381-4a6b-a583-286ca590ee35@f9941": {
+    "url": "db://assets/res/sub1/dog.jpg@f9941",
+    "value": {
+      "depends": [
+        "97f98e01-e381-4a6b-a583-286ca590ee35@6c48a"
+      ]
+    }
+  },
+  "c46d8da0-7146-4505-a66e-b3d601a9b853": {
+    "url": "db://assets/res/sub2/hzw.jpeg",
+    "value": {
+      "depends": []
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@2270b": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@2270b",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@c7d93": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@c7d93",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "343708b9-308b-4def-8b66-680b41b23b48@6c48a": {
+    "url": "db://assets/res/sub2/bg.jpg@6c48a",
+    "value": {
+      "depends": [
+        "343708b9-308b-4def-8b66-680b41b23b48"
+      ]
+    }
+  },
+  "6c3a1e21-23a0-4cc1-b205-38690d07d67e@6c48a": {
+    "url": "db://assets/res/sub2/dog.jpg@6c48a",
+    "value": {
+      "depends": [
+        "6c3a1e21-23a0-4cc1-b205-38690d07d67e"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@f425c": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@f425c",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@a17ff": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@a17ff",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@7408a": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@7408a",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@495c4": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@495c4",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "c46d8da0-7146-4505-a66e-b3d601a9b853@6c48a": {
+    "url": "db://assets/res/sub2/hzw.jpeg@6c48a",
+    "value": {
+      "depends": [
+        "c46d8da0-7146-4505-a66e-b3d601a9b853"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@b4a00": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@b4a00",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "8b2ef6ff-4880-4af2-b7e2-abc28b8f33fc@f9941": {
+    "url": "db://assets/res/sub1/hzw.jpeg@f9941",
+    "value": {
+      "depends": [
+        "8b2ef6ff-4880-4af2-b7e2-abc28b8f33fc@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@ad93a": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@ad93a",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "343708b9-308b-4def-8b66-680b41b23b48@f9941": {
+    "url": "db://assets/res/sub2/bg.jpg@f9941",
+    "value": {
+      "depends": [
+        "343708b9-308b-4def-8b66-680b41b23b48@6c48a"
+      ]
+    }
+  },
+  "6c3a1e21-23a0-4cc1-b205-38690d07d67e@f9941": {
+    "url": "db://assets/res/sub2/dog.jpg@f9941",
+    "value": {
+      "depends": [
+        "6c3a1e21-23a0-4cc1-b205-38690d07d67e@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@74afa": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@74afa",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@0cc24": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@0cc24",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@1159d": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@1159d",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@92c2d": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@92c2d",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@26d18": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@26d18",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@08d9b": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@08d9b",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "c46d8da0-7146-4505-a66e-b3d601a9b853@f9941": {
+    "url": "db://assets/res/sub2/hzw.jpeg@f9941",
+    "value": {
+      "depends": [
+        "c46d8da0-7146-4505-a66e-b3d601a9b853@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@492b7": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@492b7",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@100e6": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@100e6",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "ec6af875-be27-41a4-92be-06042e848fde@106da": {
+    "url": "db://assets/res/atlas/zxnn_main_atlas.plist@106da",
+    "value": {
+      "depends": [
+        "ec6af875-be27-41a4-92be-06042e848fde",
+        "e80e626f-66d8-47ed-afd6-a74a52d53b22@6c48a"
+      ]
+    }
+  },
+  "c56e17d8-0511-425b-bd69-3d17a25ecb92": {
+    "url": "db://assets/res/spine/chuansongganzi.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "c56e17d8-0511-425b-bd69-3d17a25ecb92@6c48a": {
+    "url": "db://assets/res/spine/chuansongganzi.png@6c48a",
+    "value": {
+      "depends": [
+        "c56e17d8-0511-425b-bd69-3d17a25ecb92"
+      ]
+    }
+  },
+  "c56e17d8-0511-425b-bd69-3d17a25ecb92@f9941": {
+    "url": "db://assets/res/spine/chuansongganzi.png@f9941",
+    "value": {
+      "depends": [
+        "c56e17d8-0511-425b-bd69-3d17a25ecb92@6c48a"
+      ]
+    }
+  },
+  "d903ba09-7ee6-48a2-9aaf-0a2aa96b6175": {
+    "url": "db://assets/res/spine/chuansongganzi.atlas.txt",
+    "value": {
+      "depends": []
+    }
+  },
+  "e5d7ae7a-17e7-4571-8c0b-5ba4ecdc57fb": {
+    "url": "db://assets/res/spine/chuansongganzi.json",
+    "value": {
+      "depends": [
+        "d43b1e3a-923b-4d89-9464-3b0198638f4c@6c48a"
+      ]
+    }
+  },
+  "d43b1e3a-923b-4d89-9464-3b0198638f4c": {
+    "url": "db://assets/res/spine/chuansongganzi.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "d43b1e3a-923b-4d89-9464-3b0198638f4c@6c48a": {
+    "url": "db://assets/res/spine/chuansongganzi.png@6c48a",
+    "value": {
+      "depends": [
+        "d43b1e3a-923b-4d89-9464-3b0198638f4c"
+      ]
+    }
+  },
+  "d43b1e3a-923b-4d89-9464-3b0198638f4c@f9941": {
+    "url": "db://assets/res/spine/chuansongganzi.png@f9941",
+    "value": {
+      "depends": [
+        "d43b1e3a-923b-4d89-9464-3b0198638f4c@6c48a"
+      ]
+    }
+  },
+  "f8cccba4-7f44-453a-a089-46d1239c3d98": {
+    "url": "db://assets/script/utils/GlobalImport.ts",
+    "value": {}
   }
 }

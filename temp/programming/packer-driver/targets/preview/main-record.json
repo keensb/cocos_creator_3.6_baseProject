@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 7479.091808319092,
+      "mTimestamp": 7580.8893032073975,
       "chunkId": "909f786ffe128f06f5aa1b4e1e3fbbd65262915e",
       "imports": [
         {
@@ -409,7 +409,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 89554542.90370083,
+      "mTimestamp": 237438.0700483322,
       "chunkId": "5a6a98ae14ee88abb8ca98380f8150e672c61ad5",
       "imports": [
         {
@@ -497,7 +497,7 @@
           }
         },
         {
-          "value": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/GlabolImport.ts",
+          "value": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/GlobalImport.ts",
           "resolved": "__unresolved_6",
           "loc": {
             "start": {
@@ -572,7 +572,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/GlabolImport.ts"
+            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/GlobalImport.ts"
           },
           "messages": []
         },
@@ -724,7 +724,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1681980945074,
+      "mTimestamp": 1682243848992,
       "chunkId": "3a1fd7b13056478820ebedd306d3446d1aa408cc",
       "imports": [],
       "type": "esm",
@@ -818,10 +818,10 @@
     },
     "file:///F:/creator/project_3/NewProject_36/assets/script/com/MainEntry.ts": {
       "mTimestamp": {
-        "mtime": 1682067593279.5647,
+        "mtime": 1682244084446.2605,
         "uuid": "6ed06b80-76ca-49b0-aebe-dfa781633962"
       },
-      "chunkId": "7f2961c003d41f63991f8182bc072062d430d539",
+      "chunkId": "b4245a5f0f45723b23f520bcc9319c6d0f649c3e",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -852,11 +852,11 @@
           "loc": {
             "start": {
               "line": 2,
-              "column": 255
+              "column": 274
             },
             "end": {
               "line": 2,
-              "column": 259
+              "column": 278
             }
           }
         },
@@ -875,7 +875,7 @@
           }
         },
         {
-          "value": "../utils/GlabolImport",
+          "value": "../utils/GlobalImport",
           "resolved": "__unresolved_3",
           "loc": {
             "start": {
@@ -912,6 +912,20 @@
             "end": {
               "line": 8,
               "column": 48
+            }
+          }
+        },
+        {
+          "value": "../config/usingAssets",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 28
+            },
+            "end": {
+              "line": 9,
+              "column": 51
             }
           }
         }
@@ -963,7 +977,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/GlabolImport.ts"
+            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/GlobalImport.ts"
           },
           "messages": []
         },
@@ -980,15 +994,22 @@
             "url": "file:///F:/creator/project_3/NewProject_36/assets/script/utils/asyncAsset.ts"
           },
           "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///F:/creator/project_3/NewProject_36/assets/script/config/usingAssets.ts"
+          },
+          "messages": []
         }
       ]
     },
     "file:///F:/creator/project_3/NewProject_36/assets/script/utils/GlabolImport.ts": {
       "mTimestamp": {
-        "mtime": 1670832434503.2214,
+        "mtime": 1682231389676.1694,
         "uuid": "adc6510f-24fb-423d-ba74-4dc067f47150"
       },
-      "chunkId": "169e1874860c4275c4e62bb888d311a29e232291",
+      "chunkId": "065434c9f754b457d9b6d0e04704ce0fe29c471c",
       "imports": [
         {
           "value": "cc"
@@ -1059,7 +1080,7 @@
     },
     "file:///F:/creator/project_3/NewProject_36/assets/script/overwrite/EngineOverride.ts": {
       "mTimestamp": {
-        "mtime": 1682064848085.3489,
+        "mtime": 1682235587232.1238,
         "uuid": "44c8dc46-5ccf-4a3b-ad16-135e58191b1f"
       },
       "chunkId": "be79ae8859225af3bf893240c3f5f9af501b296b",
@@ -1111,10 +1132,10 @@
     },
     "file:///F:/creator/project_3/NewProject_36/assets/script/utils/asyncAsset.ts": {
       "mTimestamp": {
-        "mtime": 1682070085979.96,
+        "mtime": 1682243940179.594,
         "uuid": "27ad81e9-db69-4d36-9093-7df04639ce95"
       },
-      "chunkId": "00a4df4d8b970ac642cb0e19b4b80a4b2fb2a317",
+      "chunkId": "d5febdd814dc91a5e37ddda753531594357773f8",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -1247,10 +1268,10 @@
     },
     "file:///F:/creator/project_3/NewProject_36/assets/script/config/usingAssets.ts": {
       "mTimestamp": {
-        "mtime": 1682060670714.3142,
+        "mtime": 1682244016238.3313,
         "uuid": "1be8cfa4-6f46-47ec-bb33-b1abf794eb20"
       },
-      "chunkId": "8ff3f50c9a860e00da66e92b29d2116bf37ef04a",
+      "chunkId": "22961f5b4b7f8b575caed338fea6292825b44627",
       "imports": [
         {
           "value": "cc"
@@ -1263,11 +1284,11 @@
           "loc": {
             "start": {
               "line": 2,
-              "column": 124
+              "column": 139
             },
             "end": {
               "line": 2,
-              "column": 128
+              "column": 143
             }
           }
         }
@@ -1288,6 +1309,28 @@
           },
           "messages": []
         },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///F:/creator/project_3/NewProject_36/assets/script/utils/GlobalImport.ts": {
+      "mTimestamp": {
+        "mtime": 1682235591408.2698,
+        "uuid": "f8cccba4-7f44-453a-a089-46d1239c3d98"
+      },
+      "chunkId": "36cfe01d048cfaa2ca2d1910ee24cb4534b4faa4",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
         {
           "resolved": {
             "type": "module",
