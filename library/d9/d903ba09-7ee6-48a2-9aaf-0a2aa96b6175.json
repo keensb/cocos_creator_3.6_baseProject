@@ -1,7 +1,0 @@
-{
-  "__type__": "cc.TextAsset",
-  "_name": "chuansongganzi.atlas",
-  "_objFlags": 0,
-  "_native": "",
-  "text": "\nchuansongganzi.png\nsize: 139,45\nformat: RGBA8888\nfilter: Linear,Linear\nrepeat: none\nganzi\n  rotate: true\n  xy: 2, 7\n  size: 36, 75\n  orig: 36, 75\n  offset: 0, 0\n  index: -1\nhoumian\n  rotate: true\n  xy: 79, 2\n  size: 41, 58\n  orig: 41, 58\n  offset: 0, 0\n  index: -1\nqianmian\n  rotate: true\n  xy: 79, 2\n  size: 41, 58\n  orig: 41, 58\n  offset: 0, 0\n  index: -1\n"
-}

@@ -59,6 +59,11 @@ declare module "cc" {//<----------注意:这里坑爹的地方  模块名不是 
         z: number;
 
         /**
+         * 按照creator 2.x习惯直接修改 Node在父级节点上的深度值
+         */
+        zIndex: number;
+
+        /**
          * 按照creator 2.x习惯直接修改 Node的水平拉伸比例
          */
         scaleX: number;

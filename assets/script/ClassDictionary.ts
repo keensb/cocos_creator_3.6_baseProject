@@ -1,8 +1,8 @@
-import { ClassSon } from "./../script/utils/ClassSon";
-import { ClassSuper } from "./../script/utils/ClassSuper";
+import { ClassSon } from "./../script/com/example/ClassSon";
+import { ClassSuper } from "./../script/com/example/ClassSuper";
 import { EngineOverride } from "./../script/overwrite/EngineOverride";
 import { MainEntry } from "./../script/com/MainEntry";
-import { asyncAsset } from "./../script/utils/asyncAsset";
+import { asyncAsset } from "./../script/mgr/asyncAsset";
 
 
 export class ClassDictionary {

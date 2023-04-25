@@ -1,2 +1,6 @@
 /temp/programming/packer-driver/targets/preview/chunks
 /temp/programming/packer-driver/targets/editor/chunks
+library
+temp
+/library
+/temp

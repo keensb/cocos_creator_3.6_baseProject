@@ -1,12 +1,15 @@
-import "../overwrite/EngineOverride";//不带 from 关键字的import,  作用是直接导进来并立即执行 相当于js的 require()
-import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode, NodeEventType, Scene, resources, AssetManager, assetManager, SpriteAtlas, Sprite, SpriteFrame, dragonBones, Texture2D, Asset, ImageAsset, AudioClip, sp, AnimationClip } from 'cc';
-import { ClassSon } from '../utils/ClassSon';
-import { superSetter } from '../utils/GlobalImport';
+import  "../overwrite/EngineOverride";//不带 from 关键字的import,  作用是直接导进来并立即执行 相当于js的 require()
+import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode, NodeEventType, Scene, resources, AssetManager, assetManager, SpriteAtlas, Sprite, SpriteFrame, dragonBones, Texture2D, Asset, ImageAsset, AudioClip, sp, AnimationClip, utils, NodeActivator, UITransform } from 'cc';
+import { ClassSon } from './example/ClassSon';
+
 
 
 import { DEBUG } from 'cc/env';
-import { asyncAsset } from '../utils/asyncAsset';
+import { asyncAsset } from '../mgr/asyncAsset';
 import { usingAssets } from "../config/usingAssets";
+import { ccutils } from "../ccutils/ccutils";
+
+
 
 const { ccclass, property } = _decorator;
 
@@ -24,32 +27,42 @@ export class MainEntry extends Component {
     label: Label = null;
 
     onLoad() {
-        console.log("okokokok", this.node["__proto__"]);
-        //engineOverrider.startWrite();//在 creator 底层的JS原型链中 新增或覆盖自定义的业务代码
+         
     }
 
     start() {
         console.log(1234567);
         let son = new ClassSon();
         log(son.a)
-        superSetter(ClassSon, son, "a", 5);
+        ccutils.superSetter(ClassSon, son, "a", 5);
         log(son.a)
         son.a = 3;
         log(son.a);
+        ccutils.superGetter(ClassSon, son, "a");
 
         //find("Canvas/bg").getComponent(UIOpacity).opacity = 100;
+
         var bg = find("Canvas/bg");
-        bg.getOrAddComponent(UIOpacity).opacity = 100;
+        var love = find("Canvas/love");
+        var nn = find("Canvas/Node1/Node2");
+        
         window["bg"] = bg;
+        window["sp"] = bg.getComponent(Sprite);
+        window["sf"] = bg.getComponent(Sprite).spriteFrame;
         bg.setPosition(100, bg.position.y);
 
-        console.log("scale", bg.scale)
+        window["love"] = love;
+        window["lsa"] = love.getComponent 
+        window["lsp"] = love.getComponent(Sprite);
+        window["lsa"] = love.getComponent(Sprite).spriteAtlas;
+        window["lsf"] = love.getComponent(Sprite).spriteFrame;
 
+        window["nn"] = nn;
         //tween(bg).to(5, { scaleX: 2 }).start();
         //tween(bg).to(5, { hh: 400 }).start();
 
 
-
+        console.log(ccutils.getObjectSetter(Sprite, "spriteFrame"))
 
 
         /* 
@@ -84,8 +97,11 @@ export class MainEntry extends Component {
         this.node.removeChild(xxx)
         console.log("STAGE_CHANGED2222", xxx.stage, DEBUG);
 
-        console.log(director.getScene().findSubComponent(MainEntry), find("Canvas").findSubComponent(MainEntry));
-
+        //console.log(director.getScene().findSubComponent(MainEntry), find("Canvas").findSubComponent(MainEntry));
+        assetManager.loadAny("ec6af875-be27-41a4-92be-06042e848fde", (err, res) => { 
+            console.log("xxxxxxxxx", err, res);
+            window["bigPic"] = res;
+        })
         this.assetHandler();
     }
 
@@ -104,21 +120,21 @@ export class MainEntry extends Component {
 
 
     private async assetHandler(): Promise<void> {
-        
+
         /* let bundle = await asyncAsset.loadOneBundle("res", false);
 
         bundle.load("dog" , Asset, (err, res) => {
           
         }) */
-        
-       /*  let dog = await asyncAsset.bundleLoadByUrl("res", "dog", SpriteFrame);
-        
-        window["dog"] = dog;
+
+        /*  let dog = await asyncAsset.bundleLoadByUrl("res", "dog", SpriteFrame);
          
-        let ske = await asyncAsset.bundleLoadByUrl("res", usingAssets.res.chuansongganzi$1);
-        console.log("ske =", ske); */
-        //assetManager.loadRemote('https://baishancdn.hicnhm.com/beiji_res/assets/avatar3/300000015_8_5.png', (err, texture) => console.log(texture));
+         window["dog"] = dog;
           
+         let ske = await asyncAsset.bundleLoadByUrl("res", usingAssets.res.chuansongganzi$1);
+         console.log("ske =", ske); */
+        //assetManager.loadRemote('https://baishancdn.hicnhm.com/beiji_res/assets/avatar3/300000015_8_5.png', (err, texture) => console.log(texture));
+
         let xx = await asyncAsset.loadOneUsingAsset(usingAssets.res.chuansongganzi$1)
     }
 }
