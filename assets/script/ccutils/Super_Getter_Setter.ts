@@ -60,7 +60,7 @@ export function superGetter(currentClass: any, thisObj: any, type: string) {
 }
 
 
-export function getObjectSetter(currentClass: any, type: string): any {
+export function getSetter(currentClass: any, type: string): any {
     var cla = currentClass.prototype;
     var seters;
     if (!currentClass.hasOwnProperty("__sets__")) {
@@ -87,7 +87,7 @@ export function getObjectSetter(currentClass: any, type: string): any {
 }
 
 
-export function getObjectGetter(currentClass: any, type: string): any {
+export function getGetter(currentClass: any, type: string): any {
     var cla = currentClass.prototype;
     var geters;
     if (!currentClass.hasOwnProperty("__gets__")) {

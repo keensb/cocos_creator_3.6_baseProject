@@ -18,7 +18,8 @@ import { usingAssets } from "../config/usingAssets";
 
 5 省流: request={'path': 'images/background'}  options={'myParam': 'important'}  
 */
-export class asyncAsset {
+
+class AsyncAsset {
     /**
      * 通过异步队列的方式加载一个分包 bundle , 第二个参数的用途是: 询问是否在加载bundle的同时, 顺便把该bundle下的所有子资源都一并加载了
      */
@@ -382,7 +383,7 @@ export class asyncAsset {
                                 if (object.type.prototype.constructor.name == "SpriteFrame") {
                                     let arr = url.split("/");
                                     if (arr[arr.length - 1] !== "spriteFrame") {
-                                        //url += "/spriteFrame";
+                                        url += "/spriteFrame";
                                     }
                                 }
                                 else if (object.type.prototype.constructor.name == "Texture2D") {
@@ -440,5 +441,9 @@ export class asyncAsset {
         })
     }
 }
-
+export const asyncAsset = AsyncAsset;
 window["asyncAsset"] = asyncAsset;
+
+AssetManager.Bundle.prototype["getUsingAsset"] = function <T extends Asset>(usingAsset: { url: string, type: new (...parmas) => T }): T {
+    return this.get(usingAsset.url, usingAsset.type);
+}

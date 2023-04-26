@@ -1,5 +1,5 @@
 import  "../overwrite/EngineOverride";//不带 from 关键字的import,  作用是直接导进来并立即执行 相当于js的 require()
-import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode, NodeEventType, Scene, resources, AssetManager, assetManager, SpriteAtlas, Sprite, SpriteFrame, dragonBones, Texture2D, Asset, ImageAsset, AudioClip, sp, AnimationClip, utils, NodeActivator, UITransform } from 'cc';
+import { _decorator, Component, find, director, Node, log, UIOpacity, Label, tween, Vec3, BaseNode, NodeEventType, Scene, resources, AssetManager, assetManager, SpriteAtlas, Sprite, SpriteFrame, dragonBones, Texture2D, Asset, ImageAsset, AudioClip, sp, AnimationClip, utils, NodeActivator, UITransform, instantiate } from 'cc';
 import { ClassSon } from './example/ClassSon';
 
 
@@ -31,14 +31,14 @@ export class MainEntry extends Component {
     }
 
     start() {
-        console.log(1234567);
+        /* console.log(1234567);
         let son = new ClassSon();
         log(son.a)
         ccutils.superSetter(ClassSon, son, "a", 5);
         log(son.a)
         son.a = 3;
         log(son.a);
-        ccutils.superGetter(ClassSon, son, "a");
+        ccutils.superGetter(ClassSon, son, "a"); */
 
         //find("Canvas/bg").getComponent(UIOpacity).opacity = 100;
 
@@ -52,89 +52,46 @@ export class MainEntry extends Component {
         bg.setPosition(100, bg.position.y);
 
         window["love"] = love;
-        window["lsa"] = love.getComponent 
         window["lsp"] = love.getComponent(Sprite);
         window["lsa"] = love.getComponent(Sprite).spriteAtlas;
         window["lsf"] = love.getComponent(Sprite).spriteFrame;
 
         window["nn"] = nn;
-        //tween(bg).to(5, { scaleX: 2 }).start();
-        //tween(bg).to(5, { hh: 400 }).start();
+        let mm = window["mm"] = new Node("mm");
+        mm.parent = nn.parent;
+        mm.x = nn.x;
+        mm.y = nn.y;
 
-
-        console.log(ccutils.getObjectSetter(Sprite, "spriteFrame"))
-
-
-        /* 
-            assetManager.loadAny({url:'assets/res/dog.jpg', type: SpriteAtlas}, (err, res) => {
-            let sprite = this.getComponent(Sprite);
-            //sprite.spriteFrame = res.getSpriteFrame(bg);
-            console.log("aaaaa", err,res);
-            }) 
-        */
-
-
+        nn.getOrAddComponent(Sprite).spriteFrame = love["spriteFrame"];
+        nn.opacity = 80;
+        mm.getOrAddComponent(Sprite).spriteFrame = love["spriteFrame"];
+        mm.opacity = 254;
+         
         /* assetManager.loadAny({uuid:'xxx', type: SpriteAtlas}, (err, res) => {
             let sprite = this.getComponent(Sprite);
             sprite.spriteFrame = res.getSpriteFrame(bg);
           }) */
 
-        NodeEventType.SCENE_CHANGED_FOR_PERSISTS
-
-        let textObj2 = this.test<Object>(10, 20, Node, "hello");
-
-
-        console.log("textObj2 =", textObj2, textObj2["name"])
-
-        var xxx = new Node();
-
-
-
-
-        this.node.addChild(xxx)
-        console.log("STAGE_CHANGED1111", xxx.stage);
-
-        this.node.removeChild(xxx)
-        console.log("STAGE_CHANGED2222", xxx.stage, DEBUG);
+       
+        
+        let xx = resources.getUsingAsset(usingAssets.res.chuansongganzi)
+          
 
         //console.log(director.getScene().findSubComponent(MainEntry), find("Canvas").findSubComponent(MainEntry));
         assetManager.loadAny("ec6af875-be27-41a4-92be-06042e848fde", (err, res) => { 
             console.log("xxxxxxxxx", err, res);
             window["bigPic"] = res;
         })
-        this.assetHandler();
+        
     }
 
 
-
-    private test<T>(x: number, y: number, inst: new (...parmas) => T, ...args): T {
-        let obj = new inst(...args);
-        obj["x"] = x;
-        obj["y"] = y;
-        return <T>obj;
-    }
+ 
 
     update(deltaTime: number) {
 
     }
 
 
-    private async assetHandler(): Promise<void> {
-
-        /* let bundle = await asyncAsset.loadOneBundle("res", false);
-
-        bundle.load("dog" , Asset, (err, res) => {
-          
-        }) */
-
-        /*  let dog = await asyncAsset.bundleLoadByUrl("res", "dog", SpriteFrame);
-         
-         window["dog"] = dog;
-          
-         let ske = await asyncAsset.bundleLoadByUrl("res", usingAssets.res.chuansongganzi$1);
-         console.log("ske =", ske); */
-        //assetManager.loadRemote('https://baishancdn.hicnhm.com/beiji_res/assets/avatar3/300000015_8_5.png', (err, texture) => console.log(texture));
-
-        let xx = await asyncAsset.loadOneUsingAsset(usingAssets.res.chuansongganzi$1)
-    }
+    
 }

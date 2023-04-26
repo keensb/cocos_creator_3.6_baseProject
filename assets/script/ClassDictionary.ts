@@ -1,8 +1,6 @@
 import { ClassSon } from "./../script/com/example/ClassSon";
 import { ClassSuper } from "./../script/com/example/ClassSuper";
-import { EngineOverride } from "./../script/overwrite/EngineOverride";
 import { MainEntry } from "./../script/com/MainEntry";
-import { asyncAsset } from "./../script/mgr/asyncAsset";
 
 
 export class ClassDictionary {
@@ -30,6 +28,4 @@ export class ClassDictionary {
 
 ClassDictionary.classDic["ClassSon"] = ClassSon;
 ClassDictionary.classDic["ClassSuper"] = ClassSuper;
-ClassDictionary.classDic["EngineOverride"] = EngineOverride;
 ClassDictionary.classDic["MainEntry"] = MainEntry;
-ClassDictionary.classDic["asyncAsset"] = asyncAsset;

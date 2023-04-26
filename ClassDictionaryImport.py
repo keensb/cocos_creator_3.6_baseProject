@@ -6,8 +6,22 @@ defaultPathDic = {}
 classList = []
 sxList = []
 
+'''
+注意:只有声明了export的class才会被注册进来
+
+export class MyClass1(){//会被注册进来
+    ...
+}
+
+class MyClass2(){//不会被注册进来
+   ...
+}
+
+
+'''
 
 def findTargetInDir(dirPath):
+    # print("dirPath =",dirPath)
     list = os.listdir(dirPath)  # 列出文件夹下所有的目录与文件
     for i in range(0, len(list)):
         path = os.path.join(dirPath, list[i])

@@ -3,7 +3,7 @@
 //cocos creator 3.0+ 引擎代码位置  可以尝试覆盖这几个位置
 //CocosDashboard安装目录\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\preview\bundled\index.js  主要
 //CocosDashboard安装目录\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\cocos\core\scene-graph\node.ts  次要
-import { AssetManager, BaseNode, CCObject, Component, director, errorID, Material, Node, NodeEventType, path, RenderTexture, Scene, Sprite, SpriteFrame, Texture2D, UIOpacity, UIRenderer, UITransform, warn, __private } from 'cc';
+import { AssetManager, BaseNode, CCObject, Component, debug, director, errorID, Material, Node, NodeEventType, path, RenderTexture, replaceProperty, Scene, Sprite, SpriteFrame, Texture2D, UIOpacity, UIRenderer, UITransform, warn, __private } from 'cc';
 import { DEBUG } from 'cc/env';
 import '../ccutils/Super_Getter_Setter';
 
@@ -49,8 +49,15 @@ class EngineOverride {
                 enumerable: true,
                 configurable: true
             })
-        }
 
+            globalThis["$cr"] = function (sf?:SpriteFrame): Node { 
+                let newNode = new Node();
+                newNode.addComponent(Sprite).spriteFrame = sf;
+                return newNode;
+            }
+        }
+        
+       
 
         //检测BaseNode之下有没有这个Component, 有的话直接返回Component的引用; 没有的话自动新增Component实例再返回其引用
         BaseNode.prototype.getOrAddComponent = function <T extends Component>(componentType: new (...parmas) => T, ...args): T {
@@ -180,7 +187,7 @@ class EngineOverride {
 
       
 
-        Object.defineProperty(BaseNode.prototype, "ww", {
+        Object.defineProperty(BaseNode.prototype, "nodeWidth", {
             get: function () {
                 //没有UITransform? 那就自动创建一个
                 return this.getOrAddComponent(UITransform).width;
@@ -194,7 +201,7 @@ class EngineOverride {
         });
 
 
-        Object.defineProperty(Node.prototype, "hh", {
+        Object.defineProperty(BaseNode.prototype, "nodeHeight", {
             get: function () {
                 //没有UITransform? 那就自动创建一个
                 return this.getOrAddComponent(UITransform).height;
@@ -206,6 +213,7 @@ class EngineOverride {
             enumerable: true,
             configurable: true
         });
+        
 
         Object.defineProperty(Node.prototype, "x", {
             get: function () {
@@ -298,6 +306,7 @@ class EngineOverride {
                     path += "/texture";
                 }
             }
+            
             return this._config.getInfoWithPath(path, type);
         }
 
@@ -481,8 +490,10 @@ class EngineOverride {
 
     }
 }
-EngineOverride.startWrite()
-
+if (EngineOverride.startWrite) {
+    EngineOverride.startWrite();
+    EngineOverride.startWrite = null;//执行完一次后置空 不再重复覆盖
+}
 
 
 

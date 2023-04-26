@@ -1,8 +1,5 @@
-import { getObjectGetter, getObjectSetter, superGetter, superSetter } from "./Super_Getter_Setter";
+import { getGetter, getSetter, superGetter, superSetter } from "./Super_Getter_Setter";
 //namespace整合步骤3 把子模块都引入这里整合 同时让子模块执行注册脚本 (不带 "{xxx} from"  可以在引入时直接动用脚本文件内的顶级函数)
-
- 
-
 
 /**
     用万能的any类型
@@ -32,9 +29,8 @@ import { getObjectGetter, getObjectSetter, superGetter, superSetter } from "./Su
 export const ccutils = globalThis["ccutils"] = {
     superSetter: superSetter,
     superGetter: superGetter,
-    getObjectSetter:getObjectSetter,
-    getObjectGetter: getObjectGetter,
-    
+    getSetter: getSetter,
+    getGetter: getGetter,
 }
 
 

@@ -41,7 +41,6 @@ os.path.supports_unicode_filenames  #设置是否支持unicode路径名
 
 # list = os.listdir(rootdir)  # 列出文件夹下所有的目录与文件
 
-
 import os
 import re
 import json
@@ -75,7 +74,7 @@ findBundleInDir("./assets")
 
 fileArray = {}
 filePathArray = {}
-
+fileCount = 0
 
 def findAssetInDir(bundleName, bundlePath, dirPath):
     list = os.listdir(dirPath)  # 列出文件夹下所有的目录与文件
@@ -90,6 +89,9 @@ def findAssetInDir(bundleName, bundlePath, dirPath):
                 if fileArray.get(bundleName) == None:
                     fileArray[bundleName] = []
                     filePathArray[bundleName] = []
+                    global fileCount
+                    fileCount += 1
+                    
                 fileArray[bundleName].append(path.split(bundlePath+"/")[1])
                 filePathArray[bundleName].append(path)
                 if bundleName == "resources":
@@ -109,14 +111,17 @@ with open("./assets/script/config/usingAssets.ts", "w+", encoding="utf-8") as fi
     file.write("/** created by assetExport.py */"+"\n")
     file.write(
         'import { AnimationClip, LabelAtlas, Font, SpriteAtlas, SpriteFrame, Prefab, AudioClip, sp, dragonBones, JsonAsset, TextAsset, Asset } from "cc";'+'\n\n')
+    file.write("/*\n目前3.6版本发现的规律\n\t所有资源加载后储存在字典 assetManager.assets 里面, 每个资源生成一个对应的AssetInfo, AssetInfo的uuid就是该资源的key;  使用 bundle.get(path, type) 将尝试匹配对应的AssetInfo, 然后通过它的uuid在assetManager.assets里查找资源\n\tbundle.load('图片相对路径', SpriteFrame) 或 bundle.load('图片相对路径', Texture2D)  只能获得 ImageAsset, 类型参数 SpriteFrame 根本没用(这个在官方文档有说明)\n\tbundle.load('图片相对路径' + '/spriteFrame')  将获得 SpriteFrame, 不需要类型参数 SpriteFrame\n\tbundle.load('图片相对路径' + '/texture')  将获得 Texture2D, 不需要类型参数 Texture2D\n\tassetManager.loadAny(图片uuid + '@6c48a')  将在回调方法里获得 Texture2D\n\tassetManager.loadAny(图片uuid + '@f9941')  将在回调方法里获得 SpriteFrame\n\tspine动画josn数据文件只能通过 assetManager.loadAny(uuid) 的方式去加载才能获得正确类型 sp.SkeletonData, 否则返回一个 ImageAsset(因为如果spine动画的json文件叫做abcd.json, 那么它的图集肯定就叫做abcd.png, 两者去掉后缀变成同名同路径, 而bundle.load()的path参数又偏偏不允许带后缀名, 默认你要加载的是图集); 龙骨动画则不用\n*/\n\n")
     file.write("export const usingAssets = {"+"\n")
     for key in fileArray:
+        fileCount -= 1
         file.write("\t" + key + ": {\n")
         # file.write("\t\t"+ "id: \"" + key + "\",\n")
         valueArr = fileArray[key]
         filePathArr = filePathArray[key]
         fileNameArray = []
-        for i in range(0, len(valueArr)):
+        _len = len(valueArr)
+        for i in range(0, _len):
             fileName = os.path.basename(valueArr[i])
             # 把 ???@2x.png 这类图片资源名称改为 ???_a2x.png
             tempName = fileName.replace("@", "_a")
@@ -187,12 +192,15 @@ with open("./assets/script/config/usingAssets.ts", "w+", encoding="utf-8") as fi
                             assetType = "dragonBones.DragonBonesAtlasAsset"
             elif file_extension == "txt":
                 assetType = "TextAsset"
+
             info = fileName + ": { bundle: \"" + key + "\", url: \"" + valueArr[i].split("." + file_extension)[
-                0] + "\", ext: \"." + file_extension + "\", type: " + assetType + (", uuid: \"" + uuid + "\" }," if uuid != "" else " },")
+                0] + "\", ext: \"." + file_extension + "\", type: " + assetType + (", uuid: \"" + uuid + "\" }" if uuid != "" else " }")
             print(info)
+            if i < _len - 1:
+                info = info + ","
             # value[i].split(file_extension)[0]
             file.write("\t\t" + info + "\n")
-        file.write("\t},\n")
+        file.write("\t},\n" if fileCount > 0 else "\t}\n")
     file.write("}\n")
     file.write(
         "globalThis[\"usingAssets\"] = globalThis[\"UA\"] = usingAssets;\n")
@@ -203,6 +211,7 @@ with open("./assets/script/config/usingAssets.ts", "w+", encoding="utf-8") as fi
     file.write("\n}\n")
     file.write(
         "globalThis[\"usingBundles\"] = globalThis[\"UB\"] = usingBundles;")
+    
 
 
 input("===============导出配置完成===============")

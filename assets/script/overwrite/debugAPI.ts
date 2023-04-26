@@ -31,9 +31,10 @@ class debugAPI {
             })
             return _newBaseNode;
         }
-
-        globalThis["$la"] = asyncAsset.bundleLoadOneAsset;
-        globalThis["$lu"] = asyncAsset.bundleLoadOneUsingAsset;
+        globalThis["$am"] = assetManager;
+        globalThis["$aa"] = asyncAsset;
+        globalThis["$ala"] = asyncAsset.bundleLoadOneAsset;
+        globalThis["$alu"] = asyncAsset.bundleLoadOneUsingAsset;
     }
 }
 debugAPI.startWrite();

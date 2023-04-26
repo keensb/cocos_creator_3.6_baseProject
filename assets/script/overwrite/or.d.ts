@@ -21,10 +21,13 @@ declare module "cc" {//<----------注意:这里坑爹的地方  模块名不是 
         findSubComponent<T extends Component>(componentType: new (...parmas) => T, ...agrs): T[];
     }
 
-    export class SpriteFrameXX {
-        constructor(xx:any) 
-             
+    export namespace AssetManager {
+        export interface Bundle {
+            getUsingAsset<T extends Asset>(usingAsset: { url: string, type: new (...parmas) => T }): T;
+        }
     }
+
+   
 
     export interface Node {//这里声明是 interface Node  , 避免和 class Node 重复
 
