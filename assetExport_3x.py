@@ -128,7 +128,7 @@ with open("./assets/script/config/usingAssets.ts", "w+", encoding="utf-8") as fi
             file_extension = fileName.split(".")[-1:][0].lower()
             tempName = ".".join(tempName.split('.')[:-1])
 
-            fileName = tempName
+            fileName = tempName + "_" + file_extension
 
             n = 1
             pattern = r'[a-zA-Z]|_'
@@ -214,4 +214,4 @@ with open("./assets/script/config/usingAssets.ts", "w+", encoding="utf-8") as fi
     
 
 
-input("===============导出配置完成===============")
+input("\n\n=============================================导出配置完成=============================================")

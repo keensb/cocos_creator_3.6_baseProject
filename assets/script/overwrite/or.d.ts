@@ -37,14 +37,14 @@ declare module "cc" {//<----------注意:这里坑爹的地方  模块名不是 
         opacity: number;
 
         /**
-         * 按照creator 2.x习惯直接修改 Node的宽度 用width会有黄字提示 width 已被弃用, 尤其在使用tween的时候控制台会被大量刷屏 所以改用ww
+         * 按照creator 2.x习惯直接修改 Node的宽度 用width会有黄字提示 width 已被弃用, 尤其在使用tween的时候控制台会被大量刷屏
          */
-        ww: number;
+        nodeWidth: number;
 
         /**
-         * 按照creator 2.x习惯直接修改 Node的高度 用height会有黄字提示 height 已被弃用, 尤其在使用tween的时候控制台会被大量刷屏 所以改用hh
+         * 按照creator 2.x习惯直接修改 Node的高度 用height会有黄字提示 height 已被弃用, 尤其在使用tween的时候控制台会被大量刷屏
          */
-        hh: number;
+        nodeHeight: number;
 
         /**
          * 按照creator 2.x习惯直接修改 Node在父级节点上的x坐标
@@ -80,6 +80,11 @@ declare module "cc" {//<----------注意:这里坑爹的地方  模块名不是 
          * 按照creator 2.x习惯  不知道这是啥, 但是随手写了...
          */
         scaleZ: number;
+
+        /**
+         * 直接从node上获得 UITransform 的引用, 没有的话则自动添加
+         */
+        uiTransform: UITransform;
     }
 
 

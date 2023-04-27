@@ -199,34 +199,68 @@ class AsyncAsset {
         });
     }
 
+    //加载远程资源
+    /*
+    //loadRemote 回调中，首先检查该 ImageAsset 是否已有对应的 SpriteFrame，有则直接用，没有则创建一个新的 SpriteFrame 和 Texture2D，然后计数加1；
+    assetManager.loadRemote<ImageAsset>(url, (err, imageAsset) => {
+        if (!err && imageAsset) {
+            let spFrame = this.cache[imageAsset._uuid];
+            if (!spFrame) {
+                const texture = new Texture2D();
+                texture.image = imageAsset;
+                spFrame = new SpriteFrame();
+                spFrame.texture = texture;
+                imageAsset.addRef();
+                this.cache[imageAsset._uuid] = spFrame; // 添加映射表记录
+            }
+            spFrame.addRef(); // 计数加1
+        }
+    }); 
+    */
 
-    public static async assetManagerLoadRemote(urlObject: string | string[], onProgress?: (finished?: number, total?: number, currentRes?: any) => void, onComplete?: (currentRes?: any) => void): Promise<any> {
-        return new Promise<any>(resolve => {
+    public static async loadOneRemote(url: string, onComplete?: (currentRes?: Asset) => void): Promise<Asset> {
+        return new Promise<Asset>(resolve => {
+            assetManager.loadRemote(url, { cacheAsset: false }, (err, asset) => {
+                if (err) {
+                    console.info("加载远程资源 " + url + " 失败!");
+                }
+                else if (onComplete) {
+                    onComplete(asset);//获取最后一个资源 
+                }
+                resolve(asset);
+            })
+
+        });
+    }
+
+    public static async loadRemotes(urlObject: string | string[], onProgress?: (finished?: number, total?: number, currentRes?: Asset) => void, onComplete?: (currentRes?: Asset[]) => void): Promise<Asset[]> {
+        return new Promise<Asset[]>(resolve => {
             let urlArr: string[] = [];
             urlArr = urlArr.concat(urlObject);
             let total = urlArr.length;
             let count = 0;
-            let lastAsset: any;
+            let assets: Asset[] = [];
             for (let url of urlArr) {
-                assetManager.loadRemote(url, (err, asset: Asset) => {
+                assetManager.loadRemote(url, { cacheAsset: false }, (err, asset: Asset) => {
                     if (err != undefined) {
                         console.info("加载资源 " + url + " 失败!");
-                        lastAsset = null;
                     }
-                    else {
-                        lastAsset = asset;
-                    }
+                    assets[assets.length] = asset;
                     count++;
                     if (onProgress) {
-                        onProgress(count, total, lastAsset);
+
+                        onProgress(count, total, asset);
                     }
 
-                    if (onComplete) {
-                        onComplete(lastAsset);//获取最后一个资源
+                    if (count == urlArr.length) {
+                        if (onComplete) {
+                            onComplete(assets);//获取最后一个资源
+                        }
+                        resolve(assets);
                     }
                 })
             }
-            resolve(lastAsset);
+
         });
     }
 
