@@ -9,7 +9,8 @@ import { AnimationClip, LabelAtlas, Font, SpriteAtlas, SpriteFrame, Prefab, Audi
 	bundle.load('图片相对路径' + '/texture')  将获得 Texture2D, 不需要类型参数 Texture2D
 	assetManager.loadAny(图片uuid + '@6c48a')  将在回调方法里获得 Texture2D
 	assetManager.loadAny(图片uuid + '@f9941')  将在回调方法里获得 SpriteFrame
-	spine动画josn数据文件只能通过 assetManager.loadAny(uuid) 的方式去加载才能获得正确类型 sp.SkeletonData, 否则返回一个 ImageAsset(因为如果spine动画的json文件叫做abcd.json, 那么它的图集肯定就叫做abcd.png, 两者去掉后缀变成同名同路径, 而bundle.load()的path参数又偏偏不允许带后缀名, 默认你要加载的是图集); 龙骨动画则不用
+	texturePack打包图集, 配置文件与png文件去掉后缀名之后路径相同, 因此加载时必须声明 SpriteAtlas, 否则加载的就是 ImageAsset
+	spine动画 json配置文件与png文件去掉后缀路径相同, 因此加载时必须声明 sp.SkeletonData, 否则加载的就是 ImageAsset   龙骨动画则不用(因为json与png去掉后缀 路径也不同名)
 */
 
 export const usingAssets = {

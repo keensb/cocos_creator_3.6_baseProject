@@ -3,7 +3,7 @@
 //cocos creator 3.0+ 引擎代码位置  可以尝试覆盖这几个位置
 //CocosDashboard安装目录\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\bin\.cache\dev\preview\bundled\index.js  主要
 //CocosDashboard安装目录\resources\.editors\Creator\3.6.0\resources\resources\3d\engine\cocos\core\scene-graph\node.ts  次要
-import { AssetManager, BaseNode, CCObject, Component, debug, director, errorID, Material, Node, NodeEventType, path, RenderTexture, Scene, Sprite, SpriteFrame, Texture2D, UIOpacity, UIRenderer, UITransform, warn, __private } from 'cc';
+import { assetManager, AssetManager, BaseNode, CCObject, Component, debug, director, errorID, Material, Node, NodeEventType, path, RenderTexture, Scene, Sprite, SpriteFrame, Texture2D, UIOpacity, UIRenderer, UITransform, warn, __private } from 'cc';
 import { DEBUG } from 'cc/env';
 import '../ccutils/Super_Getter_Setter';
 
@@ -69,6 +69,22 @@ class EngineOverride {
 
         //检测一个Node对象是否正处于场景中的渲染队列(类似于检测 egret.DisplayObject 的 stage)
         Object.defineProperty(BaseNode.prototype, "stage", {
+            get: function () {
+                let parent = this.parent;
+                while (parent) {
+                    if (parent == director.getScene()) {
+                        break;
+                    }
+                    parent = parent.parent;
+                }
+                return parent;
+            },
+            enumerable: true,
+            configurable: true
+        });
+
+        //检测一个Node对象是否正处于场景中的渲染队列(类似于检测 egret.DisplayObject 的 stage)
+        Object.defineProperty(BaseNode.prototype, "", {
             get: function () {
                 let parent = this.parent;
                 while (parent) {
@@ -369,6 +385,8 @@ class EngineOverride {
                 if (!sf["$_$__spriteDic__"][this.uuid]) {
                     sf["$_$__spriteRef__"]++;
                     sf["$_$__spriteDic__"][this.uuid] = 1;
+
+                   
                 }
 
                 if (!sf["$_$__onStageRef__"]) sf["$_$__onStageRef__"] = 0;

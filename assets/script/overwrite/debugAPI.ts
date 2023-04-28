@@ -34,7 +34,7 @@ class debugAPI {
         globalThis["$am"] = assetManager;
         globalThis["$aa"] = asyncAsset;
         globalThis["$ala"] = asyncAsset.bundleLoadOneAsset;
-        globalThis["$alu"] = asyncAsset.bundleLoadOneUsingAsset;
+        globalThis["$alu"] = asyncAsset.bundleLoadAllUsingAssets;
     }
 }
 debugAPI.startWrite();

@@ -1,15 +1,17 @@
-import { Layout, Node, Widget, screen, UITransform, v3, View, Canvas, find } from "cc";
+import { Layout, Node, Widget, screen, UITransform, v3, Canvas, find, view, director } from "cc";
 import { DEBUG } from "cc/env";
 
 export enum alignType {
-    LEFT_TO_LEFT = 1,//10
-    LEFT_TO_RIGHT,
-    RIGHT_TO_RIGHT,
-    RIGHT_TO_LEFT,
-    TOP_TO_TOP,
-    TOP_TO_BOTTOM,
-    BOTTOM_TO_BOTTOM,
-    BOTTOM_TO_TOP,
+    LEFT_TO_LEFT = 2,
+    LEFT_TO_RIGHT = 4,
+    RIGHT_TO_RIGHT = 8,
+    RIGHT_TO_LEFT = 16,
+    TOP_TO_TOP = 32,
+    TOP_TO_BOTTOM = 64,
+    BOTTOM_TO_BOTTOM = 128,
+    BOTTOM_TO_TOP = 256,
+    CENTER_TO_CENTER = 512,
+    MIDDLE_TO_MIDDLE = 1024
 }
 
 
@@ -184,7 +186,7 @@ export class alignMgr {
      * 让节点1的左侧边缘主动贴近节点2的左侧边缘处(左对齐), (节点1不能是节点2的父级节点  因为父级无法向子级对齐(父级移动子级也会跟着移动) 并且节点1没有被 Widget 所约束)
      * 第三个参数的意思是启用递归scale判断
      */
-    public static leftClosesToLeft(node1: Node, refObj: Node | number, getParentWorldScale = false): void {
+    public static leftClosesToLeft(node1: Node, refObj: Node | number, getParentWorldScale = true): void {
         let n1w = node1.uiTransform.getBoundingBoxToWorld();
         let n2w: any = refObj instanceof Node ? refObj.uiTransform.getBoundingBoxToWorld() : refObj;
         let left1 = n1w.x;
@@ -206,7 +208,7 @@ export class alignMgr {
      * 让节点1的左侧边缘主动贴近节点2的右侧边缘处(接合), (节点1不能是节点2的父级节点  因为父级无法向子级对齐(父级移动子级也会跟着移动) 并且节点1没有被 Widget 所约束)
      * 第三个参数的意思是启用递归scale判断
      */
-    public static leftClosesToRight(node1: Node, refObj: Node | number, getParentWorldScale = false): void {
+    public static leftClosesToRight(node1: Node, refObj: Node | number, getParentWorldScale = true): void {
         let n1w = node1.uiTransform.getBoundingBoxToWorld();
         let n2w: any = refObj instanceof Node ? refObj.uiTransform.getBoundingBoxToWorld() : refObj;
         let left = n1w.x;
@@ -227,7 +229,7 @@ export class alignMgr {
      * 让节点1的右侧边缘主动贴近节点2的右侧边缘处(右对齐), (节点1不能是节点2的父级节点  因为父级无法向子级对齐(父级移动子级也会跟着移动) 并且节点1没有被 Widget 所约束)
      * 第三个参数的意思是启用递归scale判断
      */
-    public static rightClosesToRight(node1: Node, refObj: Node | number, getParentWorldScale = false): void {
+    public static rightClosesToRight(node1: Node, refObj: Node | number, getParentWorldScale = true): void {
         let n1w = node1.uiTransform.getBoundingBoxToWorld();
         let n2w: any = refObj instanceof Node ? refObj.uiTransform.getBoundingBoxToWorld() : refObj;
         let right1 = n1w.x + n1w.width;
@@ -248,7 +250,7 @@ export class alignMgr {
      * 让节点1的右侧边缘主动贴近节点2的左侧边缘处(接合), (节点1不能是节点2的父级节点  因为父级无法向子级对齐(父级移动子级也会跟着移动) 并且节点1没有被 Widget 所约束)
      * 第三个参数的意思是启用递归scale判断
      */
-    public static rightClosesToLeft(node1: Node, refObj: Node | number, getParentWorldScale = false): void {
+    public static rightClosesToLeft(node1: Node, refObj: Node | number, getParentWorldScale = true): void {
         let n1w = node1.uiTransform.getBoundingBoxToWorld();
         let n2w: any = refObj instanceof Node ? refObj.uiTransform.getBoundingBoxToWorld() : refObj;
         let left = n2w.x;
@@ -269,7 +271,7 @@ export class alignMgr {
      * 让节点1的水平中心与节点2的水平中心重合, (节点1不能是节点2的父级节点  因为父级无法向子级对齐(父级移动子级也会跟着移动) 并且节点1没有被 Widget 所约束)
      * 第三个参数的意思是启用递归scale判断
      */
-    public static hCenterClosesToCenter(node1: Node, refObj: Node | number, getParentWorldScale = false): void {
+    public static hCenterClosesToCenter(node1: Node, refObj: Node | number, getParentWorldScale = true): void {
         alignMgr.leftClosesToLeft(node1, refObj, getParentWorldScale);
         let n1w = node1.uiTransform.getBoundingBoxToWorld();
         let n2w: any = refObj instanceof Node ? refObj.uiTransform.getBoundingBoxToWorld() : refObj;
@@ -294,7 +296,7 @@ export class alignMgr {
      * 让节点1的水平中心与节点2的水平中心重合, (节点1不能是节点2的父级节点  因为父级无法向子级对齐(父级移动子级也会跟着移动) 并且节点1没有被 Widget 所约束)
      * 第三个参数的意思是启用递归scale判断
      */
-    public static vCenterClosesToCenter(node1: Node, refObj: Node | number, getParentWorldScale = false): void {
+    public static vCenterClosesToCenter(node1: Node, refObj: Node | number, getParentWorldScale = true): void {
         alignMgr.bottomClosesToBottom(node1, refObj, getParentWorldScale);
         let n1w = node1.uiTransform.getBoundingBoxToWorld();
         let n2w: any = refObj instanceof Node ? refObj.uiTransform.getBoundingBoxToWorld() : refObj;
@@ -322,7 +324,7 @@ export class alignMgr {
      * 让节点1的顶端边缘主动贴近节点2的顶端边缘处(顶对齐), (节点1不能是节点2的父级节点  因为父级无法向子级对齐(父级移动子级也会跟着移动) 并且节点1没有被 Widget 所约束)
      * 第三个参数的意思是启用递归scale判断
      */
-    public static topClosesToTop(node1: Node, refObj: Node | number, getParentWorldScale = false): void {
+    public static topClosesToTop(node1: Node, refObj: Node | number, getParentWorldScale = true): void {
         let n1w = node1.uiTransform.getBoundingBoxToWorld();
         let n2w: any = refObj instanceof Node ? refObj.uiTransform.getBoundingBoxToWorld() : refObj;
         let top1 = n1w.y + n1w.height;
@@ -343,7 +345,7 @@ export class alignMgr {
      * 让节点1的顶端边缘主动贴近节点2的底端边缘处(接合), (节点1不能是节点2的父级节点  因为父级无法向子级对齐(父级移动子级也会跟着移动) 并且节点1没有被 Widget 所约束)
      * 第三个参数的意思是启用递归scale判断
      */
-    public static topClosesToBottom(node1: Node, refObj: Node | number, getParentWorldScale = false): void {
+    public static topClosesToBottom(node1: Node, refObj: Node | number, getParentWorldScale = true): void {
         let n1w = node1.uiTransform.getBoundingBoxToWorld();
         let n2w: any = refObj instanceof Node ? refObj.uiTransform.getBoundingBoxToWorld() : refObj;
         let top = n1w.y + n1w.height;
@@ -365,7 +367,7 @@ export class alignMgr {
      * 让节点1的底端边缘主动贴近节点2的底端边缘处(底对齐), (节点1不能是节点2的父级节点  因为父级无法向子级对齐(父级移动子级也会跟着移动) 并且节点1没有被 Widget 所约束)
      * 第三个参数的意思是启用递归scale判断
      */
-    public static bottomClosesToBottom(node1: Node, refObj: Node | number, getParentWorldScale = false): void {
+    public static bottomClosesToBottom(node1: Node, refObj: Node | number, getParentWorldScale = true): void {
         let n1w = node1.uiTransform.getBoundingBoxToWorld();
         let n2w: any = refObj instanceof Node ? refObj.uiTransform.getBoundingBoxToWorld() : refObj;
         let bottom1 = n1w.y;
@@ -387,7 +389,7 @@ export class alignMgr {
      * 让节点1的底端边缘主动贴近节点2的顶端边缘处(接合), (节点1不能是节点2的父级节点  因为父级无法向子级对齐(父级移动子级也会跟着移动) 并且节点1没有被 Widget 所约束)
      * 第三个参数的意思是启用递归scale判断
      */
-    public static bottomClosesToTop(node1: Node, refObj: Node | number, getParentWorldScale = false): void {
+    public static bottomClosesToTop(node1: Node, refObj: Node | number, getParentWorldScale = true): void {
         let n1w = node1.uiTransform.getBoundingBoxToWorld();
         let n2w: any = refObj instanceof Node ? refObj.uiTransform.getBoundingBoxToWorld() : refObj;
         let bottom = n1w.y;
@@ -489,52 +491,24 @@ export class alignMgr {
      * 让节点node以所在Canvas节点为参照 对齐手机屏幕边缘  alignTypeNum = alignType.LEFT_TO_LEFT|alignType.RIGHT_TO_LEFT
      */
     public static alignToFrameSize(node: Node, alignTypeNum: alignType): void {
-        let win_bl1 = screen.windowSize.width / screen.windowSize.height;//设计分辨率比例
-        let win_bl2 = screen.windowSize.height / screen.windowSize.width;//设计分辨率比例
 
-        let parent = node.parent;
-        while (parent.parent && parent.parent.constructor.name != "Scene") {
-            parent.parent = parent;
-        }
+        
+        let canvas = director.getScene().getComponentInChildren(Canvas);
+        if (!canvas) return;
+
         let newNode = new Node();
-        newNode.parent = parent;
-
-
-        //一般手机  fitHight || fitWidth  横屏 
-        //newNode.setContentSize(screen.windowSize.width * sb_bl1 / win_bl1, screen.windowSize.height);
-
-        //一般手机  fitHight || fitWidth  竖屏   或    ipad  fitHight || fitWidth  横屏竖屏通用
-        //newNode.setContentSize(screen.windowSize.width , screen.windowSize.height * sb_bl2 / win_bl2);
-
-        //screen.windowSize.width  screen.windowSize.height  不论怎么旋转都不改变
-        //screen.windowSize.width   screen.windowSize.height  旋转后横向为 screen.windowSize.width  竖向为screen.windowSize.height
-
+        newNode.parent = canvas.node;
 
         //智能识别
         if (screen.windowSize.width > screen.windowSize.height) {//这个项目是以横屏为主设计的
-            //console.log("横屏逻辑设计")
-            if (screen.windowSize.width / screen.windowSize.height > 1.4) {//手机横屏摆放
-                //console.log("手机")
-                let sb_bl1 = screen.windowSize.width / screen.windowSize.height;//设备屏幕比例
-                newNode.uiTransform.setContentSize(screen.windowSize.width * sb_bl1 / win_bl1, screen.windowSize.height);
-            }
-            else {//手机竖屏摆放 或 当前设备是平板(平板不分横竖屏)
-                let sb_bl2 = screen.windowSize.height / screen.windowSize.width;//设备屏幕比例 
-                newNode.uiTransform.setContentSize(screen.windowSize.width, screen.windowSize.height * sb_bl2 / win_bl2);
-            }
+            console.log("横屏逻辑设计")
         }
         else {//这个游戏是以竖屏为主设计的
-            //console.log("竖屏逻辑设计")
-            if (screen.windowSize.height / screen.windowSize.width > 1.4) {//手机竖屏摆放
-                //console.log("手机")
-                let sb_bl1 = screen.windowSize.width / screen.windowSize.height;//设备屏幕比例
-                newNode.uiTransform.setContentSize(screen.windowSize.width * sb_bl1 / win_bl1, screen.windowSize.height);
-            }
-            else {//手机横屏摆放 或 当前设备是平板(平板不分横竖屏)
-                let sb_bl2 = screen.windowSize.height / screen.windowSize.width;//设备屏幕比例 
-                newNode.uiTransform.setContentSize(screen.windowSize.width, screen.windowSize.height * sb_bl2 / win_bl2);
-            }
+            console.log("竖屏逻辑设计")
         }
+        newNode.uiTransform.setContentSize(newNode.parent.uiTransform.width, newNode.parent.uiTransform.height);
+
+
 
         //水平方向的对齐同时只有1种能生效
         if (alignTypeNum & alignType.LEFT_TO_LEFT) {
@@ -571,4 +545,6 @@ export class alignMgr {
 if (DEBUG) {
     window["alignMgr"] = alignMgr;
     window["alignType"] = alignType;
+
+    window["viewDesignSize"] = view.getDesignResolutionSize();//本项目的设计宽高 也就是Canvas的默认宽高 
 }

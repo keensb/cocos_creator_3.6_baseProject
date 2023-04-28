@@ -48,10 +48,9 @@ export class MainEntry extends Component {
         var nn = find("Canvas/Node1/Node2");
 
         window["bg"] = bg;
-        window["sp"] = bg.getComponent(Sprite);
         window["sf"] = bg.getComponent(Sprite).spriteFrame;
-        bg.setPosition(100, bg.position.y);
-
+        
+        tween(bg).to(1, { x: -300 }).union
         window["love"] = love;
         window["lsp"] = love.getComponent(Sprite);
         window["lsa"] = love.getComponent(Sprite).spriteAtlas;
@@ -64,16 +63,14 @@ export class MainEntry extends Component {
         mm.y = nn.y;
 
         nn.getOrAddComponent(Sprite).spriteFrame = love["spriteFrame"];
-        nn.opacity = 80;
-        mm.getOrAddComponent(Sprite).spriteFrame = love["spriteFrame"];
-        mm.opacity = 254;
+        nn.opacity = 120;
+        
 
         /* assetManager.loadAny({uuid:'xxx', type: SpriteAtlas}, (err, res) => {
             let sprite = this.getComponent(Sprite);
             sprite.spriteFrame = res.getSpriteFrame(bg);
           }) */
-
-
+        
 
         let xx = resources.getUsingAsset(usingAssets.res.chuansongganzi_json)
 
@@ -89,7 +86,7 @@ export class MainEntry extends Component {
         // https://baishancdn.hicnhm.com/beiji_res/assets/avatar3/300000015_1_1.png
 
 
-        let role = "300000015"; //"300000001";//1~9  15 17 32
+      /*   let role = "300000015"; //"300000001";//1~9  15 17 32
         let urls = [];
         for (let i = 1; i <= 8; i++) {//8个方向
             for (let j = 1; j <= 7; j++) {//7个动作
@@ -99,7 +96,7 @@ export class MainEntry extends Component {
             }
         }
 
-        this.loadRemotes(urls);
+        this.loadRemotes(urls); */
     }
 
     private async loadRemote(url: string) {
@@ -122,4 +119,7 @@ export class MainEntry extends Component {
 
 
 
+}
+if (DEBUG) {
+    window["SkeletonData"] = sp.SkeletonData;
 }

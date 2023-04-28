@@ -138,35 +138,7 @@ class AsyncAsset {
             resUrl = resUrl.substring(0, resUrl.length - 1);
         }
         if (assetType && assetType.prototype && assetType.prototype.constructor) {//自动对应类型 补齐图片资源的后缀路径
-            if (assetType.prototype.constructor.name == "SkeletonData" && _urlObj["uuid"]) {
-                return new Promise<T>(resolve => {
-                    if (!_bundle) {
-                        console.warn("bundle不存在, 或未被加载");
-                        if (onComplete) {
-                            onComplete(null);//获取最后一个资源
-                        }
-                        resolve(null);
-                        return;
-                    }
-                    assetManager.loadAny(_urlObj["uuid"], (error, res) => {
-                        if (!error) {
-                            resolve(res);
-                            if (onComplete) {
-                                onComplete(res);//获取最后一个资源
-                            }
-                        }
-                        else {
-                            console.warn("资源不存在, 请检查路径bundle " + _bundle.name + "所在路径" + _bundle.base + "下是否存在文件路径" + resUrl);//如果不存在,那多半是用错bundle或bundle路径了
-                            if (onComplete) {
-                                onComplete(null);//获取最后一个资源
-                            }
-                            resolve(null);//即使加载失败了也调用resolve() 当做成功来进行异步回调, 不过此时返回的是null, 表示该bundle不存在
-                        }
-                    })
-
-                });
-            }
-            else if (assetType.prototype.constructor.name == "SpriteFrame") {
+            if (assetType.prototype.constructor.name == "SpriteFrame") {
                 let arr = resUrl.split("/");
                 if (arr[arr.length - 1] !== "spriteFrame") {
                     resUrl += "/spriteFrame";
@@ -186,7 +158,11 @@ class AsyncAsset {
                 resolve(null);
                 return;
             }
-            _bundle.load(resUrl, (error, res: any) => {
+            let _assetType: any = assetType;
+            if (!assetType) {
+                _assetType = Asset;
+            }
+            _bundle.load(resUrl, _assetType, (error, res: any) => {
                 if (!error) {
                     resolve(res);
                 }
@@ -282,7 +258,7 @@ class AsyncAsset {
     /**
      *  让一个 AssetManager.bundle 对象加载在其主文件夹下、并且在usingAssets.ts文件中配置过的所有资源 
      */
-    public static async bundleLoadOneUsingAsset(bundle: AssetManager.Bundle | string, onProgress?: (finished: number, total: number, finishPath?: string) => void, onComplete?: () => void): Promise<void> {
+    public static async bundleLoadAllUsingAssets(bundle: AssetManager.Bundle | string, onProgress?: (finished: number, total: number, finishPath?: string) => void, onComplete?: () => void): Promise<void> {
         let _bundle: any = bundle;
         if (typeof bundle == "string") {
             _bundle = assetManager.getBundle(bundle);
@@ -314,8 +290,6 @@ class AsyncAsset {
                 }
             }
 
-
-
             for (let i = 0; i < keys.length; i++) {
                 let object: any = usingAssets[name][keys[i]];
                 if (object.url) {
@@ -323,25 +297,8 @@ class AsyncAsset {
                         object.url = object.url.substring(0, object.url.length - 1);
                     }
                     if (object.type && object.type.prototype && object.type.prototype.constructor) {//自动对应类型 补齐图片资源的后缀路径
-                        if (object.type.prototype.constructor.name == "SkeletonData" && object["uuid"]) {
-                            assetManager.loadAny(object["uuid"], (error, res) => {
-                                fin++;
-                                if (error != undefined) {
-                                    console.info("资源包<" + name + "> 加载 {url:\"" + object.url + "\"" + ", type:\"" + object.type.prototype["__classname__"] + "\"} 失败!");//检查路径和类型
-                                }
-                                if (onProgress) {
-                                    onProgress(fin, total, object.url);
-                                }
-                                if (fin == total) {
-                                    if (onComplete) {
-                                        onComplete();
-                                    }
-                                    resolve();
-                                }
-                            })
-                            continue;
-                        }
-                        else if (object.type.prototype.constructor.name == "SpriteFrame") {
+
+                        if (object.type.prototype.constructor.name == "SpriteFrame") {
                             let arr = object.url.split("/");
                             if (arr[arr.length - 1] !== "spriteFrame") {
                                 object.url += "/spriteFrame";
@@ -395,25 +352,7 @@ class AsyncAsset {
                                 url = url.substring(0, url.length - 1);
                             }
 
-                            if (object.type.prototype.constructor.name == "SkeletonData" && object["uuid"]) {
-                                assetManager.loadAny(object["uuid"], (error, res) => {
-                                    fin++;
-                                    if (error != undefined) {
-                                        console.info("资源包<" + name + "> 加载 {url:\"" + object.url + "\"" + ", type:\"" + object.type.prototype["__classname__"] + "\"} 失败!");//检查路径和类型
-                                    }
-                                    if (onProgress) {
-                                        onProgress(fin, total, object.url);
-                                    }
-                                    if (fin == total) {
-                                        if (onComplete) {
-                                            onComplete();
-                                        }
-                                        resolve();
-                                    }
-                                })
-                                continue;
-                            }
-                            else if (object.type && object.type.prototype && object.type.prototype.constructor) {//自动对应类型 补齐图片资源的后缀路径
+                            if (object.type && object.type.prototype && object.type.prototype.constructor) {//自动对应类型 补齐图片资源的后缀路径
                                 if (object.type.prototype.constructor.name == "SpriteFrame") {
                                     let arr = url.split("/");
                                     if (arr[arr.length - 1] !== "spriteFrame") {
