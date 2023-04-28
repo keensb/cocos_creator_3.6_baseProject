@@ -112,7 +112,7 @@ with open("./assets/script/config/usingAssets.ts", "w+", encoding="utf-8") as fi
     file.write(
         'import { AnimationClip, LabelAtlas, Font, SpriteAtlas, SpriteFrame, Prefab, AudioClip, sp, dragonBones, JsonAsset, TextAsset, Asset } from "cc";'+'\n\n')
     
-    file.write("/*\n目前3.6版本发现的规律\n\t所有资源加载后储存在字典 assetManager.assets 里面, 每个资源生成一个对应的AssetInfo, AssetInfo的uuid就是该资源的key;  使用 bundle.get(path, type) 将尝试匹配对应的AssetInfo, 然后通过它的uuid在assetManager.assets里查找资源\n\tbundle.load('图片相对路径', SpriteFrame) 或 bundle.load('图片相对路径', Texture2D)  只能获得 ImageAsset, 类型参数 SpriteFrame 根本没用(这个在官方文档有说明)\n\tbundle.load('图片相对路径' + '/spriteFrame')  将获得 SpriteFrame, 不需要类型参数 SpriteFrame\n\tbundle.load('图片相对路径' + '/texture')  将获得 Texture2D, 不需要类型参数 Texture2D\n\tassetManager.loadAny(图片uuid + '@6c48a')  将在回调方法里获得 Texture2D\n\tassetManager.loadAny(图片uuid + '@f9941')  将在回调方法里获得 SpriteFrame\n\ttexturePack打包图集, 配置文件与png文件去掉后缀名之后路径相同, 因此加载时必须声明 SpriteAtlas, 否则加载的就是 ImageAsset\n\tspine动画 json配置文件与png文件去掉后缀路径相同, 因此加载时必须声明 sp.SkeletonData, 否则加载的就是 ImageAsset   龙骨动画则不用(因为json与png去掉后缀 路径也不同名)\n*/\n\n")
+    file.write("/*\n目前3.6版本发现的规律\n\t所有资源加载后储存在字典 assetManager.assets 里面, 每个资源生成一个对应的AssetInfo, AssetInfo的uuid就是该资源的key;  使用 bundle.get(path, type) 将尝试匹配对应的AssetInfo, 然后通过它的uuid在assetManager.assets里查找资源\n\tbundle.load('图片相对路径', SpriteFrame) 或 bundle.load('图片相对路径', Texture2D)  只能获得 ImageAsset, 类型参数 SpriteFrame 根本没用(这个在官方文档有说明)\n\tbundle.load('图片相对路径' + '/spriteFrame')  将获得 SpriteFrame, 不需要类型参数 SpriteFrame\n\tbundle.load('图片相对路径' + '/texture')  将获得 Texture2D, 不需要类型参数 Texture2D\n\tassetManager.loadAny(图片uuid + '@6c48a')  将在回调方法里获得 Texture2D   (或者使用更暴力的方式同步获取 assetManager.assets._map[图片uuid + '@6c48a'])\n\tassetManager.loadAny(图片uuid + '@f9941')  将在回调方法里获得 SpriteFrame   (或者使用更暴力的方式同步获取 assetManager.assets._map[图片uuid + '@f9941'])\n\ttexturePack打包图集, 配置文件与png文件去掉后缀名之后路径相同, 因此加载时必须声明 SpriteAtlas, 否则加载的就是 ImageAsset\n\tspine动画 json配置文件与png文件去掉后缀路径相同, 因此加载时必须声明 sp.SkeletonData, 否则加载的就是 ImageAsset   龙骨动画则不用(因为json与png去掉后缀 路径也不同名)\n*/\n\n")
     file.write("export const usingAssets = {"+"\n")
     for key in fileArray:
         fileCount -= 1
@@ -151,6 +151,12 @@ with open("./assets/script/config/usingAssets.ts", "w+", encoding="utf-8") as fi
             fileNameArray.append(fileName)
             assetType = "Asset"
             uuid = ""
+            jsonData1 = {}
+            if os.path.exists(filePathArr[i] + ".meta"):
+                with open(filePathArr[i] + ".meta", "r", encoding="utf-8") as file1:
+                    read1 = file1.read()
+                    jsonData1 = json.loads(read1)
+                    uuid = jsonData1["uuid"]
             if file_extension == "anim":  # 动画剪辑
                 assetType = "AnimationClip"
             elif file_extension == "labelatlas":  # 艺术字
@@ -169,17 +175,12 @@ with open("./assets/script/config/usingAssets.ts", "w+", encoding="utf-8") as fi
                 assetType = "JsonAsset"
                 # 优先从比较小的.meta文件去解析 如果新资源传入creator项目并在IDE里刷新了资源包 都会生成这个 .meta文件
                 if os.path.exists(filePathArr[i] + ".meta"):
-                    with open(filePathArr[i] + ".meta", "r", encoding="utf-8") as file1:
-                        read1 = file1.read()
-                        jsonData1 = json.loads(read1)
-                        if "importer" in jsonData1 and jsonData1["importer"] == "spine-data":
-                            assetType = "sp.SkeletonData"
-                            # 目前只发现通过 assetManager.loadAny("uuid")的方式能识别出 sp.SkeletonData
-                            uuid = jsonData1["uuid"]
-                        elif "importer" in jsonData1 and jsonData1["importer"] == "dragonbones":
-                            assetType = "dragonBones.DragonBonesAsset"
-                        elif "importer" in jsonData1 and jsonData1["importer"] == "dragonbones-atlas":
-                            assetType = "dragonBones.DragonBonesAtlasAsset"
+                    if "importer" in jsonData1 and jsonData1["importer"] == "spine-data":
+                        assetType = "sp.SkeletonData"
+                    elif "importer" in jsonData1 and jsonData1["importer"] == "dragonbones":
+                        assetType = "dragonBones.DragonBonesAsset"
+                    elif "importer" in jsonData1 and jsonData1["importer"] == "dragonbones-atlas":
+                        assetType = "dragonBones.DragonBonesAtlasAsset"
                 # .meta文件尚未生成 只能从较大的json文件去解析
                 else:
                     with open(filePathArr[i], "r", encoding="utf-8") as file2:
@@ -204,14 +205,14 @@ with open("./assets/script/config/usingAssets.ts", "w+", encoding="utf-8") as fi
         file.write("\t},\n" if fileCount > 0 else "\t}\n")
     file.write("}\n")
     file.write(
-        "globalThis[\"usingAssets\"] = globalThis[\"UA\"] = usingAssets;\n")
+        "globalThis[\"usingAssets\"] = usingAssets;\n")
 
     file.write("\n\nexport const usingBundles = {"+"")
     for valueArr in bundleNames:
         file.write("\n\t" + valueArr[0] + ": " + "\"" + valueArr[0] + "\",")
     file.write("\n}\n")
     file.write(
-        "globalThis[\"usingBundles\"] = globalThis[\"UB\"] = usingBundles;")
+        "globalThis[\"usingBundles\"] = usingBundles;")
     
 
 

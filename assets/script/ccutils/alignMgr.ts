@@ -1,4 +1,4 @@
-import { Layout, Node, Widget, screen, UITransform, v3, Canvas, find, view, director } from "cc";
+import { Layout, Node, Widget, screen, UITransform, v3, Canvas, find, view, director, assetManager } from "cc";
 import { DEBUG } from "cc/env";
 
 export enum alignType {
@@ -508,7 +508,7 @@ export class alignMgr {
         }
         newNode.uiTransform.setContentSize(newNode.parent.uiTransform.width, newNode.parent.uiTransform.height);
 
-
+        
 
         //水平方向的对齐同时只有1种能生效
         if (alignTypeNum & alignType.LEFT_TO_LEFT) {
@@ -537,7 +537,7 @@ export class alignMgr {
         else if (alignTypeNum & alignType.BOTTOM_TO_TOP) {
             alignMgr.bottomClosesToTop(node, newNode, true);
         }
-
+        assetManager.assets.get
         newNode.parent = null;
         newNode.destroy();
     }
