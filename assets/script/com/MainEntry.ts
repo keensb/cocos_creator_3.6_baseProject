@@ -40,7 +40,6 @@ export class MainEntry extends Component {
         log(son.a);
         ccutils.superGetter(ClassSon, son, "a");
 
-
         //find("Canvas/bg").getComponent(UIOpacity).opacity = 100;
 
         var bg = find("Canvas/bg");
@@ -48,7 +47,7 @@ export class MainEntry extends Component {
         var nn = find("Canvas/Node1/Node2");
 
         window["bg"] = bg;
-        window["sf"] = bg.getComponent(Sprite).spriteFrame;
+        window["sf"] = bg.getComponent(Sprite).spriteFrame.destorySafe;
         
         tween(bg).to(1, { x: -300 }).union
         window["love"] = love;

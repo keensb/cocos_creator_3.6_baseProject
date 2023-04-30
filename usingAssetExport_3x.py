@@ -108,7 +108,7 @@ if not os.path.exists("./assets/script/config"):
     os.makedirs("./assets/script/config")
 
 with open("./assets/script/config/usingAssets.ts", "w+", encoding="utf-8") as file:
-    file.write("/** created by assetExport.py */"+"\n")
+    file.write("/** created by usingAssetExport_3x.py */"+"\n//asset目录下所有被设置为'Bundle'的文件夹, 里面资源都会被注册进来\n")
     file.write(
         'import { AnimationClip, LabelAtlas, Font, SpriteAtlas, SpriteFrame, Prefab, AudioClip, sp, dragonBones, JsonAsset, TextAsset, Asset } from "cc";'+'\n\n')
     

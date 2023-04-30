@@ -27,7 +27,12 @@ declare module "cc" {//<----------注意:这里坑爹的地方  模块名不是 
         }
     }
 
-   
+    export interface SpriteFrame {
+        /**
+         * 判断SpriteFrame对象当前是否可以被安全销毁
+         */
+        destorySafe: boolean;
+    }
 
     export interface Node {//这里声明是 interface Node  , 避免和 class Node 重复
 

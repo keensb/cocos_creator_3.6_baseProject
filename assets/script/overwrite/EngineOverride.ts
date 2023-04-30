@@ -50,14 +50,33 @@ class EngineOverride {
                 configurable: true
             })
 
-            globalThis["$cr"] = function (sf?:SpriteFrame): Node { 
+            globalThis["$cr"] = function (sf?: SpriteFrame): Node {
                 let newNode = new Node();
                 newNode.addComponent(Sprite).spriteFrame = sf;
                 return newNode;
             }
         }
-        
-       
+
+        let activateNode = director._nodeActivator.activateNode;
+        //在节点被激活或取消激活时 统计节点上SpriteFrame的激活引用计数
+        director._nodeActivator.activateNode = function (node, active) {
+            activateNode.call(this, node, active);
+            if (node.getComponent(Sprite) && node.getComponent(Sprite).spriteFrame) {
+                let sp = node.getComponent(Sprite);
+                let sf = node.getComponent(Sprite).spriteFrame;
+                if (!sf["$_$__activeRef__"]) sf["$_$__activeRef__"] = 0;
+                if (!sf["$_$__activeDic__"]) sf["$_$__activeDic__"] = {};
+                if (active && !sf["$_$__activeDic__"][sp.uuid]) {
+                    sf["$_$__activeRef__"]++;
+                    sf["$_$__activeDic__"][sp.uuid] = 1;
+                }
+                else if (sf["$_$__activeDic__"][sp.uuid]) {
+                    sf["$_$__activeRef__"]--;
+                    delete sf["$_$__activeDic__"][sp.uuid];
+                }
+            }
+        }
+
 
         //检测BaseNode之下有没有这个Component, 有的话直接返回Component的引用; 没有的话自动新增Component实例再返回其引用
         BaseNode.prototype.getOrAddComponent = function <T extends Component>(componentType: new (...parmas) => T, ...args): T {
@@ -83,23 +102,35 @@ class EngineOverride {
             configurable: true
         });
 
-        //检测一个Node对象是否正处于场景中的渲染队列(类似于检测 egret.DisplayObject 的 stage)
-        Object.defineProperty(BaseNode.prototype, "", {
+ 
+
+        Object.defineProperty(SpriteFrame.prototype, "destorySafe", {
             get: function () {
-                let parent = this.parent;
-                while (parent) {
-                    if (parent == director.getScene()) {
-                        break;
-                    }
-                    parent = parent.parent;
+                if (!this["$_$__onStageRef__"]!) {
+                    return true;
                 }
-                return parent;
+                if (!this["$_$__activeRef__"]) {
+                    return true;
+                }
+                
+                if (this["$_$__onStageDic__"] && this["$_$__activeDic__"]) {
+                    for (let s in this["$_$__onStageDic__"]) {//是否同时存在于 ["$_$__onStageDic__"] 和 ["$_$__activeDic__"]
+                        if (s in this["$_$__activeDic__"]) {
+                            return false;
+                        }
+                    }
+
+                    for (let a in this["$_$__activeDic__"]) {//是否同时存在于 ["$_$__onStageDic__"] 和 ["$_$__activeDic__"]
+                        if (a in this["$_$__onStageDic__"]) {
+                            return false;
+                        }
+                    }
+                }
+                return true;
             },
             enumerable: true,
             configurable: true
-        });
-
-
+        })
 
         BaseNode.prototype.findSubComponent = function <T extends Component>(componentType: new (...parmas) => T, ...args): T[] {
 
@@ -201,7 +232,7 @@ class EngineOverride {
             configurable: true
         });
 
-        
+
         Object.defineProperty(Node.prototype, "uiTransform", {
             get: function () {
                 //没有UITransform? 那就自动创建一个
@@ -237,7 +268,7 @@ class EngineOverride {
             enumerable: true,
             configurable: true
         });
-        
+
 
         Object.defineProperty(Node.prototype, "x", {
             get: function () {
@@ -330,30 +361,55 @@ class EngineOverride {
                     path += "/texture";
                 }
             }
-            
+
             return this._config.getInfoWithPath(path, type);
         }
 
         let _destroy = Component.prototype.destroy;
         Component.prototype.destroy = function (): boolean {
-            if (this.constructor == Sprite.prototype.constructor && this["spriteFrame"]) {
-                let oldFrame = this["spriteFrame"];
-                if (!oldFrame["$_$__spriteRef__"]) oldFrame["$_$__spriteRef__"] = 0;
-                if (!oldFrame["$_$__spriteDic__"]) oldFrame["$_$__spriteDic__"] = {};
-                if (oldFrame["$_$__spriteDic__"][this.uuid]) {
-                    oldFrame["$_$__spriteRef__"]--;
-                    delete oldFrame["$_$__spriteDic__"][this.uuid];
-                }
+            let bool = this.isValid;
+            if(bool){
+                if (this.constructor == Sprite.prototype.constructor && this["spriteFrame"]) {
+                    let oldFrame = this["spriteFrame"];
+                    if (!oldFrame["$_$__spriteRef__"]) oldFrame["$_$__spriteRef__"] = 0;
+                    if (!oldFrame["$_$__spriteDic__"]) oldFrame["$_$__spriteDic__"] = {};
+                    if (oldFrame["$_$__spriteDic__"][this.uuid]) {
+                        oldFrame["$_$__spriteRef__"]--;
+                        delete oldFrame["$_$__spriteDic__"][this.uuid];
+                    }
 
-                if (!oldFrame["$_$__onStageRef__"]) oldFrame["$_$__onStageRef__"] = 0;
-                if (!oldFrame["$_$__onStageDic__"]) oldFrame["$_$__onStageDic__"] = {};
-                if (oldFrame["$_$__onStageDic__"][this.uuid]) {
-                    oldFrame["$_$__onStageRef__"]--;
-                    delete oldFrame["$_$__onStageDic__"][this.uuid];
+                    if (!oldFrame["$_$__onStageRef__"]) oldFrame["$_$__onStageRef__"] = 0;
+                    if (!oldFrame["$_$__onStageDic__"]) oldFrame["$_$__onStageDic__"] = {};
+                    if (oldFrame["$_$__onStageDic__"][this.uuid]) {
+                        oldFrame["$_$__onStageRef__"]--;
+                        delete oldFrame["$_$__onStageDic__"][this.uuid];
+                    }
+
+                    if (!oldFrame["$_$__activeRef__"]) oldFrame["$_$__activeRef__"] = 0;
+                    if (!oldFrame["$_$__activeDic__"]) oldFrame["$_$__activeDic__"] = {};
+                    if (oldFrame["$_$__activeDic__"][this.uuid]) {
+                        oldFrame["$_$__activeRef__"]--;
+                        delete oldFrame["$_$__activeDic__"][this.uuid];
+                    }
                 }
             }
             return _destroy.call(this);
         }
+
+
+        let _nodeDestroy = BaseNode.prototype.destroy;
+        //销毁节点时,顺带销毁节点上的Sprite组件, 触发组件的引用计数变更
+        BaseNode.prototype.destroy = function (): boolean {
+            let bool = this.isValid;
+            if (bool) {
+                let sprite = this.getComponent(Sprite);
+                if (sprite) {
+                    sprite.destroy();
+                }
+            }
+            return _nodeDestroy.call(this);
+        }
+
 
         //在Sprite初始化的时候 统计spriteFrame被所有Sprite引用的次数  被字典或数组储存的spriteFrame 不会被统计进来
         Sprite.prototype["_updateBuiltinMaterial"] = function () {
@@ -370,12 +426,15 @@ class EngineOverride {
                 if (DEBUG) {
                     sf["$_$__debugDes__"] = {
                         描述: {
-                            1: '关于 自定义自动引用计数 $_$__xxx 字段的解释(该说明仅在DEBUG版本可见):',
+                            1: '关于SpriteFrame自定义自动引用计数 $_$__xxxxRef 字段的解释(该说明仅在DEBUG版本可见):',
                             2: '为了避免SpriteFrame繁琐的自增自减操作(addRef和decRef), 采用自动统计策略 为此, 重写了一些底层方法, 但并不与 addRef和decRef 冲突',
-                            3: '$_$__spriteRef__ 表示该SpriteFrame当前总共被几个Sprite组件所引用',
-                            4: '$_$__onStageRef__ 表示引用该SpriteFrame的Sprite组件 目前总共有几个出现在场景里',
-                            5: '※理论上$_$__onStageRef__ 的值任何时候都不应该大于 $_$__spriteRef__',
-                            6: '※根据creator的循环渲染机制 当该SpriteFram 没有出现在场景上时   也就是$_$__onStageRef__ 的值为0时 才可以通过destroy()安全销毁该SpriteFram'
+                            3: '$_$__spriteRef__ 表示该SpriteFrame当前总共被几个Sprite组件所引用 并使用 字典对象$_$__spriteDic__ 保存Sprite组件的uuid',
+                            4: '$_$__activeRef__ 表示引用该SpriteFrame的Sprite组件所在节点 目前总共有几个正处于激活状态 并使用 字典对象$_$__activeDic__ 保存Sprite组件的uuid',
+                            5: '$_$__onStageRef__ 表示引用该SpriteFrame的Sprite组件所在节点 目前总共有几个出现在场景里 并使用 字典对象$_$__onStageDic__ 保存Sprite组件的uuid',
+                            6: '※理论上$_$__onStageRef__ 或 $_$__activeRef__ 的值任何时候都不应该大于 $_$__spriteRef__',
+                            7: '※根据creator的循环渲染机制 当引用了该SpriteFrame的所有Sprite组件的节点 当前都没有出现在场景上或都没有被激活时(也就是同时存在于$_$__onStageDic__ 和 $_$__activeDic__字典的uuid总和为0时) 才可以通过destroy()安全销毁该SpriteFrame',
+                            8: '另外为SpriteFrame类提供了一个destorySafe字段 用于判断该SpriteFrame当前是否可以被销毁和释放(要保证引用该SpriteFrame的Sprite组件所在的节点 不会再次被加载进场景或再次被激活,否则仍然会报错 最好是让 Sprite组件.spriteFrame = 其他值 或销毁Sprite组件)',
+                            9: '※建议: 当$_$__spriteRef__的值为0时 才是最安全的销毁时机'
                         }
                     }
                 }
@@ -385,8 +444,6 @@ class EngineOverride {
                 if (!sf["$_$__spriteDic__"][this.uuid]) {
                     sf["$_$__spriteRef__"]++;
                     sf["$_$__spriteDic__"][this.uuid] = 1;
-
-                   
                 }
 
                 if (!sf["$_$__onStageRef__"]) sf["$_$__onStageRef__"] = 0;
@@ -398,6 +455,17 @@ class EngineOverride {
                 else if (!stage && sf["$_$__onStageDic__"][this.uuid]) {
                     sf["$_$__onStageRef__"]--;
                     delete sf["$_$__onStageDic__"][this.uuid];
+                }
+
+                if (!sf["$_$__activeRef__"]) sf["$_$__activeRef__"] = 0;
+                if (!sf["$_$__activeDic__"]) sf["$_$__activeDic__"] = {};
+                if (this.node.active && !sf["$_$__activeDic__"][this.uuid]) {
+                    sf["$_$__activeRef__"]++;
+                    sf["$_$__activeDic__"][this.uuid] = 1;
+                }
+                else if (!this.node.active && sf["$_$__activeDic__"][this.uuid]) {
+                    sf["$_$__activeRef__"]--;
+                    delete sf["$_$__activeDic__"][this.uuid];
                 }
             }
             ///=↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑新增↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
@@ -434,6 +502,13 @@ class EngineOverride {
                     delete oldFrame["$_$__onStageDic__"][this.uuid];
                 }
 
+                if (!oldFrame["$_$__activeRef__"]) oldFrame["$_$__activeRef__"] = 0;
+                if (!oldFrame["$_$__activeDic__"]) oldFrame["$_$__activeDic__"] = {};
+                if (oldFrame["$_$__activeDic__"][this.uuid]) {
+                    oldFrame["$_$__activeRef__"]--;
+                    delete oldFrame["$_$__activeDic__"][this.uuid];
+                }
+
             }
             if (spriteFrame) {
                 if (!spriteFrame["$_$__spriteRef__"]) spriteFrame["$_$__spriteRef__"] = 0;
@@ -448,6 +523,13 @@ class EngineOverride {
                 if (this.node && this.node.stage && !spriteFrame["$_$__onStageDic__"][this.uuid]) {
                     spriteFrame["$_$__onStageRef__"]++;
                     spriteFrame["$_$__onStageDic__"][this.uuid] = 1;
+                }
+
+                if (!spriteFrame["$_$__activeRef__"]) spriteFrame["$_$__activeRef__"] = 0;
+                if (!spriteFrame["$_$__activeDic__"]) spriteFrame["$_$__activeDic__"] = {};
+                if (this.node.active && !spriteFrame["$_$__activeDic__"][this.uuid]) {
+                    spriteFrame["$_$__activeRef__"]++;
+                    spriteFrame["$_$__activeDic__"][this.uuid] = 1;
                 }
             }
             ///=↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑新增↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
@@ -472,6 +554,7 @@ class EngineOverride {
             }
         }
 
+        
 
 
         /* let scene_activate = Scene.prototype["_activate"];

@@ -508,7 +508,7 @@ export class alignMgr {
         }
         newNode.uiTransform.setContentSize(newNode.parent.uiTransform.width, newNode.parent.uiTransform.height);
 
-        
+    
 
         //水平方向的对齐同时只有1种能生效
         if (alignTypeNum & alignType.LEFT_TO_LEFT) {
